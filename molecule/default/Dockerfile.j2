@@ -1,0 +1,50 @@
+{% if item.registry is defined %}
+FROM {{ item.registry.url }}/{{ item.image }}
+{% else %}
+FROM {{ item.image }}
+{% endif %}
+
+ENV LC_ALL C
+ENV DEBIAN_FRONTEND noninteractive
+
+# Install dependencies.
+RUN apt-get update -y \
+ && apt-get install -y \
+        sudo \
+        systemd \
+        systemd-sysv \
+        build-essential \
+        libffi-dev \
+        libssl-dev \
+        python3-pip \
+        python3-dev \
+        python3-setuptools \
+        python3-wheel \
+        python3-apt \
+ && rm -rf \
+    /var/lib/apt/lists/* \
+    /tmp/* \
+    /var/tmp/* \
+ && apt-get clean
+
+# Install Ansible via pip.
+RUN pip3 install ansible
+
+RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
+    /etc/systemd/system/*.wants/* \
+    /lib/systemd/system/local-fs.target.wants/* \
+    /lib/systemd/system/sockets.target.wants/*udev* \
+    /lib/systemd/system/sockets.target.wants/*initctl* \
+    /lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup* \
+    /lib/systemd/system/systemd-update-utmp*
+
+# Install Ansible inventory file.
+RUN mkdir -p /etc/ansible/group_vars
+RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+RUN echo "---\nansible_python_interpreter: /usr/bin/python3" > /etc/ansible/group_vars/all.yml
+
+# Make sure systemd doesn't start agettys on tty[1-6].
+RUN rm -f /lib/systemd/system/multi-user.target.wants/getty.target
+
+VOLUME ["/sys/fs/cgroup"]
+CMD ["/lib/systemd/systemd"]
