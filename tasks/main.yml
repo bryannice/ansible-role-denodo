@@ -1,2 +1,10 @@
 ---
-# tasks file for template
+# tasks file for install Denodo
+- name: Upload install payload to server
+  copy:
+    src: G2Module.ini
+    dest: "{{ senzing_project_dir }}/etc"
+    owner: root
+    group: root
+    mode: "u=rw,g=r,o=r"
+    force: yes
