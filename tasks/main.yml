@@ -2,7 +2,7 @@
 # tasks file for install Denodo
 - include_tasks: variables.yml
 
-- include_tasks: setup-OS-Family-RedHat-pre-tasks.yml
+- include_tasks: setup-OS-Family-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
 - name: Upload and decompress install file
