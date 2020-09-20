@@ -7,7 +7,7 @@
 
 - name: Upload and decompress install file
   unarchive:
-    src: denodo-install-solutionmanager-8.0-ga-linux64.zip
+    src: {{ denodo_install_payload }}/denodo-install-solutionmanager-8.0-ga-linux64.zip
     dest: /denodo-install-solutionmanager-8.0-ga-linux64
 
 - name: Upload install config xml
