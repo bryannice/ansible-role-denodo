@@ -5,15 +5,31 @@
 - include_tasks: setup-OS-Family-RedHat-pre-tasks.yml
   when: ansible_os_family == 'RedHat'
 
-- name: Upload compressed install file
-
-
-- name: Decompress install file
-
+- name: Upload and decompress install file
+  unarchive:
+    src: denodo-install-solutionmanager-8.0-ga-linux64.zip
+    dest: /denodo-install-solutionmanager-8.0-ga-linux64
 
 - name: Upload install config xml
+  template:
+    src: solution_manager_installer_configuration_8_0.jinja
+    dest: /denodo-install-solutionmanager-8.0-ga-linux64/solution_manager_installer_configuration_8_0.xml
 
+- name: Change installer shell to executable
+  file:
+    path: /denodo-install-solutionmanager-8.0-ga-linux64/installer_cli.sh
+    mode: +x
 
 - name: Install Denodo Solution Manager
+  shell:
+    cmd: ./denodo-install-solutionmanager-8.0-ga-linux64/installer_cli.sh install --autoinstaller solution_manager_installer_configuration_8_0.xml
 
+- name: Remove installer files
+  file:
+    path: denodo-install-solutionmanager-8.0-ga-linux64.zip
+    state: absent
 
+- name: Remove installer directory
+  file:
+    path: /denodo-install-solutionmanager-8.0-ga-linux64
+    state: absent

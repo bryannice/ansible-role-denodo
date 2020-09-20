@@ -1,4 +1,4 @@
-# template-ansible-role
+# Ansible Role: Denodo Solution Manager
 
 This repository is a template repository.
 
