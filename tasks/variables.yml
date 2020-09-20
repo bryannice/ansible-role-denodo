@@ -1,0 +1,6 @@
+---
+# Variable configuration.
+- name: Gather package facts
+  package_facts:
+    manager: auto
+  register: required_packages_check
