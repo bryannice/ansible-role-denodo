@@ -1,61 +1,103 @@
-# Ansible Role: Denodo Solution Manager
+Ansible Role: Denodo Solution Manager
+=========
 
-This repository is a template repository.
+This role installs and configures Denodo Solution Manager.
 
-## Files
+ToDo's
+---------------
 
-Template files:
+1. Update molecule unit test to provide coverage for RHEL based systems.
 
-1. .github/
-    1. ISSUE\_TEMPLATE/
-        1. [bug\_report.md](#githubissue_templatebug_reportmd)
-        1. [feature\_request.md](#githubissue_templatefeature_requestmd)
-1. [LICENSE](#license)
-1. [PULL\_REQUEST\_TEMPLATE.md](#pull_request_templatemd)
-1. [README.md](#readmemd)
+1. Update role to install Denodo Solution Manager on Debian based systems.
 
-## PULL\_REQUEST\_TEMPLATE.md
+1. Update role to install Denodo Solution Manager on Windows based systems.
 
-The `PULL_REQUEST_TEMPLATE.md` file asks a pull requester for information about the pull request.
+1. Upldate molecule unit test to provide coverage for Debian based systems.
 
-The [PULL_REQUEST_TEMPLATE.md](PULL_REQUEST_TEMPLATE.md) file in this repository
-is an example that can be modified.
+1. Update molecule unit test to provide coverage for Windows based systems.
 
-### How to create PULL\_REQUEST\_TEMPLATE.md
+Role Variables
+----------------
 
-1. Option #1: Using GitHub's "Wizard"
-    1. [github.com](https://github.com/) > (choose repository) > Insights > Community > Pull request template > "Add" button
-1. Option #2: Manual file creation
-    1. See GitHub's [Creating a pull request template for your repository](https://help.github.com/articles/creating-a-pull-request-template-for-your-repository/)
+Ansible variables are listed below and these mainly control the XML config used by the installer. To see defualt values see defaults/main.yml.
 
-## .github/ISSUE\_TEMPLATE/bug\_report.md
+```ansible
+denodo_mounted_volume_path: 
+denodo_solution_manager_derby_port: 
+denodo_solution_manager_diagnosticmonitoringtool: 
+denodo_solution_manager_install_path:
+denodo_solution_manager_license_file:
+denodo_solution_manager_licensemanager_port: 
+denodo_solution_manager_licensemanagerserver: 
+denodo_solution_manager_locale: 
+denodo_solution_manager_port: 
+denodo_solution_manager_scheduler: 
+denodo_solution_manager_scheduleradmin: 
+denodo_solution_manager_solutionmanager: 
+denodo_solution_manager_solutionmanagerserver: 
+denodo_solution_manager_solutionmanagerwebtool: 
+denodo_solution_manager_server_asyncrmi_port: 
+denodo_solution_manager_server_odbc_port: 
+denodo_solution_manager_server_shutdownport: 
+denodo_solution_manager_server_port: 
+denodo_solution_manager_server_factory_port: 
+denodo_solution_manager_setup_type: 
+denodo_solution_manager_vdpadmintool: 
+denodo_solution_manager_vdpserver: 
+denodo_solution_manager_virtualdataport: 
+denodo_solution_manager_webdesignstudio: 
+denodo_solution_manager_wc_aux_jmx_port: 
+denodo_solution_manager_wc_jmx_port: 
+denodo_solution_manager_wc_http_port: 
+denodo_solution_manager_wc_shutdown_port: 
+```
 
-A template presented to the Contributor when creating an issue that reports a bug.
+Example Playbook
+----------------
 
-The [bug_report.md](.github/ISSUE_TEMPLATE/bug_report.md) file in this repository
-is an example that can be modified.
+Including an example of how to use the role in a playbook:
 
-### How to create .github/ISSUE\_TEMPLATE/bug\_report.md
+```ansible
+- hosts: all
+  become: true
+  gather_facts: true
+  vars:
+    denodo_mounted_volume_path: "{{ lookup('env', 'DENODO_MOUNTED_VOLUME_PATH') | default('/data', true) }}"
+  pre_tasks:
+    - name: Gather package facts
+      package_facts:
+        manager: auto
+  roles:
+    - denodo-solution-manager
+```
 
-1. Option #1: Using GitHub's "Wizard"
-    1. [github.com](https://github.com/) > (choose repository) > Insights > Community > Issue templates > "Add" button > Add template: Bug report
+Testing Role
+----------------
 
-## .github/ISSUE\_TEMPLATE/feature\_request.md
+The ansible molecule container needs to mount the host machine's /var/run/docker.sock to have the ability to spawn another container representing the environment to unit test the role in. Once the environment container is running, then the molecule container will connect to the test environment container to run the test ansible playbook.
 
-A template presented to the Contributor when creating an issue that requests a feature.
+![ansible role unit testing](assets/ansible_role_unit_testing.png)
 
-The [feature_request.md](.github/ISSUE_TEMPLATE/feature_request.md) file in this repository
-is an example that can be modified.
+Example docker command to run molecule:
 
-### How to create .github/ISSUE\_TEMPLATE/feature\_request.md
+```ansible
+docker run --rm -it \
+    --env MOLECULE_NO_LOG="false" \
+    -v "$(pwd)":/tmp/$(basename "${PWD}"):ro \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v ~/.ssh:/root/.ssh \
+    -w /tmp/$(basename "${PWD}") \
+    quay.io/ansible/molecule:3.0.4 \
+    molecule test
+```
 
-1. Option #1: Using GitHub's "Wizard"
-    1. [github.com](https://github.com/) > (choose repository) > Insights > Community > Issue templates > "Add" button > Add template: Feature request
-
-## License
+License
+-------
 
 [GPLv3](LICENSE)
 
-## References
+References
+----------
 
-* [Markdownlint](https://dlaa.me/markdownlint/)
+- [Yamllint](https://yamllint.readthedocs.io/en/latest/)
+- [Molecule Docker Configuration](https://molecule.readthedocs.io/en/2.22/configuration.html#docker)
