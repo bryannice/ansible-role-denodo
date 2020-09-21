@@ -12,6 +12,7 @@ denodo_solution_manager_port: 10090
 denodo_solution_manager_scheduler: true
 denodo_solution_manager_scheduleradmin: true
 denodo_solution_manager_solutionmanager: true
+denodo_solution_manager_solutionmanagerserver: true
 denodo_solution_manager_solutionmanagerwebtool: true
 denodo_solution_manager_server_asyncrmi_port: 19999
 denodo_solution_manager_server_odbc_port: 19996

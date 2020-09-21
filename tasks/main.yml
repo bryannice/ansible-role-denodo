@@ -7,30 +7,36 @@
 
 - name: Upload and decompress install file
   unarchive:
-    creates: /denodo-install-solutionmanager-8.0-ga-linux64
     src: "{{ denodo_install_payload }}/denodo-install-solutionmanager-8.0-ga-linux64.zip"
-    dest: /denodo-install-solutionmanager-8.0-ga-linux64
+    dest: /
 
 - name: Upload install config xml
   template:
     src: solution_manager_installer_configuration_8_0.jinja
-    dest: "{{ denodo_install_payload }}/denodo-install-solutionmanager-8.0-ga-linux64/solution_manager_installer_configuration_8_0.xml"
+    dest: /denodo-install-solutionmanager-8.0/solution_manager_installer_configuration_8_0.xml
 
 - name: Change installer shell to executable
   file:
-    path: "{{ denodo_install_payload }}/denodo-install-solutionmanager-8.0-ga-linux64/installer_cli.sh"
+    path: /denodo-install-solutionmanager-8.0/installer_cli.sh
     mode: +x
 
 - name: Install Denodo Solution Manager
   shell:
-    cmd: ".{{ denodo_install_payload }}/denodo-install-solutionmanager-8.0-ga-linux64/installer_cli.sh install --autoinstaller solution_manager_installer_configuration_8_0.xml"
+    cmd: /denodo-install-solutionmanager-8.0/installer_cli.sh install --autoinstaller solution_manager_installer_configuration_8_0.xml
+  async: 1000
+  poll: 0
+  register: denodo_solution_manager_installer
 
-- name: Remove installer files
-  file:
-    path: denodo-install-solutionmanager-8.0-ga-linux64.zip
-    state: absent
+- name: Check when Denodo Solution Manager Completes
+  async_status:
+    jid: "{{ denodo_solution_manager_installer.ansible_job_id }}"
+  delay: 10
+  ignore_errors: True
+  register: job_result
+  retries: 180
+  until: job_result.finished
 
 - name: Remove installer directory
   file:
-    path: /denodo-install-solutionmanager-8.0-ga-linux64
+    path: /denodo-install-solutionmanager-8.0
     state: absent
