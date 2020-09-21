@@ -101,3 +101,4 @@ References
 
 - [Yamllint](https://yamllint.readthedocs.io/en/latest/)
 - [Molecule Docker Configuration](https://molecule.readthedocs.io/en/2.22/configuration.html#docker)
+- [Linux startup scripts for Solution Manager and License Manager](https://community.denodo.com/kb/view/document/Linux%20startup%20scripts%20for%20Solution%20Manager%20and%20License%20Manager?category=Operation)
