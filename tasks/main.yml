@@ -7,22 +7,29 @@
 
 - name: Upload and decompress install file
   unarchive:
-    src: "{{ denodo_install_payload }}/denodo-install-solutionmanager-8.0-ga-linux64.zip"
-    dest: /
+    src: "{{ denodo_mounted_volume_path }}/denodo-install-solutionmanager-8.0-ga-linux64.zip"
+    dest: /opt
 
-- name: Upload install config xml
+- name: Add license file
+  file:
+    src: "{{ item }}"
+    dest: /opt/denodo-install-solutionmanager-8.0/conf/
+  with_fileglob:
+    - "{{ denodo_mounted_volume_path }}/*.lic"
+
+- name: Add install config xml
   template:
     src: solution_manager_installer_configuration_8_0.jinja
-    dest: /denodo-install-solutionmanager-8.0/solution_manager_installer_configuration_8_0.xml
+    dest: /opt/denodo-install-solutionmanager-8.0/solution_manager_installer_configuration_8_0.xml
 
 - name: Change installer shell to executable
   file:
-    path: /denodo-install-solutionmanager-8.0/installer_cli.sh
+    path: /opt/denodo-install-solutionmanager-8.0/installer_cli.sh
     mode: +x
 
 - name: Install Denodo Solution Manager
   shell:
-    cmd: /denodo-install-solutionmanager-8.0/installer_cli.sh install --autoinstaller solution_manager_installer_configuration_8_0.xml
+    cmd: /opt/denodo-install-solutionmanager-8.0/installer_cli.sh install --autoinstaller solution_manager_installer_configuration_8_0.xml
   async: 1000
   poll: 0
   register: denodo_solution_manager_installer
@@ -31,12 +38,34 @@
   async_status:
     jid: "{{ denodo_solution_manager_installer.ansible_job_id }}"
   delay: 10
-  ignore_errors: True
   register: job_result
   retries: 180
   until: job_result.finished
 
-- name: Remove installer directory
-  file:
-    path: /denodo-install-solutionmanager-8.0
-    state: absent
+- name: Copy service shell to systemd location
+  copy:
+    src: "{{ item }}"
+    dest: /etc/systemd/system/
+  with_fileglob:
+    - "*.service"
+
+- name: Start Denodo License Manager
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-solution-manager-license-manager.service
+    state: started
+
+- name: Start Denodo Solution Manager
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-solution-manager.service
+    state: started
+
+- name: Start Denodo Solution Manager
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-solution-manager-web-tool.service
+    state: started

@@ -1,6 +1,6 @@
 ---
 # defaults file for solution manager
-denodo_install_payload: /data
+denodo_mounted_volume_path: /data
 denodo_solution_manager_derby_port: 11526
 denodo_solution_manager_diagnosticmonitoringtool: true
 denodo_solution_manager_install_path:
