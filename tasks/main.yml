@@ -11,7 +11,7 @@
     dest: /opt
 
 - name: Add license file
-  file:
+  copy:
     src: "{{ item }}"
     dest: /opt/denodo-install-solutionmanager-8.0/conf/
   with_fileglob:
