@@ -1,10 +1,14 @@
 [Unit]
 Description=Denodo Solution Manager
+After=network.target
+After=denodo-license-manager.service
+Before=denodo-solution-manager-web-tool.service
 
 [Service]
 ExecStart=/opt/denodo-install-solutionmanager-8.0/bin/solutionmanager_startup.sh
-ExecStop=/bin/kill -2 $MAINPID
-Restart=always
+ExecStop=/opt/denodo-install-solutionmanager-8.0/bin/solutionmanager_shutdown.sh
+RemainAfterExit=true
+Type=oneshot
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

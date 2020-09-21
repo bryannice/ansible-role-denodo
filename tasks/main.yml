@@ -15,7 +15,7 @@
     src: "{{ item }}"
     dest: /opt/denodo-install-solutionmanager-8.0/conf/
   with_fileglob:
-    - "{{ denodo_mounted_volume_path }}/*.lic"
+    - "{{ denodo_mounted_volume_path }}/denodo.lic"
 
 - name: Add install config xml
   template:
@@ -53,7 +53,7 @@
   systemd:
     daemon_reload: yes
     enabled: yes
-    name: denodo-solution-manager-license-manager.service
+    name: denodo-license-manager.service
     state: started
 
 - name: Start Denodo Solution Manager
@@ -63,7 +63,7 @@
     name: denodo-solution-manager.service
     state: started
 
-- name: Start Denodo Solution Manager
+- name: Start Denodo Solution Manager Web Tool
   systemd:
     daemon_reload: yes
     enabled: yes
