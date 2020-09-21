@@ -2,9 +2,6 @@
 # tasks file for install Denodo
 - include_tasks: variables.yml
 
-- include_tasks: setup-OS-Family-RedHat.yml
-  when: ansible_os_family == 'RedHat'
-
 - name: Upload and decompress install file
   unarchive:
     src: "{{ denodo_install_payload }}/denodo-install-solutionmanager-8.0-ga-linux64.zip"
