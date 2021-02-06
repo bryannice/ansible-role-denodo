@@ -1,0 +1,20 @@
+###############################################################################
+#  SOLUTION MANAGER WEB TOOL CONFIGURATION                                      #
+###############################################################################
+# General Configuration
+com.denodo.vdb.install={{ sm_admin_configuration_properties.com_denodo_vdb_install }}
+
+# Solution Manager Configuration
+com.denodo.solutionmanager.host={{ sm_admin_configuration_properties.com_denodo_solutionmanager_host }}
+com.denodo.solutionmanager.port={{ sm_admin_configuration_properties.com_denodo_solutionmanager_port }}
+
+# SSL
+com.denodo.solutionmanager.security.ssl.enabled={{ ssl.enabled }}
+
+#Revisions timeout property for creation and update
+com.denodo.solutionmanager.revisions.timeoutInMilliseconds={{ sm_admin_configuration_properties.com_denodo_solutionmanager_revisions_timeoutInMilliseconds }}
+
+###############################################################################
+#  SSO CONFIGURATION                                                          #
+###############################################################################
+sso.confFile={{ sm_admin_configuration_properties.sso_confFile }}

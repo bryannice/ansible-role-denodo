@@ -1,0 +1,37 @@
+---
+# defaults file for solution manager
+solution_manager_installer:
+  common: true
+  enabled: true
+  denodo_installer_path: /data
+  derby_port: 11526
+  diagnosticmonitoringtool: true
+  install_path:
+  isntall_license_manager_server_service: none
+  install_solution_manager_server_service: none
+  install_vdp_server_service: none
+  install_web_apps_services: none
+  license_file:
+  licensemanager_port: 10091
+  licensemanagerserver: true
+  locale: us_pst
+  port: 10090
+  scheduler: true
+  scheduleradmin: true
+  solutionmanager: true
+  solutionmanagerserver: true
+  solutionmanagerwebtool: true
+  server_asyncrmi_port: 19999
+  server_odbc_port: 19996
+  server_shutdownport: 19998
+  server_port: 19997
+  server_factory_port: 19995
+  setup_type: custom
+  vdpadmintool: true
+  vdpserver: true
+  virtualdataport: true
+  webdesignstudio: true
+  wc_aux_jmx_port: 19097
+  wc_jmx_port: 19098
+  wc_http_port: 19090
+  wc_shutdown_port: 19099

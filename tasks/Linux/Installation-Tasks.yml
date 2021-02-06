@@ -1,0 +1,34 @@
+---
+- include_tasks: Installer-OS-Family-RedHat-Tasks.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Upload and decompress install file
+  ansible.builtin.unarchive:
+    create: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
+    dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
+    src: "{{ solution_manager_installer.denodo_installer_path }}"
+
+- name: Add install config xml
+  ansible.bultin.template:
+    dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer/installer.xml"
+    src: linux_installer.j2
+
+- name: Change installer shell to executable
+  file:
+    path: "{{ solution_manager_installer.install_path }}/solution_manager_installer/installer_cli.sh"
+    mode: +x
+
+- name: Install Denodo Solution Manager
+  shell:
+    cmd: "{{ solution_manager_installer.install_path }}/solution_manager_installer/installer_cli.sh install --autoinstaller {{ solution_manager_installer.install_path }}/solution_manager_installer/installer.xml"
+  async: 1000
+  poll: 0
+  register: denodo_solution_manager_installer
+
+- name: Check when Denodo Solution Manager Completes
+  async_status:
+    jid: "{{ denodo_solution_manager_installer.ansible_job_id }}"
+  delay: 10
+  register: job_result
+  retries: 180
+  until: job_result.finished

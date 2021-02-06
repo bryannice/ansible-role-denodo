@@ -2,70 +2,11 @@
 # tasks file for install Denodo
 - include_tasks: variables.yml
 
-- include_tasks: OS-Family-RedHat.yml
-  when: ansible_os_family == 'RedHat'
+- include_tasks: Installer-Tasks.yml
+  when: solution_manager_installer.enabled
 
-- name: Upload and decompress install file
-  unarchive:
-    src: "{{ denodo_mounted_volume_path }}/denodo-install-solutionmanager-8.0-ga-linux64.zip"
-    dest: /opt
+- include_tasks: SSL-Configuration-Tasks.yml
+  when: ssl.enabled
 
-- name: Add license file
-  copy:
-    src: "{{ item }}"
-    dest: /opt/denodo-install-solutionmanager-8.0/conf/
-  with_fileglob:
-    - "{{ denodo_mounted_volume_path }}/denodo.lic"
-
-- name: Add install config xml
-  template:
-    src: solution_manager_installer_configuration_8_0.jinja
-    dest: /opt/denodo-install-solutionmanager-8.0/solution_manager_installer_configuration_8_0.xml
-
-- name: Change installer shell to executable
-  file:
-    path: /opt/denodo-install-solutionmanager-8.0/installer_cli.sh
-    mode: +x
-
-- name: Install Denodo Solution Manager
-  shell:
-    cmd: /opt/denodo-install-solutionmanager-8.0/installer_cli.sh install --autoinstaller solution_manager_installer_configuration_8_0.xml
-  async: 1000
-  poll: 0
-  register: denodo_solution_manager_installer
-
-- name: Check when Denodo Solution Manager Completes
-  async_status:
-    jid: "{{ denodo_solution_manager_installer.ansible_job_id }}"
-  delay: 10
-  register: job_result
-  retries: 180
-  until: job_result.finished
-
-- name: Copy service shell to systemd location
-  copy:
-    src: "{{ item }}"
-    dest: /etc/systemd/system/
-  with_fileglob:
-    - "*.service"
-
-- name: Start Denodo License Manager
-  systemd:
-    daemon_reload: yes
-    enabled: yes
-    name: denodo-license-manager.service
-    state: started
-
-- name: Start Denodo Solution Manager
-  systemd:
-    daemon_reload: yes
-    enabled: yes
-    name: denodo-solution-manager.service
-    state: started
-
-- name: Start Denodo Solution Manager Web Tool
-  systemd:
-    daemon_reload: yes
-    enabled: yes
-    name: denodo-solution-manager-web-tool.service
-    state: started
+- include_tasks: Post-Installer-Tasks.yml
+  when: solution_manager_installer.enabled

@@ -1,0 +1,11 @@
+---
+ssl:
+  enabled: false
+  key_store:
+  key_store_password:
+  key_store_password_encrypted: true
+  trust_store_enabled: false
+  trust_store:
+  trust_store_password:
+  trust_store_password_encrypted: true
+  jmxremote_ssl_config_file: {{ solution_manager_installer.install_path }}/resources/apache-tomcat/conf/jmxssl.properties

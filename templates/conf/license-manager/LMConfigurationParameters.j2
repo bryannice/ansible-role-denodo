@@ -1,0 +1,59 @@
+###############################################################################
+#  LICENSE MANAGER SERVER CONFIGURATION                                       #
+###############################################################################
+server.port={{ lm_configuration_parameters_properties.server_port }}
+
+# HTTPS
+{% if ssl.enabled %}
+server.ssl.key-store={{ ssl.key_store }}
+server.ssl.key-store-password={{ ssl.key_store_password }}
+server.ssl.key-store-password.encrypted={{ ssl.key_store_password_encrypted }}
+{% endif %}
+{% if ssl.trustStore_enabled %}
+com.denodo.security.ssl.trustStore={{ ssl.trust_store }}
+com.denodo.security.ssl.trustStorePassword={{ ssl.trust_store_password }}
+com.denodo.security.ssl.trustStorePassword.encrypted={{ ssl.trust_store_password_encrypted }}
+{% endif %}
+
+# Storage Manager Factory
+com.denodo.solutionmanager.storage.StorageManagerFactory.className={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_storage_manager_factory_class_name }}
+com.denodo.solutionmanager.storage.StorageManagerFactory.provider={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_storage_manager_factory_provider }}
+{% if lm_configuration_parameters_properties.com_denodo_solution_manager_storage_storage_manager_factory_provider == 'embedded_derby' %}
+
+# Derby Storage Manager
+com.denodo.solutionmanager.storage.DerbyStorageManager.derbyHome={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_derby_storage_manager_derby_home }}
+com.denodo.solutionmanager.storage.DerbyStorageManager.derbyHost={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_derby_storage_manager_derby_host }}
+com.denodo.solutionmanager.storage.DerbyStorageManager.derbyPort={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_derby_storage_manager_derby_port }}
+
+{% endif %}
+spring.data.rest.defaultMediaType={{ lm_configuration_parameters_properties.spring_data_rest_default_media_type }}
+spring.hateoas.use-hal-as-default-json-media-type={{ lm_configuration_parameters_properties.spring_hateoas_use_hal_as_default_json_media_type }}
+spring.jpa.hibernate.ddl-auto={{ lm_configuration_parameters_properties.spring_jpa_hibernate_ddl_auto }}
+
+java.env.DENODO_OPTS_START={{ lm_configuration_parameters_properties.java_env_DENODO_OPTS_START }}
+com.denodo.licensemanager.rmi.host={{ lm_configuration_parameters_properties.com_denodo_lm_configuration_parameters_properties.rmi_host }}
+
+com.denodo.solutionmanager.utils.LicenseManager.iconRoute={{ lm_configuration_parameters_properties.com_denodo_solution_manager_utils_lm_configuration_parameters_properties.icon_route }}
+com.denodo.vdb.install={{ lm_configuration_parameters_properties.com_denodo_vdb_install }}
+
+# Timezone
+com.denodo.solutionmanager.timezone={{ lm_configuration_parameters_properties.com_denodo_solution_manager_timezone }}
+
+# Grace period (in minutes)
+com.denodo.licensemanager.gracePeriod={{ lm_configuration_parameters_properties.com_denodo_lm_configuration_parameters_properties.grace_period }}
+
+# License ACK timeout (in milliseconds)
+com.denodo.licensemanager.licenseACKTimeout={{ lm_configuration_parameters_properties.com_denodo_lm_configuration_parameters_properties.license_ack_timeout }}
+
+# Server Refresh Interval (in minutes)
+com.denodo.licensemanager.refreshInterval={{ lm_configuration_parameters_properties.com_denodo_lm_configuration_parameters_properties.refresh_interval }}
+com.denodo.licensemanager.globalLicenseId={{ lm_configuration_parameters_properties.com_denodo_lm_configuration_parameters_properties.global_license_id }}
+{% if lm_configuration_parameters_properties.com_denodo_solution_manager_storage_storage_manager_factory_provider != 'embedded_derby' %}
+
+# External Database Config
+com.denodo.solutionmanager.storage.GenericStorageManager.connectionURI={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_generic_storage_manager_connection_uri }}
+com.denodo.solutionmanager.storage.GenericStorageManager.driverClassName={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_generic_storage_manager_driver_class_name }}
+com.denodo.solutionmanager.storage.GenericStorageManager.username={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_generic_storage_manager_username }}
+com.denodo.solutionmanager.storage.GenericStorageManager.password={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_generic_storage_manager_password }}
+com.denodo.solutionmanager.storage.GenericStorageManager.password.encrypted={{ lm_configuration_parameters_properties.com_denodo_solution_manager_storage_generic_storage_manager_password_encrypted }}
+{% endif %}

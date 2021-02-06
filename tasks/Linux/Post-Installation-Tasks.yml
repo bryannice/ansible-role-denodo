@@ -1,0 +1,28 @@
+---
+- name: Copy service shell to systemd location
+  copy:
+    src: "{{ item }}"
+    dest: /etc/systemd/system/
+  with_fileglob:
+    - linux/"*.service"
+
+- name: Start Denodo License Manager
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-license-manager.service
+    state: started
+
+- name: Start Denodo Solution Manager
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-solution-manager.service
+    state: started
+
+- name: Start Denodo Solution Manager Web Tool
+  systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-solution-manager-web-tool.service
+    state: started

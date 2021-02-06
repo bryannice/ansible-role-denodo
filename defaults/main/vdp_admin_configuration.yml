@@ -1,0 +1,54 @@
+---
+vdpadmin:
+  com_denodo_vdb_install: {{ solution_manager_installer.install_path }}
+  vdbDataSource_vdpAdminDataSource_vdbURI: //localhost:19999/admin
+  vdbDataSource_vdpAdminDataSource_username: 
+  vdbDataSource_vdpAdminDataSource_password: 
+  vdbDataSource_vdpAdminDataSource_queryTimeout: 900000
+  vdbDataSource_vdpAdminDataSource_chunkTimeout: 90000
+  vdbDataSource_vdpAdminDataSource_chunkSize: 1000
+  vdbDataSource_vdpAdminDataSource_userAgent: Denodo-VDP-AdminTool
+  com_denodo_vdb_admin_queryMonitor_updateTime: 5
+  com_denodo_vdb_admin_model_vdbserverproxy_VDBServerProxy_dataSourceName: vdpAdminDataSource
+  com_denodo_vdb_admin_gui_model_maps_i18n: us_pst
+  com_denodo_vdb_admin_queryconditions_file: {{ solution_manager_installer.install_path }}/metadata/vdp-admin/vdp-admin-queryconditions.bin
+  com_denodo_vdb_admin_urlconnections_file: {{ solution_manager_installer.install_path }}/metadata/vdp-admin/vdp-admin-urlconnections.bin
+  com_denodo_vdb_admin_urlconnections_queue_size: 10
+  com_denodo_vdb_admin_vqlsentences_file: {{ solution_manager_installer.install_path }}/metadata/vdp-admin/vdp-admin-vqlsentences.bin
+  com_denodo_vdb_admin_vqlsentences_traces_folder: {{ solution_manager_installer.install_path }}/metadata/vdp-admin/vdp-admin-vqlsentences-traces
+  com_denodo_vdb_admin_vqlsentences_queue_size: 100
+  com_denodo_vdb_admin_roles_ldap_configurations_file: {{ solution_manager_installer.install_path }}/metadata/vdp-admin/vdp-admin-roles-ldap-configs.bin
+  com_denodo_vdb_admin_qui_model_serverimport_urisfile: {{ solution_manager_installer.install_path }}/metadata/vdp-admin/vdp-admin-import-uris.bin
+  com_denodo_vdb_admin_gui_layout_file: {{ solution_manager_installer.install_path }}/metadata/vdp-admin/vdp-admin-layout.bin
+  com_denodo_admintool_workDir: {{ solution_manager_installer.install_path }}/work/vdp-admin
+  com_denodo_vdb_admin_model_wrapper_ws_util_suntoolslibdir: {{ solution_manager_installer.install_path }}/lib/sun-tools
+  com_denodo_vdb_admin_model_wrapper_ws_util_axislibdir: {{ solution_manager_installer.install_path }}/lib/contrib
+  com_denodo_vdb_admin_model_wrapper_ws_util_axisjars: axis.jar,commons-discovery.jar,axis-jaxrpc.jar,axis-saaj.jar
+  com_denodo_vdb_admin_model_wrapper_jdbc_util_jdbcDriversDir: {{ solution_manager_installer.install_path }}/extensions/thirdparty/lib
+  com_denodo_vdb_admin_model_wrapper_odbc_util_ODBCDriver: sun.jdbc.odbc.JdbcOdbcDriver
+  com_denodo_vdb_catalog_Catalog_identifiersMaxLength: 100
+  com_denodo_vdb_admin_gui_components_dockable_view_advanced_AdvancedViewPanel_maxSearchMethodsDisplay: 10
+  com_denodo_admintool_help_URL: https://community.denodo.com/docs/Virtual%20DataPort
+  com_denodo_admintool_help_file: {{ solution_manager_installer.install_path }}/docs/vdp/help/indexhelp.html
+  com_denodo_vdb_admin_projects_file: {{ solution_manager_installer.install_path }}/metadata/vdp-admin/vdp-admin-projects.bin
+  com_denodo_vdb_admin_tables_rowLimit: 150
+  com_denodo_export_webservice_resourcesdir: {{ solution_manager_installer.install_path }}/resources/vdp-admin/wsgenerator
+  com_denodo_export_webservice_cssfile: default.css
+  com_denodo_export_widget_resourcesdir: {{ solution_manager_installer.install_path }}/resources/vdp-admin/wsgenerator/widget
+  com_denodo_export_widget_helpmodecontent: defaultwidgethelpmodecontent.html
+  com_denodo_export_webservice_restfulws_cssfile: {{ solution_manager_installer.install_path }}/resources/vdp-admin/wsgenerator/restfulws_default.css
+  com_denodo_vdb_admin_i18nQueryResults: false
+  com_denodo_vdb_admin_combine_defaultCellSize_numFields: 10
+  com_denodo_security_ssl_trustStore: 
+  com_denodo_security_ssl_trustStorePassword: 
+  com_denodo_security_ssl_trustStorePassword_encrypted: 
+  com_denodo_vdb_wsManagement_enabled: true
+  com_denodo_vdb_wsManagement_port: 9996
+  com_denodo_vdb_admin_exportVQLShowDependencies: true
+  com_denodo_vdb_admin_exportVQLDefaultTarget: 0
+  com_denodo_vdb_admin_exportVQLDefaultDropReplaceMode: 1
+  com_denodo_vdb_admin_exportVQLIncludeJars: false
+  com_denodo_vdb_admin_exportVQLIncludeITPScanners: false
+  com_denodo_vdb_admin_exportVQLIncludeITPCustomComponents: false
+  com_denodo_vdb_admin_exportVQLSingleUserMode: true
+  java_env_DENODO_OPTS_START: -Xmx512m

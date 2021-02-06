@@ -1,0 +1,38 @@
+---
+- name: Upload Denodo compressed file
+  ansible.windows.win_copy:
+    dest: "{{ solution_manager_installer.install_path }}"
+    force: yes
+    src: "{{ solution_manager_installer.denodo_installer_path }}"
+
+- name: Decompress install file
+  ansible.windows.win_unzip:
+    creates: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
+    dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
+    recurse: yes
+    src: "{{ solution_manager_installer.denodo_installer_path }}"
+
+- name: Add install config xml
+  ansible.windows.win_template:
+    dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer/installer.xml"
+    src: windows_installer.j2
+
+- name: Install Denodo Solution Manager
+  ansible.windows.win_shell:
+    cmd: "{{ solution_manager_installer.install_path }}/solution_manager_installer/installer_cli.bat install --autoinstaller {{ solution_manager_installer.install_path }}/solution_manager_installer/installer.xml"
+  async: 1000
+  poll: 0
+  register: denodo_solution_manager_installer
+
+- name: Check when Denodo Solution Manager Completes
+  async_status:
+    jid: "{{ denodo_solution_manager_installer.ansible_job_id }}"
+  delay: 10
+  register: job_result
+  retries: 180
+  until: job_result.finished
+
+- name: Delete installer directory
+  ansible.windows.win_file:
+    path: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
+    state: absent

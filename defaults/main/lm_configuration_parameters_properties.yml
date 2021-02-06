@@ -1,0 +1,26 @@
+---
+# defaults file for template
+lm_configuration_parameters_properties:
+  server_port: {{ solution_manager_installer.licensemanager_port }}
+  com_denodo_solution_manager_storage_storage_manager_factory_class_name: com.denodo.solutionmanager.storage.DerbyStorageManager
+  com_denodo_solution_manager_storage_storage_manager_factory_provider: embedded_derby
+  com_denodo_solution_manager_storage_derby_storage_manager_derby_home: {{ solution_manager_installer.install_path }}/metadata/solution-manager/db
+  com_denodo_solution_manager_storage_derby_storage_manager_derby_host: localhost
+  com_denodo_solution_manager_storage_derby_storage_manager_derby_port: {{ solution_manager_installer.derby_port }}
+  spring_data_rest_default_media_type: application/json
+  spring_hateoas_use_hal_as_default_json_media_type: false
+  spring_jpa_hibernate_ddl_auto: none
+  java_env_DENODO_OPTS_START: -Xmx1024m
+  com_denodo_license_manager_rmi_host: localhost
+  com_denodo_solution_manager_utils_License_manager_icon_route: {{ solution_manager_installer.install_path }}/resources/license-manager/ico
+  com_denodo_vdb_install: {{ solution_manager_installer.install_path }}/solution_manager/
+  com_denodo_solution_manager_timezone: UTC
+  com_denodo_license_manager_grace_period: 7200
+  com_denodo_license_manager_license_ack_timeout: 2000
+  com_denodo_license_manager_refresh_interval: 10
+  com_denodo_license_manager_global_license_id: 1
+  com_denodo_solution_manager_storage_generic_storage_manager_connection_uri: jdbc\:sqlserver\://denodo_backend-db_1\:1433;databaseName\=denodo
+  com_denodo_solution_manager_storage_generic_storage_manager_driver_class_name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  com_denodo_solution_manager_storage_generic_storage_manager_username: sa
+  com_denodo_solution_manager_storage_generic_storage_manager_password: sM6m7ijnmpB6A7FyI2vVJTdAAZDYENTkEv6kg6J0kALpizZa/Dw9AHmS8OU+7Bb2LMgb4Ca0lR0hz/yOCQ6ippuagO5T8X9jhvRQ+/8WgHO8739NbxTZV6JLzM5Tf2hE
+  com_denodo_solution_manager_storage_generic_storage_manager_password_encrypted: ENCRYPTED
