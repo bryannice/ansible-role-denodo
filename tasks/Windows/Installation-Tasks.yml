@@ -6,7 +6,7 @@
     src: "{{ solution_manager_installer.denodo_installer_path }}"
 
 - name: Decompress install file
-  ansible.windows.win_unzip:
+  community.windows.win_unzip:
     creates: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
     dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
     recurse: yes

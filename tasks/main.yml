@@ -8,5 +8,8 @@
 - include_tasks: SSL-Configuration-Tasks.yml
   when: ssl.enabled
 
+- include_tasks: Denodo-Monitor-Configuration-Tasks.yml
+  when: denodo_monitor.enabled
+
 - include_tasks: Post-Installer-Tasks.yml
   when: solution_manager_installer.enabled
