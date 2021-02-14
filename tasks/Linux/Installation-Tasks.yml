@@ -9,10 +9,8 @@
 
 - name: Upload and decompress install file
   ansible.builtin.unarchive:
-    dest: "{{ solution_manager_installer.denodo_root_directory }}/solution_manager_installer"
-    extra_opts:
-      - -d
-      - "{{ solution_manager_installer.denodo_root_directory }}/solution_manager_installer"
+    creates: "{{ solution_manager_installer.denodo_root_directory }}/solution_manager_installer"
+    dest: "{{ solution_manager_installer.denodo_root_directory }}"
     src: "{{ solution_manager_installer.denodo_installer_path }}"
 
 - name: Add install config xml
