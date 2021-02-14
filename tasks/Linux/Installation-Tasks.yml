@@ -3,7 +3,7 @@
   when: ansible_os_family == 'RedHat'
 
 - name: Create denodo sub-directory
-  ansible.bultin.file:
+  ansible.builtin.file:
     path: "{{ solution_manager_installer.denodo_root_directory }}"
     state: directory
 
