@@ -2,11 +2,11 @@
 scheduler_webadmintool:
   authentication_type:
   kerberos_enabled: false
-  sso_confFile: {{ solution_manager_installer.install_path }}/conf/SSOConfiguration.properties
+  sso_confFile: "{{ solution_manager_installer.install_path }}/conf/SSOConfiguration.properties"
   sso_successRedirectUrl: /
   kerberos_principal:
   kerberos_keyTab:
-  kerberos_filesFolder: {{ solution_manager_installer.install_path }}/work/scheduler-webadmintool/kerberos
-  informativeMessage_filesFolder: {{ solution_manager_installer.install_path }}/work/scheduler-webadmintool/informative-message
+  kerberos_filesFolder: "{{ solution_manager_installer.install_path }}/work/scheduler-webadmintool/kerberos"
+  informativeMessage_filesFolder: "{{ solution_manager_installer.install_path }}/work/scheduler-webadmintool/informative-message"
   wanEnabled: false
   weblogin_password: lzCHuLdywxSgvQpI3MiJ8zBSbuaY2QEDKp1Kj2jcVFfrjq22ebm9/H4HT9H7c3fMqa3GJMMQr1OPJno7r9MZbrjdJa5dY3Nx
