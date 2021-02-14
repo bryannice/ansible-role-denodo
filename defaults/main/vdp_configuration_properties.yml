@@ -217,8 +217,8 @@ vdb:
   Parser_TagSets_Attributes: ALL
   GenericLexerFactory_className: com.denodo.parser.escaner.GenericFullLexer4_6
   TokenMarca_visibleTags: SELECT,IMG,MAP,BUTTON,TEXTAREA,INPUT
-  IEBrowserConnection_POOL_HOST: %{SERVERPOOL_HOST}
-  IEBrowserConnection_POOL_PORT: %{SERVERPOOL_PORT}
+  IEBrowserConnection_POOL_HOST: "%{SERVERPOOL_HOST}"
+  IEBrowserConnection_POOL_PORT: "%{SERVERPOOL_PORT}"
   IEBrowserConnection_POOL_NAME: RemoteIEBrowserPoolImpl
   IEBrowserConnection_charsetName: UTF-8
   IEBrowser_NOCACHE: 0
