@@ -4,7 +4,7 @@
 
 - name: Upload and decompress install file
   ansible.builtin.unarchive:
-    create: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
+    creates: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
     dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
     src: "{{ solution_manager_installer.denodo_installer_path }}"
 
