@@ -3,10 +3,11 @@
 solution_manager_installer:
   common: true
   enabled: true
+  denodo_roo_directory: /opt/dendodo
   denodo_installer_path: /data
   derby_port: 11526
   diagnosticmonitoringtool: true
-  install_path:
+  install_path: "{{ denodo_base_directory }}/solution_manager"
   isntall_license_manager_server_service: none
   install_solution_manager_server_service: none
   install_vdp_server_service: none
