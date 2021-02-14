@@ -9,7 +9,7 @@
     src: "{{ solution_manager_installer.denodo_installer_path }}"
 
 - name: Add install config xml
-  ansible.bultin.template:
+  ansible.builtin.template:
     dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer/installer.xml"
     src: linux_installer.j2
 
