@@ -377,7 +377,7 @@ vdb:
   com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_enableAutoSingleUserMode: true
   com_denodo_vdb_engine_session_restriction_ResourceManagerEngine_resourceManagerStatus: ON
   com_denodo_vdb_engine_session_restriction_ResourceManagerEngine_maintainerPeriodInSecs: 20
-  com_denodo_security_file_privilege_generalaccess: *
+  com_denodo_security_file_privilege_generalaccess: "*"
   com_denodo_vdb_interpreter_execution_SelectAction_simplify: true
   com_denodo_vdb_interpreter_execution_SelectAction_summaryRewrite: true
   com_denodo_vdb_interpreter_execution_SelectAction_dataMovement: true
