@@ -131,7 +131,7 @@ vdb:
   queryOptimization_parallelProcessing_customDataSource_dataSourceName:
   com_denodo_vdb_cache_AbstractViewCacheManager_instanceClassName: com.denodo.vdb.cache.ViewCacheManager
   com_denodo_vdb_cache_cacheStatus: OFF
-  com_denodo_vdb_cache_jdbc_serverCacheDataSource: "admin"."vdpcachedatasource"
+  com_denodo_vdb_cache_jdbc_serverCacheDataSource: \"admin\".\"vdpcachedatasource\"
   com_denodo_vdb_cache_jdbc_customCacheDataSourceName: customvdpcachedatasource
   com_denodo_vdb_cache_ViewCacheManager_cacheClassName: com.denodo.util.cache.MapCache
   com_denodo_vdb_cache_ViewCacheManager_maxCacheSize: 10
