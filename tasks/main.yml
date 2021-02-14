@@ -3,7 +3,7 @@
 - include_tasks: variables.yml
 
 - include_tasks: Installer-Tasks.yml
-  when: solution_manager_installer.enabled
+  when: solution_manager_installer.enabled | bool
 
 - include_tasks: SSL-Configuration-Tasks.yml
   when: ssl.enabled
