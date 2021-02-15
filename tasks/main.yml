@@ -3,13 +3,13 @@
 - include_tasks: variables.yml
 
 - include_tasks: Installer-Tasks.yml
-  when: solution_manager_installer.enabled
+  when: solution_manager_installer.enabled|bool
 
 - include_tasks: SSL-Configuration-Tasks.yml
-  when: ssl.enabled
+  when: ssl.enabled|bool
 
 - include_tasks: Denodo-Monitor-Configuration-Tasks.yml
-  when: denodo_monitor.enabled
+  when: denodo_monitor.enabled|bool
 
 #- include_tasks: Post-Installer-Tasks.yml
-#  when: solution_manager_installer.enabled
+#  when: solution_manager_installer.enabled|bool
