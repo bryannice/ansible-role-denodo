@@ -4,4 +4,4 @@
     name: Denodo-License-Manager
     description: Denodo License Manager
     actions:
-      - path: "{{ solution_manager_installer.denodo_installer_path }}/bin/licensemanager_startup.bat"
+      - path: "{{ solution_manager_installer_vars.denodo_installer_path }}/bin/licensemanager_startup.bat"

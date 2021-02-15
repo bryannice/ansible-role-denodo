@@ -2,36 +2,36 @@
 - name: Update VDB Configuration Properties
   ansible.windows.win_template:
     src: conf/vdp/VDBConfiguration.j2
-    dest: "{{ solution_manager_installer.install_path }}/conf/vdp/VDBConfiguration.properties"
+    dest: "{{ solution_manager_installer_vars.install_path }}/conf/vdp/VDBConfiguration.properties"
 
 - name: Update SM Configuration Properties
   ansible.windows.win_template:
     src: conf/solution-manager/SMConfigurationParameters.j2
-    dest: "{{ solution_manager_installer.install_path }}/conf/solution-manager/SMConfigurationParameters.properties"
+    dest: "{{ solution_manager_installer_vars.install_path }}/conf/solution-manager/SMConfigurationParameters.properties"
 
 - name: Update LM Configuration Properties
   ansible.windows.win_template:
     src: conf/license-manager/LMConfigurationParameters.j2
-    dest: "{{ solution_manager_installer.install_path }}/conf/license-manager/LMConfigurationParameters.properties"
+    dest: "{{ solution_manager_installer_vars.install_path }}/conf/license-manager/LMConfigurationParameters.properties"
 
 - name: Update Tomcat Properties
   ansible.windows.win_template:
     src: resources/apache-tomcat/conf/tomcat.j2
-    dest: "{{ solution_manager_installer.install_path }}/resources/apache-tomcat/conf/tomcat.properties"
+    dest: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf/tomcat.properties"
 
 - name: Update Tomcat Server XML
   ansible.windows.win_template:
     src: resources/apache-tomcat/conf/server.j2
-    dest: "{{ solution_manager_installer.install_path }}/resources/apache-tomcat/conf/server.xml"
+    dest: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf/server.xml"
 
 - name: Update SMAdminConfiguration.properties
   ansible.windows.win_template:
     src: conf/solution-manager-web-tool/SMAdminConfiguration.j2
-    dest: "{{ solution_manager_installer.install_path }}/conf/solution-manager-web-tool/SMAdminConfiguration.properties"
+    dest: "{{ solution_manager_installer_vars.install_path }}/conf/solution-manager-web-tool/SMAdminConfiguration.properties"
 
 - name: Create empty jmxssl.properties file
   ansible.windows.win_file:
-    path: "{{ solution_manager_installer.install_path }}/resources/apache-tomcat/conf/jmxssl.properties"
+    path: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf/jmxssl.properties"
     state: touch
 
 - name: Modify jmxssl.properties properties
@@ -40,4 +40,4 @@
     icacls jmxssl.properties /grant SYSTEM:(GR,GW)
     icacls jmxssl.properties /inheritance:r
   args:
-    chdir: "{{ solution_manager_installer.install_path }}/resources/apache-tomcat/conf"
+    chdir: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf"

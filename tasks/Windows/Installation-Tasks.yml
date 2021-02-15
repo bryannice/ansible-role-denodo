@@ -1,32 +1,32 @@
 ---
 - name: Upload Denodo compressed file
   ansible.windows.win_copy:
-    dest: "{{ solution_manager_installer.install_path }}"
+    dest: "{{ solution_manager_installer_vars.install_path }}"
     force: yes
-    src: "{{ solution_manager_installer.denodo_installer_path }}"
+    src: "{{ solution_manager_installer_vars.denodo_installer_path }}"
 
 - name: Decompress install file
   community.windows.win_unzip:
-    creates: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
-    dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
+    creates: "{{ solution_manager_installer_vars.install_path }}/solution_manager_installer_vars"
+    dest: "{{ solution_manager_installer_vars.install_path }}/solution_manager_installer_vars"
     recurse: yes
-    src: "{{ solution_manager_installer.denodo_installer_path }}"
+    src: "{{ solution_manager_installer_vars.denodo_installer_path }}"
 
 - name: Add install config xml
   ansible.windows.win_template:
-    dest: "{{ solution_manager_installer.install_path }}/solution_manager_installer/installer.xml"
+    dest: "{{ solution_manager_installer_vars.install_path }}/solution_manager_installer_vars/installer.xml"
     src: windows_installer.j2
 
 - name: Install Denodo Solution Manager
   ansible.windows.win_shell:
-    cmd: "{{ solution_manager_installer.install_path }}/solution_manager_installer/installer_cli.bat install --autoinstaller {{ solution_manager_installer.install_path }}/solution_manager_installer/installer.xml"
+    cmd: "{{ solution_manager_installer_vars.install_path }}/solution_manager_installer_vars/installer_cli.bat install --autoinstaller {{ solution_manager_installer_vars.install_path }}/solution_manager_installer_vars/installer.xml"
   async: 1000
   poll: 0
-  register: denodo_solution_manager_installer
+  register: denodo_solution_manager_installer_vars
 
 - name: Check when Denodo Solution Manager Completes
   async_status:
-    jid: "{{ denodo_solution_manager_installer.ansible_job_id }}"
+    jid: "{{ denodo_solution_manager_installer_vars.ansible_job_id }}"
   delay: 10
   register: job_result
   retries: 180
@@ -34,5 +34,5 @@
 
 - name: Delete installer directory
   ansible.windows.win_file:
-    path: "{{ solution_manager_installer.install_path }}/solution_manager_installer"
+    path: "{{ solution_manager_installer_vars.install_path }}/solution_manager_installer_vars"
     state: absent
