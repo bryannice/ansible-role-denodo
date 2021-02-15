@@ -9,14 +9,15 @@
 
 - name: Upload and decompress install file
   ansible.builtin.unarchive:
-    creates: "{{ solution_manager_installer_vars.denodo_root_directory }}/solution_manager_installer"
     dest: "{{ solution_manager_installer_vars.denodo_root_directory }}"
+    list_files: yes
     src: "{{ solution_manager_installer_vars.denodo_installer_path }}"
+  register: contents
 
-#- name: Add install config xml
-#  ansible.builtin.template:
-#    dest: "{{ solution_manager_installer_vars.denodo_root_directory }}/solution_manager_installer/installer.xml"
-#    src: linux_installer.j2
+- name: Add install config xml
+  ansible.builtin.template:
+    dest: "{{ contents.files[0] }}/installer.xml"
+    src: linux_installer.j2
 
 #- name: Change installer shell to executable
 #  file:
