@@ -1,31 +1,31 @@
 ---
 - name: Update VDB Configuration Properties
-  template:
+  ansible.builtin.template:
     src: conf/vdp/VDBConfiguration.jinja
     dest: "{{ solution_manager_installer_vars.install_path }}/conf/vdp/VDBConfiguration.properties"
 
 - name: Update SM Configuration Properties
-  template:
+  ansible.builtin.template:
     src: conf/solution-manager/SMConfigurationParameters.jinja
     dest: "{{ solution_manager_installer_vars.install_path }}/conf/solution-manager/SMConfigurationParameters.properties"
 
 - name: Update LM Configuration Properties
-  template:
+  ansible.builtin.template:
     src: conf/license-manager/LMConfigurationParameters.jinja
     dest: "{{ solution_manager_installer_vars.install_path }}/conf/license-manager/LMConfigurationParameters.properties"
 
 - name: Update Tomcat Properties
-  template:
+  ansible.builtin.template:
     src: resources/apache-tomcat/conf/tomcat.jinja
     dest: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf/tomcat.properties"
 
 - name: Update Tomcat Server XML
-  template:
+  ansible.builtin.template:
     src: resources/apache-tomcat/conf/server.jinja
     dest: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf/server.xml"
 
 - name: Update SMAdminConfiguration.properties
-  template:
+  ansible.builtin.template:
     src: conf/solution-manager-web-tool/SMAdminConfiguration.j2
     dest: "{{ solution_manager_installer_vars.install_path }}/conf/solution-manager-web-tool/SMAdminConfiguration.properties"
 
