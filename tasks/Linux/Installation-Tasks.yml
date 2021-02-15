@@ -13,10 +13,10 @@
     dest: "{{ solution_manager_installer_vars.denodo_root_directory }}"
     src: "{{ solution_manager_installer_vars.denodo_installer_path }}"
 
-- name: Add install config xml
-  ansible.builtin.template:
-    dest: "{{ solution_manager_installer_vars.denodo_root_directory }}/solution_manager_installer/installer.xml"
-    src: linux_installer.j2
+#- name: Add install config xml
+#  ansible.builtin.template:
+#    dest: "{{ solution_manager_installer_vars.denodo_root_directory }}/solution_manager_installer/installer.xml"
+#    src: linux_installer.j2
 
 #- name: Change installer shell to executable
 #  file:
