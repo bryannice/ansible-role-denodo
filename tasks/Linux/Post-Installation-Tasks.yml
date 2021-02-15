@@ -1,10 +1,18 @@
 ---
-- name: Copy service shell to systemd location
+- name: Copy service shell to systemd location for Denodo License Manager
   ansible.builtin.template:
-    src: "{{ item }}"
-    dest: "/etc/systemd/system/{{ item.path | basename | regex_replace('\.j2', '\.service') }}"
-  with_fileglob:
-    - "systemd/*"
+    dest: "/etc/systemd/system/denodo-license-manager.service"
+    src: "systemd/denodo-license-manager.j2"
+
+- name: Copy service shell to systemd location for Denodo Solution Manager
+  ansible.builtin.template:
+    dest: "/etc/systemd/system/denodo-solution-manager.service"
+    src: "systemd/denodo-solution-manager.j2"
+
+- name: Copy service shell to systemd location for Denodo Solution Manager Web Tool
+  ansible.builtin.template:
+    dest: "/etc/systemd/system/denodo-solution-manager-web-tool.service"
+    src: "systemd/denodo-solution-manager-web-tool.j2"
 
 - name: Start Denodo License Manager
   ansible.builtin.systemd:
