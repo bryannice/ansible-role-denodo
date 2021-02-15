@@ -18,3 +18,27 @@
     dest: "{{ solution_manager_installer.denodo_root_directory }}/solution_manager_installer/installer.xml"
     src: linux_installer.j2
 
+#- name: Change installer shell to executable
+#  file:
+#    path: "{{ solution_manager_installer.denodo_root_directory }}/solution_manager_installer/installer_cli.sh"
+#    mode: +x
+
+#- name: Install Denodo Solution Manager
+#  shell:
+#    cmd: "{{ solution_manager_installer.denodo_root_directory }}/solution_manager_installer/installer_cli.sh install --autoinstaller {{ solution_manager_installer.install_path }}/solution_manager_installer/installer.xml"
+#  async: 1000
+#  poll: 0
+#  register: denodo_solution_manager_installer
+
+#- name: Check when Denodo Solution Manager Completes
+#  async_status:
+#    jid: "{{ denodo_solution_manager_installer.ansible_job_id }}"
+#  delay: 10
+#  register: job_result
+#  retries: 180
+#  until: job_result.finished
+
+#- name: Remove Denodo solution manager archive
+#  ansible.builtin.file:
+#    path: "{{ solution_manager_installer.denodo_root_directory }}/solution_manager_installer"
+#    state: absent

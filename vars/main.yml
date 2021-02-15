@@ -1,0 +1,79 @@
+---
+solution_manager_installer_vars: |
+  {%- if solution_manager_installer is defined and solution_manager_installer is iterable -%}
+  {{ solution_manager_installer_defaults | combine (solution_manager_installer, recursive=True) }}
+  {%- else -%}
+  {{ solution_manager_installer_defaults }}
+  {%- endif -%}
+denodo_monitor_vars: |
+  {%- if denodo_monitor is defined and denodo_monitor is iterable -%}
+  {{ denodo_monitor_defaults | combine (denodo_monitor, recursive=True) }}
+  {%- else -%}
+  {{ denodo_monitor_defaults }}
+  {%- endif -%}
+design_studio_vars: |
+  {%- if design_studio is defined and design_studio is iterable -%}
+  {{ design_studio_defaults | combine (design_studio, recursive=True) }}
+  {%- else -%}
+  {{ design_studio_defaults }}
+  {%- endif -%}
+lm_configuration_parameters_properties_vars: |
+  {%- if lm_configuration_parameters_properties is defined and lm_configuration_parameters_properties is iterable -%}
+  {{ lm_configuration_parameters_properties_defaults | combine (lm_configuration_parameters_properties, recursive=True) }}
+  {%- else -%}
+  {{ lm_configuration_parameters_properties_defaults }}
+  {%- endif -%}
+scheduler_webadmintool_vars: |
+  {%- if scheduler_webadmintool is defined and scheduler_webadmintool is iterable -%}
+  {{ scheduler_webadmintool_defaults | combine (scheduler_webadmintool, recursive=True) }}
+  {%- else -%}
+  {{ scheduler_webadmintool_defaults }}
+  {%- endif -%}
+sm_admin_configuration_properties_vars: |
+  {%- if sm_admin_configuration_properties is defined and sm_admin_configuration_properties is iterable -%}
+  {{ sm_admin_configuration_properties_defaults | combine (sm_admin_configuration_properties, recursive=True) }}
+  {%- else -%}
+  {{ sm_admin_configuration_properties_defaults }}
+  {%- endif -%}
+sm_configuration_parameters_properties_vars: |
+  {%- if sm_configuration_parameters_properties is defined and sm_configuration_parameters_properties is iterable -%}
+  {{ sm_configuration_parameters_properties_defaults | combine (sm_configuration_parameters_properties, recursive=True) }}
+  {%- else -%}
+  {{ sm_configuration_parameters_properties_defaults }}
+  {%- endif -%}
+ssl_vars: |
+  {%- if ssl is defined and ssl is iterable -%}
+  {{ ssl_defaults | combine (ssl, recursive=True) }}
+  {%- else -%}
+  {{ ssl_defaults }}
+  {%- endif -%}
+solution_manager_sso_vars: |
+  {%- if solution_manager_sso is defined and solution_manager_sso is iterable -%}
+  {{ solution_manager_sso_defaults | combine (solution_manager_sso, recursive=True) }}
+  {%- else -%}
+  {{ solution_manager_sso_defaults }}
+  {%- endif -%}
+sso_token_vars: |
+  {%- if sso_token is defined and sso_token is iterable -%}
+  {{ sso_token_defaults | combine (sso_token, recursive=True) }}
+  {%- else -%}
+  {{ sso_token_defaults }}
+  {%- endif -%}
+tomcat_vars: |
+  {%- if tomcat is defined and tomcat is iterable -%}
+  {{ tomcat_defaults | combine (tomcat, recursive=True) }}
+  {%- else -%}
+  {{ tomcat_defaults }}
+  {%- endif -%}
+vdpadmin_vars: |
+  {%- if vdpadmin is defined and vdpadmin is iterable -%}
+  {{ vdpadmin_defaults | combine (vdpadmin, recursive=True) }}
+  {%- else -%}
+  {{ vdpadmin_defaults }}
+  {%- endif -%}
+vdb_vars: |
+ {%- if vdb is defined and vdb is iterable -%}
+ {{ vdb_defaults | combine (vdb, recursive=True) }}
+ {%- else -%}
+ {{ vdb_defaults }}
+ {%- endif -%}

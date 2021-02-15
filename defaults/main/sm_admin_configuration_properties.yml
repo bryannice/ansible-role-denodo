@@ -1,8 +1,8 @@
 ---
-sm_admin_configuration_properties:
-  com_denodo_vdb_install: "{{ solution_manager_installer.install_path }}"
+sm_admin_configuration_properties_defaults:
+  com_denodo_vdb_install: "{{ solution_manager_installer_defaults.install_path }}"
   com_denodo_solutionmanager_host: localhost
-  com_denodo_solutionmanager_port: "{{ solution_manager_installer.port }}"
+  com_denodo_solutionmanager_port: "{{ solution_manager_installer_defaults.port }}"
   com_denodo_solutionmanager_security_ssl_enabled: false
   com_denodo_solutionmanager_revisions_timeoutInMilliseconds: 1800000
-  sso_confFile: "{{ solution_manager_installer.install_path }}/conf/SSOConfiguration.properties"
+  sso_confFile: "{{ solution_manager_installer_defaults.install_path }}/conf/SSOConfiguration.properties"

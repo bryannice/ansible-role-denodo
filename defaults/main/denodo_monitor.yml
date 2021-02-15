@@ -1,3 +1,3 @@
 ---
-denodo_monitor:
+denodo_monitor_defaults:
   enabled: false

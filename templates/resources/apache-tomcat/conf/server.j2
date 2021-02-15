@@ -47,7 +47,7 @@
 
     <!-- Define the Tomcat Stand-Alone Service -->
     <Service name="${com.denodo.tomcat.engine.name}">
-{% if tomcat.enable_http %}
+{% if tomcat_vars.enable_http %}
         <!-- Define a non-SSL HTTP/1.1 Connector -->
         <Connector port="${com.denodo.tomcat.http.port}"
                    protocol="HTTP/1.1"
@@ -62,7 +62,7 @@
                    compressableMimeType="text/html,text/xml,application/json,application/xml,text/css,text/javascript,application/javascript" />
 {% endif %}
         <!-- Define a SSL Coyote HTTP/1.1 Connector on port 8443 -->
-{% if ssl.enabled %}
+{% if ssl_vars.enabled %}
         <Connector
             port="${com.denodo.tomcat.https.port}"
             protocol="org.apache.coyote.http11.Http11Nio2Protocol"

@@ -1,155 +1,155 @@
 ###############################################################################
 #  SOLUTION MANAGER SERVER CONFIGURATION                                      #
 ###############################################################################
-server.port={{ sm_configuration_parameters_properties.server_port }}
+server.port={{ sm_configuration_parameters_properties_vars.server_port }}
 
 # HTTPS
 {% if ssl.enabled %}
-server.ssl.key-store={{ ssl.key_store }}
-server.ssl.key-store-password={{ ssl.key_store_password }}
-server.ssl.key-store-password.encrypted={{ ssl.key_store_password_encrypted }}
+server.ssl.key-store={{ ssl_vars.key_store }}
+server.ssl.key-store-password={{ ssl_vars.key_store_password }}
+server.ssl.key-store-password.encrypted={{ ssl_vars.key_store_password_encrypted }}
 {% endif %}
 {% if ssl.trustStore_enabled %}
-com.denodo.security.ssl.trustStore={{ ssl.trust_store }}
-com.denodo.security.ssl.trustStorePassword={{ ssl.trust_store_password }}
-com.denodo.security.ssl.trustStorePassword.encrypted={{ ssl.trust_store_password_encrypted }}
+com.denodo.security.ssl.trustStore={{ ssl_vars.trust_store }}
+com.denodo.security.ssl.trustStorePassword={{ ssl_vars.trust_store_password }}
+com.denodo.security.ssl.trustStorePassword.encrypted={{ ssl_vars.trust_store_password_encrypted }}
 {% endif %}
 
 # Spring configuration
-spring.hateoas.use-hal-as-default-json-media-type={{ sm_configuration_parameters_properties.spring_hateoas_use_hal_as_default_json_media_type }}
-spring.data.rest.defaultMediaType={{ sm_configuration_parameters_properties.spring_data_rest_defaultMediaType }}
+spring.hateoas.use-hal-as-default-json-media-type={{ sm_configuration_parameters_properties_vars.spring_hateoas_use_hal_as_default_json_media_type }}
+spring.data.rest.defaultMediaType={{ sm_configuration_parameters_properties_vars.spring_data_rest_defaultMediaType }}
 
 # Timezone
-com.denodo.solutionmanager.timezone={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_timezone }}
+com.denodo.solutionmanager.timezone={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_timezone }}
 # Block size in batch inserts
-com.denodo.solutionmanager.jpaFlushSize={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_jpaFlushSize }}
-com.denodo.solutionmanager.userAgent={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_userAgent }}
+com.denodo.solutionmanager.jpaFlushSize={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_jpaFlushSize }}
+com.denodo.solutionmanager.userAgent={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_userAgent }}
 
 # JVM options
-java.env.DENODO_OPTS_START={{ sm_configuration_parameters_properties.java_env_DENODO_OPTS_START }}
-com.denodo.solutionmanager.rmi.host={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_rmi_host }}
+java.env.DENODO_OPTS_START={{ sm_configuration_parameters_properties_vars.java_env_DENODO_OPTS_START }}
+com.denodo.solutionmanager.rmi.host={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_rmi_host }}
 
-com.denodo.solutionmanager.utils.LicenseManager.iconRoute={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_utils_LicenseManager_iconRoute }}
-com.denodo.vdb.install={{ sm_configuration_parameters_properties.com_denodo_vdb_install }}
+com.denodo.solutionmanager.utils.LicenseManager.iconRoute={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_utils_LicenseManager_iconRoute }}
+com.denodo.vdb.install={{ sm_configuration_parameters_properties_vars.com_denodo_vdb_install }}
 
 
 ###############################################################################
 #  CONNECTION PARAMETERS                                                      #
 ###############################################################################
 # RMI Connection Parameters
-rmi.queryTimeout={{ sm_configuration_parameters_properties.rmi_queryTimeout }}
-rmi.chunkTimeout={{ sm_configuration_parameters_properties.rmi_chunkTimeout }}
-rmi.chunkSize={{ sm_configuration_parameters_properties.rmi_chunkSize }}
+rmi.queryTimeout={{ sm_configuration_parameters_properties_vars.rmi_queryTimeout }}
+rmi.chunkTimeout={{ sm_configuration_parameters_properties_vars.rmi_chunkTimeout }}
+rmi.chunkSize={{ sm_configuration_parameters_properties_vars.rmi_chunkSize }}
 
-rmi.maxActive={{ sm_configuration_parameters_properties.rmi_maxActive }}
-rmi.minIdle={{ sm_configuration_parameters_properties.rmi_minIdle }}
-rmi.maxIdle={{ sm_configuration_parameters_properties.rmi_maxIdle }}
-rmi.maxWait={{ sm_configuration_parameters_properties.rmi_maxWait }}
-rmi.whenExhaustedAction={{ sm_configuration_parameters_properties.rmi_whenExhaustedAction }}
-rmi.testOnBorrow={{ sm_configuration_parameters_properties.rmi_testOnBorrow }}
-rmi.testOnReturn={{ sm_configuration_parameters_properties.rmi_testOnReturn }}
-rmi.testWhileIdle={{ sm_configuration_parameters_properties.rmi_testWhileIdle }}
-rmi.timeBetweenEviction={{ sm_configuration_parameters_properties.rmi_timeBetweenEviction }}
-rmi.numTestsPerEviction={{ sm_configuration_parameters_properties.rmi_numTestsPerEviction }}
-rmi.minEvictableIdleTime={{ sm_configuration_parameters_properties.rmi_minEvictableIdleTime }}
-rmi.softMinEvictableIdleTime={{ sm_configuration_parameters_properties.rmi_softMinEvictableIdleTime }}
-rmi.lifo={{ sm_configuration_parameters_properties.rmi_lifo }}
+rmi.maxActive={{ sm_configuration_parameters_properties_vars.rmi_maxActive }}
+rmi.minIdle={{ sm_configuration_parameters_properties_vars.rmi_minIdle }}
+rmi.maxIdle={{ sm_configuration_parameters_properties_vars.rmi_maxIdle }}
+rmi.maxWait={{ sm_configuration_parameters_properties_vars.rmi_maxWait }}
+rmi.whenExhaustedAction={{ sm_configuration_parameters_properties_vars.rmi_whenExhaustedAction }}
+rmi.testOnBorrow={{ sm_configuration_parameters_properties_vars.rmi_testOnBorrow }}
+rmi.testOnReturn={{ sm_configuration_parameters_properties_vars.rmi_testOnReturn }}
+rmi.testWhileIdle={{ sm_configuration_parameters_properties_vars.rmi_testWhileIdle }}
+rmi.timeBetweenEviction={{ sm_configuration_parameters_properties_vars.rmi_timeBetweenEviction }}
+rmi.numTestsPerEviction={{ sm_configuration_parameters_properties_vars.rmi_numTestsPerEviction }}
+rmi.minEvictableIdleTime={{ sm_configuration_parameters_properties_vars.rmi_minEvictableIdleTime }}
+rmi.softMinEvictableIdleTime={{ sm_configuration_parameters_properties_vars.rmi_softMinEvictableIdleTime }}
+rmi.lifo={{ sm_configuration_parameters_properties_vars.rmi_lifo }}
 
 # JDBC Connection Parameters
-jdbc.local.queryTimeout={{ sm_configuration_parameters_properties.jdbc_local_queryTimeout }}
-jdbc.local.chunkTimeout={{ sm_configuration_parameters_properties.jdbc_local_chunkTimeout }}
-jdbc.local.maxActive={{ sm_configuration_parameters_properties.jdbc_local_maxActive }}
+jdbc.local.queryTimeout={{ sm_configuration_parameters_properties_vars.jdbc_local_queryTimeout }}
+jdbc.local.chunkTimeout={{ sm_configuration_parameters_properties_vars.jdbc_local_chunkTimeout }}
+jdbc.local.maxActive={{ sm_configuration_parameters_properties_vars.jdbc_local_maxActive }}
 
-jdbc.remote.queryTimeout={{ sm_configuration_parameters_properties.jdbc_remote_queryTimeout }}
-jdbc.remote.chunkTimeout={{ sm_configuration_parameters_properties.jdbc_remote_chunkTimeout }}
-jdbc.remote.maxActive={{ sm_configuration_parameters_properties.jdbc_remote_maxActive }}
+jdbc.remote.queryTimeout={{ sm_configuration_parameters_properties_vars.jdbc_remote_queryTimeout }}
+jdbc.remote.chunkTimeout={{ sm_configuration_parameters_properties_vars.jdbc_remote_chunkTimeout }}
+jdbc.remote.maxActive={{ sm_configuration_parameters_properties_vars.jdbc_remote_maxActive }}
 
-jdbc.chunkSize={{ sm_configuration_parameters_properties.jdbc_chunkSize }}
-jdbc.validationQuery={{ sm_configuration_parameters_properties.jdbc_validationQuery }}
-jdbc.minIdle={{ sm_configuration_parameters_properties.jdbc_minIdle }}
-jdbc.maxIdle={{ sm_configuration_parameters_properties.jdbc_maxIdle }}
-jdbc.maxWait={{ sm_configuration_parameters_properties.jdbc_maxWait }}
-jdbc.whenExhaustedAction={{ sm_configuration_parameters_properties.jdbc_whenExhaustedAction }}
-jdbc.testOnBorrow={{ sm_configuration_parameters_properties.jdbc_testOnBorrow }}
-jdbc.testOnReturn={{ sm_configuration_parameters_properties.jdbc_testOnReturn }}
-jdbc.testWhileIdle={{ sm_configuration_parameters_properties.jdbc_testWhileIdle }}
-jdbc.timeBetweenEviction={{ sm_configuration_parameters_properties.jdbc_timeBetweenEviction }}
-jdbc.numTestsPerEviction={{ sm_configuration_parameters_properties.jdbc_numTestsPerEviction }}
-jdbc.minEvictableIdleTime={{ sm_configuration_parameters_properties.jdbc_minEvictableIdleTime }}
-jdbc.kerberosTokenTimeout={{ sm_configuration_parameters_properties.jdbc_kerberosTokenTimeout }}
+jdbc.chunkSize={{ sm_configuration_parameters_properties_vars.jdbc_chunkSize }}
+jdbc.validationQuery={{ sm_configuration_parameters_properties_vars.jdbc_validationQuery }}
+jdbc.minIdle={{ sm_configuration_parameters_properties_vars.jdbc_minIdle }}
+jdbc.maxIdle={{ sm_configuration_parameters_properties_vars.jdbc_maxIdle }}
+jdbc.maxWait={{ sm_configuration_parameters_properties_vars.jdbc_maxWait }}
+jdbc.whenExhaustedAction={{ sm_configuration_parameters_properties_vars.jdbc_whenExhaustedAction }}
+jdbc.testOnBorrow={{ sm_configuration_parameters_properties_vars.jdbc_testOnBorrow }}
+jdbc.testOnReturn={{ sm_configuration_parameters_properties_vars.jdbc_testOnReturn }}
+jdbc.testWhileIdle={{ sm_configuration_parameters_properties_vars.jdbc_testWhileIdle }}
+jdbc.timeBetweenEviction={{ sm_configuration_parameters_properties_vars.jdbc_timeBetweenEviction }}
+jdbc.numTestsPerEviction={{ sm_configuration_parameters_properties_vars.jdbc_numTestsPerEviction }}
+jdbc.minEvictableIdleTime={{ sm_configuration_parameters_properties_vars.jdbc_minEvictableIdleTime }}
+jdbc.kerberosTokenTimeout={{ sm_configuration_parameters_properties_vars.jdbc_kerberosTokenTimeout }}
 
 ###############################################################################
 #  VIRTUAL DATA PORT CONFIGURATION                                            #
 ###############################################################################
 # VDP Configuration File
-com.denodo.solutionmanager.vdp.confFile={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vdp_confFile }}
+com.denodo.solutionmanager.vdp.confFile={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vdp_confFile }}
 # VDP authentication database
-com.denodo.solutionmanager.vdp.database={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vdp_database }}
-com.denodo.solutionmanager.vdp.hostname={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vdp_hostname }}
+com.denodo.solutionmanager.vdp.database={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vdp_database }}
+com.denodo.solutionmanager.vdp.hostname={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vdp_hostname }}
 
 ###############################################################################
 #  SCHEDULER CONFIGURATION                                                    #
 ###############################################################################
 # Waiting time until scheduler finish required actions, in miliseconds
-com.denodo.solutionmanager.scheduler.waitingTime={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_scheduler_waitingTime }}
-com.denodo.solutionmanager.scheduler.maxTryWaiting={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_scheduler_maxTryWaiting }}
+com.denodo.solutionmanager.scheduler.waitingTime={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_scheduler_waitingTime }}
+com.denodo.solutionmanager.scheduler.maxTryWaiting={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_scheduler_maxTryWaiting }}
 # Job execution timeout, in seconds
-com.denodo.solutionmanager.scheduler.jobsExecutionTimeout={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_scheduler_jobsExecutionTimeout }}
+com.denodo.solutionmanager.scheduler.jobsExecutionTimeout={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_scheduler_jobsExecutionTimeout }}
 
 ###############################################################################
 #  VERSION CONTROL SYSTEM CONFIGURATION                                       #
 ###############################################################################
 # VCS options
-com.denodo.solutionmanager.vcs.user={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_user }}
-com.denodo.solutionmanager.vcs.system={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_system }}
-com.denodo.solutionmanager.vcs.url={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_url }}
-com.denodo.solutionmanager.vcs.useDefaultBranch={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_useDefaultBranch }}
-com.denodo.solutionmanager.vcs.branch={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_branch }}
-com.denodo.solutionmanager.vcs.password={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_password }}
-com.denodo.solutionmanager.vcs.useUserAndPassword={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_useUserAndPassword }}
-com.denodo.solutionmanager.vcs.encryptedPassword={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_encryptedPassword }}
-com.denodo.solutionmanager.vcs.localRepositoriesHome={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_localRepositoriesHome }}
-com.denodo.solutionmanager.vcs.tempSVNRepository={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_tempSVNRepository }}
-com.denodo.solutionmanager.vcs.maxTryWaiting={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_maxTryWaiting }}
-com.denodo.solutionmanager.vcs.waitingTime={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_vcs_waitingTime }}
+com.denodo.solutionmanager.vcs.user={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_user }}
+com.denodo.solutionmanager.vcs.system={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_system }}
+com.denodo.solutionmanager.vcs.url={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_url }}
+com.denodo.solutionmanager.vcs.useDefaultBranch={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_useDefaultBranch }}
+com.denodo.solutionmanager.vcs.branch={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_branch }}
+com.denodo.solutionmanager.vcs.password={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_password }}
+com.denodo.solutionmanager.vcs.useUserAndPassword={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_useUserAndPassword }}
+com.denodo.solutionmanager.vcs.encryptedPassword={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_encryptedPassword }}
+com.denodo.solutionmanager.vcs.localRepositoriesHome={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_localRepositoriesHome }}
+com.denodo.solutionmanager.vcs.tempSVNRepository={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_tempSVNRepository }}
+com.denodo.solutionmanager.vcs.maxTryWaiting={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_maxTryWaiting }}
+com.denodo.solutionmanager.vcs.waitingTime={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_vcs_waitingTime }}
 
 ###############################################################################
 #  DEPLOYMENTS CONFIGURATION                                                  #
 ###############################################################################
 # Number of retries for vql execution in delete revisions deployments
-com.denodo.solutionmanager.deployments.deleteRetries={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_deployments_deleteRetries }}
+com.denodo.solutionmanager.deployments.deleteRetries={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_deployments_deleteRetries }}
 # Directory for scripts execution
-com.denodo.solutionmanagerserver.deployments.workDir={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_deployments_workDir }}
+com.denodo.solutionmanagerserver.deployments.workDir={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_deployments_workDir }}
 # Timeout in seconds of the script to execute
-com.denodo.solutionmanager.scripts.timeoutInSeconds={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_scripts_timeoutInSeconds }}
+com.denodo.solutionmanager.scripts.timeoutInSeconds={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_scripts_timeoutInSeconds }}
 
 ###############################################################################
 #  MONITORING CONFIGURATION                                                  #
 ###############################################################################
 # Directory for monitoring
-com.denodo.solutionmanagerserver.monitoring.resourcesDir={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_monitoring_resourcesDir }}
-com.denodo.solutionmanagerserver.monitoring.workDir={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_monitoring_workDir }}
-com.denodo.solutionmanagerserver.monitoring.stopRunningMonitorsOnShutdown={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_monitoring_stopRunningMonitorsOnShutdown }}
-com.denodo.solutionmanagerserver.monitoring.checkRunningMonitorsOnStartup.timeoutInSecs={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_monitoring_checkRunningMonitorsOnStartup_timeoutInSecs }}
+com.denodo.solutionmanagerserver.monitoring.resourcesDir={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_monitoring_resourcesDir }}
+com.denodo.solutionmanagerserver.monitoring.workDir={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_monitoring_workDir }}
+com.denodo.solutionmanagerserver.monitoring.stopRunningMonitorsOnShutdown={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_monitoring_stopRunningMonitorsOnShutdown }}
+com.denodo.solutionmanagerserver.monitoring.checkRunningMonitorsOnStartup.timeoutInSecs={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_monitoring_checkRunningMonitorsOnStartup_timeoutInSecs }}
 
 ###############################################################################
 #  CLOUD CONFIGURATION                                                        #
 ###############################################################################
 # URL of the authentication server
-com.denodo.solutionmanagerserver.authentication.oauth2.serverAccessTokenGeneratorUrl={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_authentication_oauth2_serverAccessTokenGeneratorUrl }}
+com.denodo.solutionmanagerserver.authentication.oauth2.serverAccessTokenGeneratorUrl={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_authentication_oauth2_serverAccessTokenGeneratorUrl }}
 # Base URL to get the available patches list from the Resources Server
-com.denodo.solutionmanagerserver.resourceServerAvailableUpdatesUrl={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_resourceServerAvailableUpdatesUrl }}
+com.denodo.solutionmanagerserver.resourceServerAvailableUpdatesUrl={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_resourceServerAvailableUpdatesUrl }}
 # Base URL to get the list of the available AMIs provided by Denodo from the Resources Server
-com.denodo.solutionmanagerserver.cloud.aws.resourceServerAvailableAmisProvidedUrl={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_cloud_aws_resourceServerAvailableAmisProvidedUrl }}
-com.denodo.solutionmanagerserver.cloud.aws.resourceServerShareAmiUrl={{ sm_configuration_parameters_properties.com_denodo_solutionmanagerserver_cloud_aws_resourceServerShareAmiUrl }}
+com.denodo.solutionmanagerserver.cloud.aws.resourceServerAvailableAmisProvidedUrl={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_cloud_aws_resourceServerAvailableAmisProvidedUrl }}
+com.denodo.solutionmanagerserver.cloud.aws.resourceServerShareAmiUrl={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanagerserver_cloud_aws_resourceServerShareAmiUrl }}
 
 ###############################################################################
 #  SSO CONFIGURATION                                                          #
 ###############################################################################
-sso.confFile={{ sm_configuration_parameters_properties.sso_confFile }}
-sso.server.confFile={{ sm_configuration_parameters_properties.sso_server_confFile }}
+sso.confFile={{ sm_configuration_parameters_properties_vars.sso_confFile }}
+sso.server.confFile={{ sm_configuration_parameters_properties_vars.sso_server_confFile }}
 
 ###############################################################################
 #  AWS CONFIGURATION                                                          #
 ###############################################################################
-com.denodo.solutionmanager.cloud.aws.supportedInstanceTypes={{ sm_configuration_parameters_properties.com_denodo_solutionmanager_cloud_aws_supportedInstanceTypes }}
+com.denodo.solutionmanager.cloud.aws.supportedInstanceTypes={{ sm_configuration_parameters_properties_vars.com_denodo_solutionmanager_cloud_aws_supportedInstanceTypes }}

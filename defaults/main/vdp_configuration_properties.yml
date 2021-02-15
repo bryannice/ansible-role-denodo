@@ -1,13 +1,13 @@
 ---
 # Virtual DataPort Configuration File
-vdb:
-  com_denodo_vdb_install: "{{ solution_manager_installer.install_path }}"
-  com_denodo_vdb_workDir: "{{ solution_manager_installer.install_path }}/work/vdp"
-  com_denodo_vdb_jdbcDriversDir: "{{ solution_manager_installer.install_path }}/extensions/thirdparty/lib"
-  com_denodo_vdb_jdbcDriversLibDir: "{{ solution_manager_installer.install_path }}/lib/extensions/jdbc-drivers"
-  com_denodo_vdb_jdbcDriversExternalLibDir: "{{ solution_manager_installer.install_path }}/lib/extensions/jdbc-drivers-external"
-  com_denodo_vdb_jdbcOtherDriversExternalLibDir: "{{ solution_manager_installer.install_path }}/lib/extensions/jdbc-drivers-other"
-  com_denodo_vdb_jarsDir: "{{ solution_manager_installer.install_path }}/metadata/db/jar"
+vdb_defaults:
+  com_denodo_vdb_install: "{{ solution_manager_installer_defaults.install_path }}"
+  com_denodo_vdb_workDir: "{{ solution_manager_installer_defaults.install_path }}/work/vdp"
+  com_denodo_vdb_jdbcDriversDir: "{{ solution_manager_installer_defaults.install_path }}/extensions/thirdparty/lib"
+  com_denodo_vdb_jdbcDriversLibDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/jdbc-drivers"
+  com_denodo_vdb_jdbcDriversExternalLibDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/jdbc-drivers-external"
+  com_denodo_vdb_jdbcOtherDriversExternalLibDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/jdbc-drivers-other"
+  com_denodo_vdb_jarsDir: "{{ solution_manager_installer_defaults.install_path }}/metadata/db/jar"
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_hostName: localhost
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_port: 19999
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_shutdownPort: 19998
@@ -15,7 +15,7 @@ vdb:
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_registryURL: localhost
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_registryPort: 19997
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_factoryPort: 19995
-  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_iconRoute: "{{ solution_manager_installer.install_path }}/resources/vdp/ico"
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_iconRoute: "{{ solution_manager_installer_defaults.install_path }}/resources/vdp/ico"
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_maxWorkers: 0
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiMinWorkers: 4
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiMaxWorkers: 100
@@ -24,7 +24,7 @@ vdb:
   com_denodo_vdb_vdbinterface_server_VDBManagerImpl_refreshMBeansPeriod: 0
   com_denodo_vdb_interpreter_execution_Action_help_path: /com/denodo/vdb/interpreter/parser/help/
   com_denodo_vdb_catalog_view_JoinView_defaultNestedParallelNumber: 5
-  derby_system_home: "{{ solution_manager_installer.install_path }}/metadata/db"
+  derby_system_home: "{{ solution_manager_installer_defaults.install_path }}/metadata/db"
   com_denodo_vdb_catalog_storage_DBDerbyStorageManager_databaseName: dbmetadata
   com_denodo_vdb_engine_optimize_Optimizer_instanceClassName: com.denodo.vdb.engine.optimize.LowestCostOptimizer
   com_denodo_vdb_engine_thread_ThreadPool_maxThreads: 300
@@ -45,13 +45,13 @@ vdb:
   com_denodo_vdb_engine_swap_SwapManager_maxBlockSizeInKB: 200
   com_denodo_vdb_engine_swap_SwapManager_swapDir: ../work/vdp/swap
   com_denodo_vdb_catalog_type_DecimalPrecision: 38
-  com_denodo_vdb_catalog_map_SimpleMap_mapPath: "{{ solution_manager_installer.install_path }}/setup/vdp/metadata/properties/databases/"
+  com_denodo_vdb_catalog_map_SimpleMap_mapPath: "{{ solution_manager_installer_defaults.install_path }}/setup/vdp/metadata/properties/databases/"
   com_denodo_vdb_catalog_map_SimpleMap_mapDirectory: maps/
-  com_denodo_vdb_misc_PropertiesMap_fileMapsPath_i18n: "{{ solution_manager_installer.install_path }}/setup/vdp/metadata/properties/i18n/"
-  com_denodo_vdb_catalog_wrapper_MetaWrapper_wrapperPath: "{{ solution_manager_installer.install_path }}/metadata/db/"
+  com_denodo_vdb_misc_PropertiesMap_fileMapsPath_i18n: "{{ solution_manager_installer_defaults.install_path }}/setup/vdp/metadata/properties/i18n/"
+  com_denodo_vdb_catalog_wrapper_MetaWrapper_wrapperPath: "{{ solution_manager_installer_defaults.install_path }}/metadata/db/"
   com_denodo_vdb_catalog_wrapper_MetaWrapper_jarDir: jar
-  com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_suntoolslibdir: "{{ solution_manager_installer.install_path }}/lib/sun-tools"
-  com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axislibdir: "{{ solution_manager_installer.install_path }}/lib/contrib"
+  com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_suntoolslibdir: "{{ solution_manager_installer_defaults.install_path }}/lib/sun-tools"
+  com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axislibdir: "{{ solution_manager_installer_defaults.install_path }}/lib/contrib"
   com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axisjars: commons-discovery.jar,denodo-axis-jaxrpc.jar,denodo-axis-saaj.jar,denodo-axis-rt-core.jar,denodo-axis-rt-transport-jms.jar
   com_denodo_parser_connection_html_ConnectionParser_defaultConnection: http.CommonsHttpClientConnection,120000
   com_denodo_vdb_misc_connection_util_ConnectionParser_defaultConnection: http.CommonsHttpClientConnection,120000
@@ -63,8 +63,8 @@ vdb:
   com_denodo_vdb_catalog_database_Database_maxCacheSize: 0
   com_denodo_vdb_catalog_database_Database_objectTimeToLive: 0
   com_denodo_vdb_catalog_database_Database_cacheMaintainerTaskPeriod: 0
-  com_denodo_vdb_catalog_database_Database_databasePath: "{{ solution_manager_installer.install_path }}/metadata/db/"
-  com_denodo_vdb_catalog_database_Database_databasePropertiesPath: "{{ solution_manager_installer.install_path }}/metadata/db/properties/"
+  com_denodo_vdb_catalog_database_Database_databasePath: "{{ solution_manager_installer_defaults.install_path }}/metadata/db/"
+  com_denodo_vdb_catalog_database_Database_databasePropertiesPath: "{{ solution_manager_installer_defaults.install_path }}/metadata/db/properties/"
   com_denodo_vdb_catalog_database_Database_adminDatabase: admin
   com_denodo_vdb_catalog_database_identifiersCharset: unicode
   com_denodo_vdb_misc_datasource_JDBCDataSource_pool_initialSize: 4
@@ -113,7 +113,7 @@ vdb:
   com_denodo_vdb_interpreter_execution_SelectAction_sendTraceOnError: true
   com_denodo_vdb_interpreter_execution_SelectAction_saveTimesInTrace: false
   com_denodo_vdb_interpreter_execution_saveTrace: ALL_FULL
-  com_denodo_vdb_interpreter_execution_saveTraceDir: "{{ solution_manager_installer.install_path }}/logs/vdp/trace"
+  com_denodo_vdb_interpreter_execution_saveTraceDir: "{{ solution_manager_installer_defaults.install_path }}/logs/vdp/trace"
   com_denodo_vdb_engine_RowQueueSizeInMB: 10
   com_denodo_vdb_engine_RowQueueNotifyPercent: 0.2
   com_denodo_vdb_misc_connection_ws_SocketTimeoutMillis: 1800000
@@ -175,15 +175,15 @@ vdb:
   com_denodo_vdb_http_userAgent:
   com_denodo_tomcat_webapps: sso,denodo-restfulws,denodo-odata4-service,denodo-graphql-service
   com_denodo_webcontainer_startonstartup: on
-  com_denodo_wsgenerator_workDir: "{{ solution_manager_installer.install_path }}/work/vdp"
-  com_denodo_vdb_wsgenerator_common_suntoolslibdir: "{{ solution_manager_installer.install_path }}/lib/sun-tools"
-  com_denodo_vdb_wsgenerator_common_axislibdir: "{{ solution_manager_installer.install_path }}/lib/contrib"
+  com_denodo_wsgenerator_workDir: "{{ solution_manager_installer_defaults.install_path }}/work/vdp"
+  com_denodo_vdb_wsgenerator_common_suntoolslibdir: "{{ solution_manager_installer_defaults.install_path }}/lib/sun-tools"
+  com_denodo_vdb_wsgenerator_common_axislibdir: "{{ solution_manager_installer_defaults.install_path }}/lib/contrib"
   com_denodo_vdb_wsgenerator_common_axisjars: denodo-axis-rt-core.jar,commons-discovery.jar,denodo-axis-jaxrpc.jar,denodo-axis-saaj.jar,denodo-axis-rt-transport-jms.jar
-  com_denodo_vdb_wsgenerator_common_baselibdir: "{{ solution_manager_installer.install_path }}/lib"
+  com_denodo_vdb_wsgenerator_common_baselibdir: "{{ solution_manager_installer_defaults.install_path }}/lib"
   com_denodo_vdb_wsgenerator_common_compilationjars: contrib/commons-logging.jar,contrib/denodo-commons-interpolator.jar,contrib/log4j-api.jar,contrib/log4j-core.jar,contrib/wss4j.jar,contrib/denodo-vdp-wsgenerator-runtime.jar,contrib/commons-betwixt.jar,contrib/commons-beanutils.jar,vdp-client-core/denodo-vdp-client.jar,../resources/apache-tomcat/lib/servlet-api.jar
   com_denodo_vdb_wsgenerator_common_warjars: contrib/opensaml-core.jar,contrib/opensaml-saml-api.jar,contrib/opensaml-saml-impl.jar,contrib/java-support.jar,contrib/metrics-core.jar,contrib/Saxon-HE.jar,contrib/denodo-commons-interpolator.jar,contrib/log4j-api.jar,contrib/log4j-core.jar,contrib/denodo-wss4j.jar,contrib/xmlsec.jar,contrib/denodo-vdp-wsgenerator-runtime.jar,,contrib/denodo-axis-saaj.jar,contrib/denodo-axis-jaxrpc.jar,contrib/denodo-axis-rt-core.jar,contrib/denodo-axis-rt-transport-jms.jar,contrib/commons-discovery.jar,contrib/commons-betwixt.jar,contrib/commons-beanutils.jar,contrib/commons-digester.jar,contrib/commons-collections.jar,contrib/commons-collections4.jar,contrib/commons-logging.jar,contrib/commons-lang.jar,contrib/commons-lang3.jar,contrib/java_cup_runtime.jar,contrib/commons-pool2.jar,contrib/wsdl4j.jar,ws-contrib/denodo-commons-util-web.jar,vdp-client-core/denodo-vdp-client.jar,contrib/denodo-asyncrmi.jar,contrib/commons-codec.jar,contrib/icu4j.jar,contrib/jms.jar,contrib/stax.jar,contrib/jackson-core.jar,contrib/jackson-databind.jar,contrib/istack-commons-runtime.jar,contrib/jaxb-runtime.jar,contrib/jaxb-api.jar,/ws-contrib/javax.activation-api.jar,contrib/javax.xml.soap-api.jar
   com_denodo_vdb_wsgenerator_common_tomcatjars: contrib/denodo-axis-jaxrpc.jar,contrib/denodo-axis-rt-core.jar,contrib/denodo-axis-rt-transport-jms.jar,contrib/denodo-vdp-wsgenerator-runtime.jar,contrib/denodo-wss4j.jar
-  com_denodo_vdb_wsgenerator_common_resourcesdir: "{{ solution_manager_installer.install_path }}/resources/db/wsgenerator"
+  com_denodo_vdb_wsgenerator_common_resourcesdir: "{{ solution_manager_installer_defaults.install_path }}/resources/db/wsgenerator"
   com_denodo_vdb_wsgenerator_common_log4j2file: log4j2.xml
   com_denodo_vdb_wsgenerator_common_cssfile: default.css
   com_denodo_vdb_wsgenerator_common_webxmltemplate: web.xml.template
@@ -191,7 +191,7 @@ vdb:
   com_denodo_vdb_wsgenerator_common_portlet168xmltemplate: portlet.portletv168.xml.template
   com_denodo_vdb_wsgenerator_common_portlet286xmltemplate: portlet.portletv286.xml.template
   com_denodo_wsgenerator_restfulws_jarsForInternalDeployments: denodo-vdp-wsgenerator-runtime,jackson-jaxrs-json-provider,swagger-jaxrs
-  com_denodo_wsgenerator_restfulws_warFile: "{{ solution_manager_installer.install_path }}/webapps/denodo-restfulws/denodo-restfulws.war"
+  com_denodo_wsgenerator_restfulws_warFile: "{{ solution_manager_installer_defaults.install_path }}/webapps/denodo-restfulws/denodo-restfulws.war"
   com_denodo_wsgenerator_restfulws_timezone: GMT
   com_denodo_wsgenerator_restfulws_cors_supportedMethods: GET, POST, PUT, DELETE, HEAD, OPTIONS
   com_denodo_wsgenerator_restfulws_cors_supportedHeaders: Accept, Accept-Language, Authorization, Cache-Control, Content-Language, Content-Type, X-Requested-With
@@ -203,8 +203,8 @@ vdb:
   com_denodo_wsgenerator_widget_portlet_cache_expirationtime: 30
   com_denodo_wsgenerator_widget_portlet_cache_scope: PRIVATE
   com_denodo_wsgenerator_widget_portlet_portletjars: contrib/denodo-commons-interpolator.jar,portlet-client-core/denodo-vdp-wsgenerator-portlet-client.jar,contrib/denodo-vdp-wsgenerator-runtime.jar,contrib/commons-discovery.jar,contrib/commons-betwixt.jar,contrib/commons-beanutils.jar,contrib/commons-digester.jar,contrib/commons-collections.jar,contrib/commons-collections4.jar,contrib/commons-logging.jar,contrib/commons-lang.jar,contrib/commons-lang3.jar,contrib/java_cup_runtime.jar,contrib/commons-pool2.jar,ws-contrib/denodo-commons-util-web.jar,vdp-client-core/denodo-vdp-client.jar,contrib/log4j-api.jar,contrib/log4j-core.jar,contrib/jstl-api.jar,contrib/taglibs-standard-impl.jar,contrib/taglibs-standard-jstlel.jar,contrib/commons-codec.jar,contrib/icu4j.jar,contrib/stax.jar
-  com_denodo_wsgenerator_widget_webpartdir: "{{ solution_manager_installer.install_path }}/resources/db/wsgenerator/widget/webpart"
-  URLBASE: "{{ solution_manager_installer.install_path }}/"
+  com_denodo_wsgenerator_widget_webpartdir: "{{ solution_manager_installer_defaults.install_path }}/resources/db/wsgenerator/widget/webpart"
+  URLBASE: "{{ solution_manager_installer_defaults.install_path }}/"
   PARSERMETADATA: metadata/parser/wes/
   PAQUETE_ESCANERS: com.denodo.parser.escaner.
   PAQUETE_FUNCIONES: com.denodo.parser.interpolator.function.
@@ -213,7 +213,7 @@ vdb:
   JUEGO_POR_DEFECTO: STANDARD
   NOMBRE_NIVELES_POR_DEFECTO: Level_
   NOMBRE_PATRONES_POR_DEFECTO: Pattern_
-  PARSER_RELOAD_DIR: "{{ solution_manager_installer.install_path }}/extensions/dev/target/classes_wes/"
+  PARSER_RELOAD_DIR: "{{ solution_manager_installer_defaults.install_path }}/extensions/dev/target/classes_wes/"
   Parser_TagSets_Attributes: ALL
   GenericLexerFactory_className: com.denodo.parser.escaner.GenericFullLexer4_6
   TokenMarca_visibleTags: SELECT,IMG,MAP,BUTTON,TEXTAREA,INPUT
@@ -236,13 +236,13 @@ vdb:
   com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_OraclePlugin_storedProcedure_table_maxlen: 100
   com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_OraclePlugin_storedProcedure_register_maxlen: 512
   ITPCore_CUSTOM_FUNCTION_LOCATOR: com.denodo.vdb.engine.wrapper.raw.html.customfunctions.ScriptAccessCustomFunctionLocator
-  com_denodo_itp_admin_custom_components_dir: "{{ solution_manager_installer.install_path }}/metadata/itp-custom-components-wes"
-  ITPilot_tempDirectory: "{{ solution_manager_installer.install_path }}/temp"
+  com_denodo_itp_admin_custom_components_dir: "{{ solution_manager_installer_defaults.install_path }}/metadata/itp-custom-components-wes"
+  ITPilot_tempDirectory: "{{ solution_manager_installer_defaults.install_path }}/temp"
   com_denodo_vdb_engine_wrapper_raw_html_ItpAccessFactory_jars: lib/iebrowser-core/denodo-iebrowser.jar,lib/itp-runtime/js.jar,lib/itp-runtime/denodo-itpmodel-runtime.jar,lib/itp-contrib/denodo-itpcore.jar,lib/denodo-vdp-adapters/denodo-itp-adapter/denodo-vdp-itp-adapter.jar
   com_denodo_iebrowser_connection_http_DenodoBrowserPoolConnection_jars: lib/iebrowser-core/denodo-iebrowser.jar,lib/itp-runtime/js.jar
   com_denodo_itp_component_core_evaluator_custom_ScriptRunner_jars: lib/iebrowser-core/denodo-iebrowser.jar,lib/itp-runtime/js.jar,lib/itp-contrib/denodo-itpcore.jar,extensions/thirdparty/itp-lib
   com_denodo_util_net_ProxyUtil_jars: lib/itp-runtime/js.jar,lib/contrib/denodo-commons-util.jar
-  Converter_tempDirectory: "{{ solution_manager_installer.install_path }}/temp"
+  Converter_tempDirectory: "{{ solution_manager_installer_defaults.install_path }}/temp"
   ConverterWordToHtmlFactory_converterClassName: com.denodo.util.converters.word.OOConverterWordToHtml
   ConverterExcelToHtmlFactory_converterClassName: com.denodo.util.converters.excel.OOConverterExcelToHtml
   ConverterPdfToHtmlFactory_converterClassName: com.denodo.util.converters.pdf.TextAcrobatConverterPdfToHtml
@@ -288,8 +288,8 @@ vdb:
   java_env_DENODO_OPTS_STOP:
   service_wrapper_WRAPPER_PING_INTERVAL: 30
   service_wrapper_WRAPPER_PING_TIMEOUT: 150
-  com_denodo_vdb_essbasePluginsDir: "{{ solution_manager_installer.install_path }}/lib/extensions/essbase-plugins"
-  com_denodo_vdb_essbaseDriversDir: "{{ solution_manager_installer.install_path }}/lib/extensions/essbase-drivers"
+  com_denodo_vdb_essbasePluginsDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/essbase-plugins"
+  com_denodo_vdb_essbaseDriversDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/essbase-drivers"
   com_denodo_essbaseJarName: denodo-essbase
   com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_12: false
   com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_11: false
@@ -304,7 +304,7 @@ vdb:
   com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_password:
   com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_useUserAndPassword:
   com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_encryptedPassword:
-  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_localRepositoriesHome: "{{ solution_manager_installer.install_path }}/work/vdp/repository"
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_localRepositoriesHome: "{{ solution_manager_installer_defaults.install_path }}/work/vdp/repository"
   com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_lsopt: 1
   com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection: 0
   com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_tfs: 3

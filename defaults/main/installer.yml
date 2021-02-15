@@ -1,6 +1,6 @@
 ---
 # defaults file for solution manager
-solution_manager_installer:
+solution_manager_installer_defaults:
   common: true
   enabled: true
   denodo_roo_directory: /opt/dendodo

@@ -3,8 +3,8 @@
 
   <Appenders>
 
-    <RollingFile name="FILEOUT" fileName="{{ solution_manager_installer.install_path }}/logs/solution-manager/solution-manager.log"
-        filePattern="{{ solution_manager_installer.install_path }}/logs/solution-manager/solution-manager%d{yyyy-MM-dd}.%i.log">
+    <RollingFile name="FILEOUT" fileName="{{ solution_manager_installer_vars.install_path }}/logs/solution-manager/solution-manager.log"
+        filePattern="{{ solution_manager_installer_vars.install_path }}/logs/solution-manager/solution-manager%d{yyyy-MM-dd}.%i.log">
       <Policies>
         <SizeBasedTriggeringPolicy size="10 MB" />
       </Policies>

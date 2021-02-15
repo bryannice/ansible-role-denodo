@@ -27,7 +27,7 @@ format.datepattern=yyyy-MM-dd'T'HH:mm:ss.SSS
 # See more information about this in the section "Enable SSL Connection in the
 # Denodo Platform Servers".
 {% if ssl.trust_store_enabled %}
-com.denodo.security.ssl.trustStore={{ ssl.trust_store }}
+com.denodo.security.ssl.trustStore={{ ssl_vars.trust_store }}
 {% endif %}
 
 # =============================================================================

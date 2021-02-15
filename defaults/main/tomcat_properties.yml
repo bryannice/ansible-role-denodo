@@ -1,22 +1,22 @@
 ---
-tomcat:
+tomcat_defaults:
   enable_http: true
-  com_denodo_tomcat_home: "{{ solution_manager_installer.install_path }}/resources/apache-tomcat"
+  com_denodo_tomcat_home: "{{ solution_manager_installer_defaults.install_path }}/resources/apache-tomcat"
   com_denodo_vdp_host: localhost
-  com_denodo_tomcat_http_port: "{{ solution_manager_installer.wc_http_port }}"
-  com_denodo_tomcat_shutdown_port: "{{ solution_manager_installer.wc_shutdown_port }}"
-  com_denodo_tomcat_jmx_port: "{{ solution_manager_installer.wc_jmx_port }}"
+  com_denodo_tomcat_http_port: "{{ solution_manager_installer_defaults.wc_http_port }}"
+  com_denodo_tomcat_shutdown_port: "{{ solution_manager_installer_defaults.wc_shutdown_port }}"
+  com_denodo_tomcat_jmx_port: "{{ solution_manager_installer_defaults.wc_jmx_port }}"
   com_denodo_tomcat_jmx_rmi_host: localhost
-  com_denodo_tomcat_jmx_rmi_port: "{{ solution_manager_installer.wc_aux_jmx_port }}"
+  com_denodo_tomcat_jmx_rmi_port: "{{ solution_manager_installer_defaults.wc_aux_jmx_port }}"
   com_denodo_tomcat_jmx_auth_enabled: false
-  com_denodo_tomcat_jmx_auth_access_file: "{{ solution_manager_installer.install_path }}/resources/apache-tomcat/conf/jmxremote.access"
-  com_denodo_tomcat_jmx_auth_password_file: "{{ solution_manager_installer.install_path }}/resources/apache-tomcat/conf/jmxremote.password"
+  com_denodo_tomcat_jmx_auth_access_file: "{{ solution_manager_installer_defaults.install_path }}/resources/apache-tomcat/conf/jmxremote.access"
+  com_denodo_tomcat_jmx_auth_password_file: "{{ solution_manager_installer_defaults.install_path }}/resources/apache-tomcat/conf/jmxremote.password"
   com_denodo_tomcat_engine_name: DenodoPlatform-8.0
   com_denodo_tomcat_export_dirname: export
   com_denodo_tomcat_http_log: false
   com_denodo_tomcat_https_port: 19443
   java_env_DENODO_OPTS_START: -Xmx1024m -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true -Dorg.apache.catalina.connector.CoyoteAdapter.ALLOW_BACKSLASH=true -Djava.locale.providers=COMPAT,SPI
-  com_denodo_tomcat_jmx_runtimePort: "{{ solution_manager_installer.wc_jmx_port }}"
-  com_denodo_tomcat_shutdown_runtimePort: "{{ solution_manager_installer.wc_shutdown_port }}"
-  com_denodo_tomcat_http_runtimePort: "{{ solution_manager_installer.wc_http_port }}"
+  com_denodo_tomcat_jmx_runtimePort: "{{ solution_manager_installer_defaults.wc_jmx_port }}"
+  com_denodo_tomcat_shutdown_runtimePort: "{{ solution_manager_installer_defaults.wc_shutdown_port }}"
+  com_denodo_tomcat_http_runtimePort: "{{ solution_manager_installer_defaults.wc_http_port }}"
   com_denodo_tomcat_https_runtimePort:

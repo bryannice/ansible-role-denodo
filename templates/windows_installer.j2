@@ -6,22 +6,22 @@
         <userInput>
             <entry key="LICENSE_FILE" value=""/>
             <entry key="SETUP_TYPE" value="custom"/>
-            <entry key="INSTALL_PATH" value="{{ solution_manager_installer.install_path }}r"/>
+            <entry key="INSTALL_PATH" value="{{ solution_manager_installer_vars.install_path }}r"/>
         </userInput>
     </com.izforge.izpack.panels.UserInputPanel>
     <com.izforge.izpack.panels.DenodoTreePacksPanel id="UNKNOWN (com.izforge.izpack.panels.DenodoTreePacksPanel)">
-        <pack name="Common" selected="{{ solution_manager_installer.common }}"/>
-        <pack name="VirtualDataPort" selected="{{ solution_manager_installer.virtualdataport }}"/>
-        <pack name="vdpadmintool" selected="{{ solution_manager_installer.vdpadmintool }}"/>
-        <pack name="webdesignstudio" selected="{{ solution_manager_installer.webdesignstudio }}"/>
-        <pack name="vdpserver" selected="{{ solution_manager_installer.vdpserver }}"/>
-        <pack name="diagnosticmonitoringtool" selected="{{ solution_manager_installer.diagnosticmonitoringtool }}"/>
-        <pack name="SolutionManager" selected="{{ solution_manager_installer.solutionmanager }}"/>
-        <pack name="solutionmanagerserver" selected="{{ solution_manager_installer.solutionmanagerserver }}"/>
-        <pack name="licensemanagerserver" selected="{{ solution_manager_installer.licensemanagerserver }}"/>
-        <pack name="solutionmanagerwebtool" selected="{{ solution_manager_installer.solutionmanagerwebtool }}"/>
-        <pack name="Scheduler" selected="{{ solution_manager_installer.scheduler }}"/>
-        <pack name="scheduleradmin" selected="{{ solution_manager_installer.scheduleradmin }}"/>
+        <pack name="Common" selected="{{ solution_manager_installer_vars.common }}"/>
+        <pack name="VirtualDataPort" selected="{{ solution_manager_installer_vars.virtualdataport }}"/>
+        <pack name="vdpadmintool" selected="{{ solution_manager_installer_vars.vdpadmintool }}"/>
+        <pack name="webdesignstudio" selected="{{ solution_manager_installer_vars.webdesignstudio }}"/>
+        <pack name="vdpserver" selected="{{ solution_manager_installer_vars.vdpserver }}"/>
+        <pack name="diagnosticmonitoringtool" selected="{{ solution_manager_installer_vars.diagnosticmonitoringtool }}"/>
+        <pack name="SolutionManager" selected="{{ solution_manager_installer_vars.solutionmanager }}"/>
+        <pack name="solutionmanagerserver" selected="{{ solution_manager_installer_vars.solutionmanagerserver }}"/>
+        <pack name="licensemanagerserver" selected="{{ solution_manager_installer_vars.licensemanagerserver }}"/>
+        <pack name="solutionmanagerwebtool" selected="{{ solution_manager_installer_vars.solutionmanagerwebtool }}"/>
+        <pack name="Scheduler" selected="{{ solution_manager_installer_vars.scheduler }}"/>
+        <pack name="scheduleradmin" selected="{{ solution_manager_installer_vars.scheduleradmin }}"/>
     </com.izforge.izpack.panels.DenodoTreePacksPanel>
     <com.izforge.izpack.panels.InstallValidatorPanel id="UNKNOWN (com.izforge.izpack.panels.InstallValidatorPanel)">
         <entry key="SELECTED_MODULES_VDP" value="VirtualDataPort,vdpserver,vdpadmintool,webdesignstudio,diagnosticmonitoringtool,"/>
@@ -29,38 +29,38 @@
         <entry key="SELECTED_MODULES_COMMON" value="Common,"/>
     </com.izforge.izpack.panels.InstallValidatorPanel>
     <com.izforge.izpack.panels.LocaleChooserPanel id="UNKNOWN (com.izforge.izpack.panels.LocaleChooserPanel)">
-        <entry key="SELECTED_LOCALE" value="{{ solution_manager_installer.locale }}"/>
+        <entry key="SELECTED_LOCALE" value="{{ solution_manager_installer_vars.locale }}"/>
     </com.izforge.izpack.panels.LocaleChooserPanel>
     <com.izforge.izpack.panels.UserInputPanel id="UNKNOWN (com.izforge.izpack.panels.UserInputPanel)">
         <userInput>
-            <entry key="SERVER_ASYNCRMI_PORT" value="{{ solution_manager_installer.server_asyncrmi_port }}"/>
-            <entry key="SERVER_ODBC_PORT" value="{{ solution_manager_installer.server_odbc_port }}"/>
-            <entry key="SERVER_SHUTDOWNPORT" value="{{ solution_manager_installer.server_shutdownport }}"/>
-            <entry key="SERVER_PORT" value="{{ solution_manager_installer.server_port }}"/>
-            <entry key="SERVER_FACTORY_PORT" value="{{ solution_manager_installer.server_factory_port }}"/>
-            <entry key="INSTALL_VDP_SERVER_SERVICE" value="{{ solution_manager_installer.install_vdp_server_service }}"/>
+            <entry key="SERVER_ASYNCRMI_PORT" value="{{ solution_manager_installer_vars.server_asyncrmi_port }}"/>
+            <entry key="SERVER_ODBC_PORT" value="{{ solution_manager_installer_vars.server_odbc_port }}"/>
+            <entry key="SERVER_SHUTDOWNPORT" value="{{ solution_manager_installer_vars.server_shutdownport }}"/>
+            <entry key="SERVER_PORT" value="{{ solution_manager_installer_vars.server_port }}"/>
+            <entry key="SERVER_FACTORY_PORT" value="{{ solution_manager_installer_vars.server_factory_port }}"/>
+            <entry key="INSTALL_VDP_SERVER_SERVICE" value="{{ solution_manager_installer_vars.install_vdp_server_service }}"/>
         </userInput>
     </com.izforge.izpack.panels.UserInputPanel>
     <com.izforge.izpack.panels.UserInputPanel id="UNKNOWN (com.izforge.izpack.panels.UserInputPanel)">
         <userInput>
-            <entry key="SOLUTIONMANAGER_PORT" value="{{ solution_manager_installer.port }}"/>
-            <entry key="INSTALL_SOLUTIONMANAGER_SERVER_SERVICE" value="{{ solution_manager_installer.install_solution_manager_server_service }}"/>
+            <entry key="SOLUTIONMANAGER_PORT" value="{{ solution_manager_installer_vars.port }}"/>
+            <entry key="INSTALL_SOLUTIONMANAGER_SERVER_SERVICE" value="{{ solution_manager_installer_vars.install_solution_manager_server_service }}"/>
         </userInput>
     </com.izforge.izpack.panels.UserInputPanel>
     <com.izforge.izpack.panels.UserInputPanel id="UNKNOWN (com.izforge.izpack.panels.UserInputPanel)">
         <userInput>
-            <entry key="LICENSEMANAGER_PORT" value="{{ solution_manager_installer.licensemanager_port }}"/>
-            <entry key="DERBY_PORT" value="{{ solution_manager_installer.derby_port }}"/>
-            <entry key="INSTALL_LICENSEMANAGER_SERVER_SERVICE" value="{{ solution_manager_installer.isntall_license_manager_server_service }}"/>
+            <entry key="LICENSEMANAGER_PORT" value="{{ solution_manager_installer_vars.licensemanager_port }}"/>
+            <entry key="DERBY_PORT" value="{{ solution_manager_installer_vars.derby_port }}"/>
+            <entry key="INSTALL_LICENSEMANAGER_SERVER_SERVICE" value="{{ solution_manager_installer_vars.isntall_license_manager_server_service }}"/>
         </userInput>
     </com.izforge.izpack.panels.UserInputPanel>
     <com.izforge.izpack.panels.UserInputPanel id="UNKNOWN (com.izforge.izpack.panels.UserInputPanel)">
         <userInput>
-            <entry key="WC_HTTP_PORT" value="{{ solution_manager_installer.wc_http_port }}"/>
-            <entry key="WC_SHUTDOWN_PORT" value="{{ solution_manager_installer.wc_shutdown_port }}"/>
-            <entry key="WC_JMX_PORT" value="{{ solution_manager_installer.wc_jmx_port }}"/>
-            <entry key="WC_AUX_JMX_PORT" value="{{ solution_manager_installer.wc_aux_jmx_port }}"/>
-            <entry key="INSTALL_WEBAPPS_SERVICES" value="{{ solution_manager_installer.install_web_apps_services }}"/>
+            <entry key="WC_HTTP_PORT" value="{{ solution_manager_installer_vars.wc_http_port }}"/>
+            <entry key="WC_SHUTDOWN_PORT" value="{{ solution_manager_installer_vars.wc_shutdown_port }}"/>
+            <entry key="WC_JMX_PORT" value="{{ solution_manager_installer_vars.wc_jmx_port }}"/>
+            <entry key="WC_AUX_JMX_PORT" value="{{ solution_manager_installer_vars.wc_aux_jmx_port }}"/>
+            <entry key="INSTALL_WEBAPPS_SERVICES" value="{{ solution_manager_installer_vars.install_web_apps_services }}"/>
         </userInput>
     </com.izforge.izpack.panels.UserInputPanel>
     <com.izforge.izpack.panels.SummaryPanel id="UNKNOWN (com.izforge.izpack.panels.SummaryPanel)"/>

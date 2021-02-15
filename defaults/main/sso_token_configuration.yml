@@ -1,8 +1,8 @@
 ---
-sso_token:
+sso_token_defaults:
   authorization_token_enabled: true
   authorization_token_signing_store_pass_encrypted: true
   authorization_token_signing_kid: 5ac9d1c6-7ff9-4360-a804-d36ff5621b72
   authorization_token_signing_store_pass: 3cDAdNFCa0SWFAapw3vayhNEZt7oWS2B3sD1e4++72YSTgMhMaNaTXVGRXmJWiKc/0iok19UtM6Iy51iqnxng85DiKXCOycrTDxNsPJmKFBBFKyu8xhxzajrTRLsKAWTeVDNhpDhWnPW8S8kPKNTFqw5U3Lg5yuff6VVGLpaa0Y\=
-  authorization_token_signing_store_file: "{{ solution_manager_installer.install_path }}/conf/denodo-sso/tokenJavaKeyStore.jks"
+  authorization_token_signing_store_file: "{{ solution_manager_installer_defaults.install_path }}/conf/denodo-sso/tokenJavaKeyStore.jks"
   authorization_token_signing_auto_generated: true

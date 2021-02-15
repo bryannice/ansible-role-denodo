@@ -1,39 +1,39 @@
-com.denodo.tomcat.home={{ tomcat.com_denodo_tomcat_home }}
+com.denodo.tomcat.home={{ tomcat_vars.com_denodo_tomcat_home }}
 {% if com_denodo_vdp_host != 'localhost' %}
-com.denodo.vdp.host={{ tomcat.com_denodo_vdp_host }}
+com.denodo.vdp.host={{ tomcat_vars.com_denodo_vdp_host }}
 {% endif %}
 {% if enable_http %}
-com.denodo.tomcat.http.port={{ tomcat.com_denodo_tomcat_http_port }}
+com.denodo.tomcat.http.port={{ tomcat_vars.com_denodo_tomcat_http_port }}
 {% endif %}
-com.denodo.tomcat.shutdown.port={{ tomcat.com_denodo_tomcat_shutdown_port }}
-com.denodo.tomcat.jmx.port={{ tomcat.com_denodo_tomcat_jmx_port }}
-com.denodo.tomcat.jmx.rmi.host={{ tomcat.com_denodo_tomcat_jmx_rmi_host }}
-com.denodo.tomcat.jmx.rmi.port={{ tomcat.com_denodo_tomcat_jmx_rmi_port }}
-com.denodo.tomcat.jmx.auth.enabled={{ tomcat.com_denodo_tomcat_jmx_auth_enabled }}
-com.denodo.tomcat.jmx.auth.access.file={{ tomcat.com_denodo_tomcat_jmx_auth_access_file }}
-com.denodo.tomcat.jmx.auth.password.file={{ tomcat.com_denodo_tomcat_jmx_auth_password_file }}
-com.denodo.tomcat.engine.name={{ tomcat.com_denodo_tomcat_engine_name }}
-com.denodo.tomcat.export.dirname={{ tomcat.com_denodo_tomcat_export_dirname }}
-com.denodo.tomcat.http.log={{ tomcat.com_denodo_tomcat_http_log }}
+com.denodo.tomcat.shutdown.port={{ tomcat_vars.com_denodo_tomcat_shutdown_port }}
+com.denodo.tomcat.jmx.port={{ tomcat_vars.com_denodo_tomcat_jmx_port }}
+com.denodo.tomcat.jmx.rmi.host={{ tomcat_vars.com_denodo_tomcat_jmx_rmi_host }}
+com.denodo.tomcat.jmx.rmi.port={{ tomcat_vars.com_denodo_tomcat_jmx_rmi_port }}
+com.denodo.tomcat.jmx.auth.enabled={{ tomcat_vars.com_denodo_tomcat_jmx_auth_enabled }}
+com.denodo.tomcat.jmx.auth.access.file={{ tomcat_vars.com_denodo_tomcat_jmx_auth_access_file }}
+com.denodo.tomcat.jmx.auth.password.file={{ tomcat_vars.com_denodo_tomcat_jmx_auth_password_file }}
+com.denodo.tomcat.engine.name={{ tomcat_vars.com_denodo_tomcat_engine_name }}
+com.denodo.tomcat.export.dirname={{ tomcat_vars.com_denodo_tomcat_export_dirname }}
+com.denodo.tomcat.http.log={{ tomcat_vars.com_denodo_tomcat_http_log }}
 {% if com_denodo_tomcat_https_port is not empty and com_denodo_security_ssl_enabled %}
-com.denodo.tomcat.https.port={{ tomcat.com_denodo_tomcat_https_port }}
+com.denodo.tomcat.https.port={{ tomcat_vars.com_denodo_tomcat_https_port }}
 {% endif %}
 {% if ssl.enabled %}
-com.denodo.security.ssl.enabled={{ ssl.enabled }}
-com.denodo.security.ssl.keyStore={{ ssl.key_store }}
-com.denodo.security.ssl.keyStorePassword={{ ssl.key_store_password }}
-com.denodo.security.ssl.keyStorePassword.encrypted={{ ssl.key_store_password_encrypted }}
+com.denodo.security.ssl.enabled={{ ssl_vars.enabled }}
+com.denodo.security.ssl.keyStore={{ ssl_vars.key_store }}
+com.denodo.security.ssl.keyStorePassword={{ ssl_vars.key_store_password }}
+com.denodo.security.ssl.keyStorePassword.encrypted={{ ssl_vars.key_store_password_encrypted }}
 {% endif %}
 {% if ssl.trustStore_enabled %}
-com.denodo.security.ssl.trustStore={{ ssl.trust_store }}
-com.denodo.security.ssl.trustStorePassword={{ ssl.trust_store_password }}
-com.denodo.security.ssl.trustStorePassword.encrypted={{ ssl.trust_store_password_encrypted }}
+com.denodo.security.ssl.trustStore={{ ssl_vars.trust_store }}
+com.denodo.security.ssl.trustStorePassword={{ ssl_vars.trust_store_password }}
+com.denodo.security.ssl.trustStorePassword.encrypted={{ ssl_vars.trust_store_password_encrypted }}
 {% endif %}
 {% if ssl.enabled %}
-com.denodo.security.management.jmxremote.ssl.config.file={{ ssl.jmxremote_ssl_config_file }}
+com.denodo.security.management.jmxremote.ssl.config.file={{ ssl_vars.jmxremote_ssl_config_file }}
 {% endif %}
-java.env.DENODO_OPTS_START={{ tomcat.java_env_DENODO_OPTS_START }}
-com.denodo.tomcat.jmx.runtimePort={{ tomcat.com_denodo_tomcat_jmx_runtimePort }}
-com.denodo.tomcat.shutdown.runtimePort={{ tomcat.com_denodo_tomcat_shutdown_runtimePort }}
-com.denodo.tomcat.http.runtimePort={{ tomcat.com_denodo_tomcat_http_runtimePort }}
-com.denodo.tomcat.https.runtimePort={{ tomcat.com_denodo_tomcat_https_runtimePort }}
+java.env.DENODO_OPTS_START={{ tomcat_vars.java_env_DENODO_OPTS_START }}
+com.denodo.tomcat.jmx.runtimePort={{ tomcat_vars.com_denodo_tomcat_jmx_runtimePort }}
+com.denodo.tomcat.shutdown.runtimePort={{ tomcat_vars.com_denodo_tomcat_shutdown_runtimePort }}
+com.denodo.tomcat.http.runtimePort={{ tomcat_vars.com_denodo_tomcat_http_runtimePort }}
+com.denodo.tomcat.https.runtimePort={{ tomcat_vars.com_denodo_tomcat_https_runtimePort }}

@@ -1,5 +1,5 @@
 ---
-solution_manager_sso:
+solution_manager_sso_defaults:
   sso_url:
   sso_enabled: false
   sso_token_enabled: true

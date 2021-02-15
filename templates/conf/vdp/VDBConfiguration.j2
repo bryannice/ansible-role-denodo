@@ -6,469 +6,469 @@
 ###############################################################################
 
 # General Configuration
-com.denodo.vdb.install={{ vdb.com_denodo_vdb_install }}
-com.denodo.vdb.workDir={{ vdb.com_denodo_vdb_workDir }}
-com.denodo.vdb.jdbcDriversDir={{ vdb.com_denodo_vdb_jdbcDriversDir }}
-com.denodo.vdb.jdbcDriversLibDir={{ vdb.com_denodo_vdb_jdbcDriversLibDir }}
-com.denodo.vdb.jdbcDriversExternalLibDir={{ vdb.com_denodo_vdb_jdbcDriversExternalLibDir }}
-com.denodo.vdb.jdbcOtherDriversExternalLibDir={{ vdb.com_denodo_vdb_jdbcOtherDriversExternalLibDir }}
-com.denodo.vdb.jarsDir={{ vdb.com_denodo_vdb_jarsDir }}
+com.denodo.vdb.install={{ vdb_vars.com_denodo_vdb_install }}
+com.denodo.vdb.workDir={{ vdb_vars.com_denodo_vdb_workDir }}
+com.denodo.vdb.jdbcDriversDir={{ vdb_vars.com_denodo_vdb_jdbcDriversDir }}
+com.denodo.vdb.jdbcDriversLibDir={{ vdb_vars.com_denodo_vdb_jdbcDriversLibDir }}
+com.denodo.vdb.jdbcDriversExternalLibDir={{ vdb_vars.com_denodo_vdb_jdbcDriversExternalLibDir }}
+com.denodo.vdb.jdbcOtherDriversExternalLibDir={{ vdb_vars.com_denodo_vdb_jdbcOtherDriversExternalLibDir }}
+com.denodo.vdb.jarsDir={{ vdb_vars.com_denodo_vdb_jarsDir }}
 
 # Server Configuration
 # For restrict listening only from one ip or host (by default, 0.0.0.0)
 {% if com_denodo_vdb_vdbinterface_server_VDBManagerImpl_hostName != 'localhost' %}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.hostName={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_hostName }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.hostName={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_hostName }}
 {% endif %}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.port={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_port }}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.shutdownPort={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_shutdownPort }}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.odbcPort={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_odbcPort }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.port={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_port }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.shutdownPort={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_shutdownPort }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.odbcPort={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_odbcPort }}
 
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.registryURL={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_registryURL }}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.registryPort={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_registryPort }}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.factoryPort={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_factoryPort }}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.iconRoute={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_iconRoute }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.registryURL={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_registryURL }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.registryPort={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_registryPort }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.factoryPort={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_factoryPort }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.iconRoute={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_iconRoute }}
 
 # RMI I/O, a value of 0 means a default value calculated depending on the CPU processors.
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.maxWorkers={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_maxWorkers }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.maxWorkers={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_maxWorkers }}
 # RMI workers
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.rmiMinWorkers={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiMinWorkers }}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.rmiMaxWorkers={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiMaxWorkers }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.rmiMinWorkers={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiMinWorkers }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.rmiMaxWorkers={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiMaxWorkers }}
 # RMI workers TTL (seconds)
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.rmiWorkerTimeout={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiWorkerTimeout }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.rmiWorkerTimeout={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiWorkerTimeout }}
 
 # Refresh metadata period for environments sharing catalog database (seconds)
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.refreshMetadataPeriod={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_refreshMetadataPeriod }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.refreshMetadataPeriod={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_refreshMetadataPeriod }}
 # Refresh mbeans period for environments sharing catalog database (seconds)
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.refreshMBeansPeriod={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_refreshMBeansPeriod }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.refreshMBeansPeriod={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_refreshMBeansPeriod }}
 
 # Help files path
-com.denodo.vdb.interpreter.execution.Action.help.path={{ vdb.com_denodo_vdb_interpreter_execution_Action_help_path }}
-com.denodo.vdb.catalog.view.JoinView.defaultNestedParallelNumber={{ vdb.com_denodo_vdb_catalog_view_JoinView_defaultNestedParallelNumber }}
+com.denodo.vdb.interpreter.execution.Action.help.path={{ vdb_vars.com_denodo_vdb_interpreter_execution_Action_help_path }}
+com.denodo.vdb.catalog.view.JoinView.defaultNestedParallelNumber={{ vdb_vars.com_denodo_vdb_catalog_view_JoinView_defaultNestedParallelNumber }}
 
 #DBDerbyConfiguration
-derby.system.home={{ vdb.derby_system_home }}
-com.denodo.vdb.catalog.storage.DBDerbyStorageManager.databaseName={{ vdb.com_denodo_vdb_catalog_storage_DBDerbyStorageManager_databaseName }}
+derby.system.home={{ vdb_vars.derby_system_home }}
+com.denodo.vdb.catalog.storage.DBDerbyStorageManager.databaseName={{ vdb_vars.com_denodo_vdb_catalog_storage_DBDerbyStorageManager_databaseName }}
 
 # Query Plan Optimization Strategy
-com.denodo.vdb.engine.optimize.Optimizer.instanceClassName={{ vdb.com_denodo_vdb_engine_optimize_Optimizer_instanceClassName }}
+com.denodo.vdb.engine.optimize.Optimizer.instanceClassName={{ vdb_vars.com_denodo_vdb_engine_optimize_Optimizer_instanceClassName }}
 
 # Thread Pool Configuration
-com.denodo.vdb.engine.thread.ThreadPool.maxThreads={{ vdb.com_denodo_vdb_engine_thread_ThreadPool_maxThreads }}
-com.denodo.vdb.engine.thread.ThreadPool.expirationTime={{ vdb.com_denodo_vdb_engine_thread_ThreadPool_expirationTime }}
-com.denodo.vdb.engine.thread.ThreadPool.sleepTime={{ vdb.com_denodo_vdb_engine_thread_ThreadPool_sleepTime }}
-com.denodo.vdb.engine.thread.ThreadPool.timeout={{ vdb.com_denodo_vdb_engine_thread_ThreadPool_timeout }}
-com.denodo.vdb.engine.thread.ThreadPool.checkoutTime={{ vdb.com_denodo_vdb_engine_thread_ThreadPool_checkoutTime }}
-com.denodo.vdb.engine.thread.ThreadPool.cancelTimeout={{ vdb.com_denodo_vdb_engine_thread_ThreadPool_cancelTimeout }}
-com.denodo.vdb.engine.wrapper.RawAccess.yieldInterval={{ vdb.com_denodo_vdb_engine_wrapper_RawAccess_yieldInterval }}
+com.denodo.vdb.engine.thread.ThreadPool.maxThreads={{ vdb_vars.com_denodo_vdb_engine_thread_ThreadPool_maxThreads }}
+com.denodo.vdb.engine.thread.ThreadPool.expirationTime={{ vdb_vars.com_denodo_vdb_engine_thread_ThreadPool_expirationTime }}
+com.denodo.vdb.engine.thread.ThreadPool.sleepTime={{ vdb_vars.com_denodo_vdb_engine_thread_ThreadPool_sleepTime }}
+com.denodo.vdb.engine.thread.ThreadPool.timeout={{ vdb_vars.com_denodo_vdb_engine_thread_ThreadPool_timeout }}
+com.denodo.vdb.engine.thread.ThreadPool.checkoutTime={{ vdb_vars.com_denodo_vdb_engine_thread_ThreadPool_checkoutTime }}
+com.denodo.vdb.engine.thread.ThreadPool.cancelTimeout={{ vdb_vars.com_denodo_vdb_engine_thread_ThreadPool_cancelTimeout }}
+com.denodo.vdb.engine.wrapper.RawAccess.yieldInterval={{ vdb_vars.com_denodo_vdb_engine_wrapper_RawAccess_yieldInterval }}
 
 # MBeans configuration
 # max number of latest request stored at mbeans
-com.denodo.vdb.management.mbeans.request.RequestsManagementInfo.maxRequests={{ vdb.com_denodo_vdb_management_mbeans_request_RequestsManagementInfo_maxRequests }}
+com.denodo.vdb.management.mbeans.request.RequestsManagementInfo.maxRequests={{ vdb_vars.com_denodo_vdb_management_mbeans_request_RequestsManagementInfo_maxRequests }}
 # max number of latest transactions stored at mbeans
-com.denodo.vdb.management.mbeans.request.TransactionsManagementInfo.maxTransactions={{ vdb.com_denodo_vdb_management_mbeans_request_TransactionsManagementInfo_maxTransactions }}
+com.denodo.vdb.management.mbeans.request.TransactionsManagementInfo.maxTransactions={{ vdb_vars.com_denodo_vdb_management_mbeans_request_TransactionsManagementInfo_maxTransactions }}
 # max number of latest refresh cache processes stored at mbeans
-com.denodo.vdb.management.mbeans.cache.DatabaseCacheManagementInfo.maxRefreshProcs={{ vdb.com_denodo_vdb_management_mbeans_cache_DatabaseCacheManagementInfo_maxRefreshProcs }}
+com.denodo.vdb.management.mbeans.cache.DatabaseCacheManagementInfo.maxRefreshProcs={{ vdb_vars.com_denodo_vdb_management_mbeans_cache_DatabaseCacheManagementInfo_maxRefreshProcs }}
 
 # the number of rows that should be fetched from the database when more rows
 # are needed. If the value specified is zero, then this feature is ignored.
-com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.DriverAdapter.fetchSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_DriverAdapter_fetchSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.DriverAdapter.fetchSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_DriverAdapter_fetchSize }}
 
 # PostgreSQL plugin sets autocommit using the value of the following property
 # when fetchSize is greater than 0
-com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.PostgreSQLPlugin.fetchSize.autoCommit={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_PostgreSQLPlugin_fetchSize_autoCommit }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.PostgreSQLPlugin.fetchSize.autoCommit={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_PostgreSQLPlugin_fetchSize_autoCommit }}
 
 # SWAPPING CONFIGURATION
 
 # Swapping status
-com.denodo.vdb.engine.swap.SwapManager.swappingStatus={{ vdb.com_denodo_vdb_engine_swap_SwapManager_swappingStatus }}
+com.denodo.vdb.engine.swap.SwapManager.swappingStatus={{ vdb_vars.com_denodo_vdb_engine_swap_SwapManager_swappingStatus }}
 # Maximum size in memory of the rows stored in a Result.
-com.denodo.vdb.engine.swap.SwapManager.swappingResultMaxSizeInMB={{ vdb.com_denodo_vdb_engine_swap_SwapManager_swappingResultMaxSizeInMB }}
+com.denodo.vdb.engine.swap.SwapManager.swappingResultMaxSizeInMB={{ vdb_vars.com_denodo_vdb_engine_swap_SwapManager_swappingResultMaxSizeInMB }}
 # Maximum size in memory of the rows stored in an Access.
-com.denodo.vdb.engine.swap.SwapManager.swappingAccessMaxSizeInMB={{ vdb.com_denodo_vdb_engine_swap_SwapManager_swappingAccessMaxSizeInMB }}
+com.denodo.vdb.engine.swap.SwapManager.swappingAccessMaxSizeInMB={{ vdb_vars.com_denodo_vdb_engine_swap_SwapManager_swappingAccessMaxSizeInMB }}
 # Maximum size of the blocks stored and retrieved from disk.
-com.denodo.vdb.engine.swap.SwapManager.maxBlockSizeInKB={{ vdb.com_denodo_vdb_engine_swap_SwapManager_maxBlockSizeInKB }}
+com.denodo.vdb.engine.swap.SwapManager.maxBlockSizeInKB={{ vdb_vars.com_denodo_vdb_engine_swap_SwapManager_maxBlockSizeInKB }}
 #Default swap directory: workDir/swap. Uncomment to specify a different one.
-#com.denodo.vdb.engine.swap.SwapManager.swapDir={{ vdb.com_denodo_vdb_engine_swap_SwapManager_swapDir }}
+#com.denodo.vdb.engine.swap.SwapManager.swapDir={{ vdb_vars.com_denodo_vdb_engine_swap_SwapManager_swapDir }}
 
 # Metadata Paths
 
 # Decimal Type
-com.denodo.vdb.catalog.type.DecimalPrecision={{ vdb.com_denodo_vdb_catalog_type_DecimalPrecision }}
+com.denodo.vdb.catalog.type.DecimalPrecision={{ vdb_vars.com_denodo_vdb_catalog_type_DecimalPrecision }}
 
 # SIMPLE MAPS (Properties)
-com.denodo.vdb.catalog.map.SimpleMap.mapPath={{ vdb.com_denodo_vdb_catalog_map_SimpleMap_mapPath }}
-com.denodo.vdb.catalog.map.SimpleMap.mapDirectory={{ vdb.com_denodo_vdb_catalog_map_SimpleMap_mapDirectory }}
+com.denodo.vdb.catalog.map.SimpleMap.mapPath={{ vdb_vars.com_denodo_vdb_catalog_map_SimpleMap_mapPath }}
+com.denodo.vdb.catalog.map.SimpleMap.mapDirectory={{ vdb_vars.com_denodo_vdb_catalog_map_SimpleMap_mapDirectory }}
 
 # MAPS
-com.denodo.vdb.misc.PropertiesMap.fileMapsPath.i18n={{ vdb.com_denodo_vdb_misc_PropertiesMap_fileMapsPath_i18n }}
+com.denodo.vdb.misc.PropertiesMap.fileMapsPath.i18n={{ vdb_vars.com_denodo_vdb_misc_PropertiesMap_fileMapsPath_i18n }}
 
 # WRAPPERS
-com.denodo.vdb.catalog.wrapper.MetaWrapper.wrapperPath={{ vdb.com_denodo_vdb_catalog_wrapper_MetaWrapper_wrapperPath }}
-com.denodo.vdb.catalog.wrapper.MetaWrapper.jarDir={{ vdb.com_denodo_vdb_catalog_wrapper_MetaWrapper_jarDir }}
+com.denodo.vdb.catalog.wrapper.MetaWrapper.wrapperPath={{ vdb_vars.com_denodo_vdb_catalog_wrapper_MetaWrapper_wrapperPath }}
+com.denodo.vdb.catalog.wrapper.MetaWrapper.jarDir={{ vdb_vars.com_denodo_vdb_catalog_wrapper_MetaWrapper_jarDir }}
 
 # JARS required by WS Wrappers
-com.denodo.vdb.catalog.wrapper.ws.MetaWebServiceWrapper.suntoolslibdir={{ vdb.com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_suntoolslibdir }}
-com.denodo.vdb.catalog.wrapper.ws.MetaWebServiceWrapper.axislibdir={{ vdb.com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axislibdir }}
-com.denodo.vdb.catalog.wrapper.ws.MetaWebServiceWrapper.axisjars={{ vdb.com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axisjars }}
+com.denodo.vdb.catalog.wrapper.ws.MetaWebServiceWrapper.suntoolslibdir={{ vdb_vars.com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_suntoolslibdir }}
+com.denodo.vdb.catalog.wrapper.ws.MetaWebServiceWrapper.axislibdir={{ vdb_vars.com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axislibdir }}
+com.denodo.vdb.catalog.wrapper.ws.MetaWebServiceWrapper.axisjars={{ vdb_vars.com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axisjars }}
 
 # Default Connection for HTML Wrapper
-com.denodo.parser.connection.html.ConnectionParser.defaultConnection={{ vdb.com_denodo_parser_connection_html_ConnectionParser_defaultConnection }}
-com.denodo.vdb.misc.connection.util.ConnectionParser.defaultConnection={{ vdb.com_denodo_vdb_misc_connection_util_ConnectionParser_defaultConnection }}
+com.denodo.parser.connection.html.ConnectionParser.defaultConnection={{ vdb_vars.com_denodo_parser_connection_html_ConnectionParser_defaultConnection }}
+com.denodo.vdb.misc.connection.util.ConnectionParser.defaultConnection={{ vdb_vars.com_denodo_vdb_misc_connection_util_ConnectionParser_defaultConnection }}
 
 # Default Driver for ODBC Wrapper
-com.denodo.vdb.ODBCDriver={{ vdb.com_denodo_vdb_ODBCDriver }}
-com.denodo.vdb.ODBCClassPath={{ vdb.com_denodo_vdb_ODBCClassPath }}
+com.denodo.vdb.ODBCDriver={{ vdb_vars.com_denodo_vdb_ODBCDriver }}
+com.denodo.vdb.ODBCClassPath={{ vdb_vars.com_denodo_vdb_ODBCClassPath }}
 
 # USERS
-com.denodo.vdb.catalog.user.User.maxCacheSize={{ vdb.com_denodo_vdb_catalog_user_User_maxCacheSize }}
-com.denodo.vdb.catalog.user.User.objectTimeToLive={{ vdb.com_denodo_vdb_catalog_user_User_objectTimeToLive }}
-com.denodo.vdb.catalog.user.User.cacheMaintainerTaskPeriod={{ vdb.com_denodo_vdb_catalog_user_User_cacheMaintainerTaskPeriod }}
+com.denodo.vdb.catalog.user.User.maxCacheSize={{ vdb_vars.com_denodo_vdb_catalog_user_User_maxCacheSize }}
+com.denodo.vdb.catalog.user.User.objectTimeToLive={{ vdb_vars.com_denodo_vdb_catalog_user_User_objectTimeToLive }}
+com.denodo.vdb.catalog.user.User.cacheMaintainerTaskPeriod={{ vdb_vars.com_denodo_vdb_catalog_user_User_cacheMaintainerTaskPeriod }}
 
 # DATABASES
-com.denodo.vdb.catalog.database.Database.maxCacheSize={{ vdb.com_denodo_vdb_catalog_database_Database_maxCacheSize }}
-com.denodo.vdb.catalog.database.Database.objectTimeToLive={{ vdb.com_denodo_vdb_catalog_database_Database_objectTimeToLive }}
-com.denodo.vdb.catalog.database.Database.cacheMaintainerTaskPeriod={{ vdb.com_denodo_vdb_catalog_database_Database_cacheMaintainerTaskPeriod }}
-com.denodo.vdb.catalog.database.Database.databasePath={{ vdb.com_denodo_vdb_catalog_database_Database_databasePath }}
-com.denodo.vdb.catalog.database.Database.databasePropertiesPath={{ vdb.com_denodo_vdb_catalog_database_Database_databasePropertiesPath }}
+com.denodo.vdb.catalog.database.Database.maxCacheSize={{ vdb_vars.com_denodo_vdb_catalog_database_Database_maxCacheSize }}
+com.denodo.vdb.catalog.database.Database.objectTimeToLive={{ vdb_vars.com_denodo_vdb_catalog_database_Database_objectTimeToLive }}
+com.denodo.vdb.catalog.database.Database.cacheMaintainerTaskPeriod={{ vdb_vars.com_denodo_vdb_catalog_database_Database_cacheMaintainerTaskPeriod }}
+com.denodo.vdb.catalog.database.Database.databasePath={{ vdb_vars.com_denodo_vdb_catalog_database_Database_databasePath }}
+com.denodo.vdb.catalog.database.Database.databasePropertiesPath={{ vdb_vars.com_denodo_vdb_catalog_database_Database_databasePropertiesPath }}
 
 #Administration database
-com.denodo.vdb.catalog.database.Database.adminDatabase={{ vdb.com_denodo_vdb_catalog_database_Database_adminDatabase }}
+com.denodo.vdb.catalog.database.Database.adminDatabase={{ vdb_vars.com_denodo_vdb_catalog_database_Database_adminDatabase }}
 
 # Identifiers charset
-com.denodo.vdb.catalog.database.identifiersCharset={{ vdb.com_denodo_vdb_catalog_database_identifiersCharset }}
+com.denodo.vdb.catalog.database.identifiersCharset={{ vdb_vars.com_denodo_vdb_catalog_database_identifiersCharset }}
 
 # CONNECTION POOL
 
 # The number of idle connections to initialize the pool with.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.initialSize={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_initialSize }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.initialSize={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_initialSize }}
 
 # The cap on the number of idle instances in the pool.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.maxIdle={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxIdle }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.maxIdle={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxIdle }}
 
 # The cap on the minimum number of idle instances in the pool.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.minIdle={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_minIdle }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.minIdle={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_minIdle }}
 
 # The cap on the total number of active instances from the pool.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.maxActive={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxActive }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.maxActive={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxActive }}
 
 # The maximum amount of time (in millis) the pool should block when borrow an object before throwing
 # an exception when the pool is exhausted and the whenExhaustedAction is equals to 1 (EXHAUSTED_BLOCK).
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.maxWait={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxWait }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.maxWait={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxWait }}
 
 # The default "when exhausted action" for the pool
 # (EXHAUSTED_FAIL = 0), (EXHAUSTED_BLOCK  = 1), (EXHAUSTED_GROW = 2)
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.whenExhaustedAction={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_whenExhaustedAction }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.whenExhaustedAction={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_whenExhaustedAction }}
 
 # When true, connection will be validated before being borrowed by the pool.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.testOnBorrow={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testOnBorrow }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.testOnBorrow={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testOnBorrow }}
 
 # When true, connection will be validated before being eing returned to the pool.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.testOnReturn={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testOnReturn }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.testOnReturn={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testOnReturn }}
 
 # When true, connection will be validated while it is idle in the pool.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.testWhileIdle={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testWhileIdle }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.testWhileIdle={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testWhileIdle }}
 
 # The number of milliseconds to sleep between runs of the idle test.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.timeBetweenEvictionRunsMillis={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_timeBetweenEvictionRunsMillis }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.timeBetweenEvictionRunsMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_timeBetweenEvictionRunsMillis }}
 
 # The number of objects to examine during each run of the idle object evictor thread
 # When a negative value is supplied, ceil(numIdle}/abs(numTestsPerEvictionRun)
 # tests will be run
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.numTestsPerEvictionRun={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_numTestsPerEvictionRun }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.numTestsPerEvictionRun={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_numTestsPerEvictionRun }}
 
 # The minimum amount of time an object may sit idle in the pool
 # before it is eligible for eviction by the idle object evictor.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.minEvictableIdleTimeMillis={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_minEvictableIdleTimeMillis }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.minEvictableIdleTimeMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_minEvictableIdleTimeMillis }}
 
 # Ping Query. For testing pool connections.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.pingQuery={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_pingQuery }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.pingQuery={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_pingQuery }}
 
 # Enable or disable prepared statements pool. (true = enable)
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.poolPreparedStatements={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_poolPreparedStatements }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.poolPreparedStatements={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_poolPreparedStatements }}
 
 # The maximum number of opened statements in each pool.
-com.denodo.vdb.misc.datasource.JDBCDataSource.pool.maxOpenPreparedStatements={{ vdb.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxOpenPreparedStatements }}
+com.denodo.vdb.misc.datasource.JDBCDataSource.pool.maxOpenPreparedStatements={{ vdb_vars.com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxOpenPreparedStatements }}
 
 # WS Connection Pool
-com.denodo.vdb.misc.datasource.WebServiceDataSource.connectionPoolTimeout={{ vdb.com_denodo_vdb_misc_datasource_WebServiceDataSource_connectionPoolTimeout }}
-com.denodo.vdb.misc.datasource.WebServiceDataSource.maxTotalConnections={{ vdb.com_denodo_vdb_misc_datasource_WebServiceDataSource_maxTotalConnections }}
-com.denodo.vdb.misc.datasource.WebServiceDataSource.connectionPoolReadTimeout={{ vdb.com_denodo_vdb_misc_datasource_WebServiceDataSource_connectionPoolReadTimeout }}
+com.denodo.vdb.misc.datasource.WebServiceDataSource.connectionPoolTimeout={{ vdb_vars.com_denodo_vdb_misc_datasource_WebServiceDataSource_connectionPoolTimeout }}
+com.denodo.vdb.misc.datasource.WebServiceDataSource.maxTotalConnections={{ vdb_vars.com_denodo_vdb_misc_datasource_WebServiceDataSource_maxTotalConnections }}
+com.denodo.vdb.misc.datasource.WebServiceDataSource.connectionPoolReadTimeout={{ vdb_vars.com_denodo_vdb_misc_datasource_WebServiceDataSource_connectionPoolReadTimeout }}
 
 # Internacionalization Configuration
-com.denodo.vdb.misc.I18nParametersManager.i18nDefault={{ vdb.com_denodo_vdb_misc_I18nParametersManager_i18nDefault }}
-com.denodo.vdb.misc.I18nParametersManager.useI18nOnCast={{ vdb.com_denodo_vdb_misc_I18nParametersManager_useI18nOnCast }}
-com.denodo.vdb.misc.I18nParametersManager.prefixFileName={{ vdb.com_denodo_vdb_misc_I18nParametersManager_prefixFileName }}
-com.denodo.vdb.misc.I18nParametersManager.cacheClassName={{ vdb.com_denodo_vdb_misc_I18nParametersManager_cacheClassName }}
-#com.denodo.vdb.misc.I18nParametersManager.cachePropertiesFile={{ vdb.com_denodo_vdb_misc_I18nParametersManager_cachePropertiesFile }}
+com.denodo.vdb.misc.I18nParametersManager.i18nDefault={{ vdb_vars.com_denodo_vdb_misc_I18nParametersManager_i18nDefault }}
+com.denodo.vdb.misc.I18nParametersManager.useI18nOnCast={{ vdb_vars.com_denodo_vdb_misc_I18nParametersManager_useI18nOnCast }}
+com.denodo.vdb.misc.I18nParametersManager.prefixFileName={{ vdb_vars.com_denodo_vdb_misc_I18nParametersManager_prefixFileName }}
+com.denodo.vdb.misc.I18nParametersManager.cacheClassName={{ vdb_vars.com_denodo_vdb_misc_I18nParametersManager_cacheClassName }}
+#com.denodo.vdb.misc.I18nParametersManager.cachePropertiesFile={{ vdb_vars.com_denodo_vdb_misc_I18nParametersManager_cachePropertiesFile }}
 
 # Basic Query Transformations
-com.denodo.vdb.interpreter.execution.transformations.TransformationManager.transformations.file={{ vdb.com_denodo_vdb_interpreter_execution_transformations_TransformationManager_transformations_file }}
+com.denodo.vdb.interpreter.execution.transformations.TransformationManager.transformations.file={{ vdb_vars.com_denodo_vdb_interpreter_execution_transformations_TransformationManager_transformations_file }}
 
 # Maximum Length for Identifiers
-com.denodo.vdb.catalog.Catalog.identifiersMaxLength={{ vdb.com_denodo_vdb_catalog_Catalog_identifiersMaxLength }}
+com.denodo.vdb.catalog.Catalog.identifiersMaxLength={{ vdb_vars.com_denodo_vdb_catalog_Catalog_identifiersMaxLength }}
 
 # The distance metrics strategy
-com.denodo.vdb.util.TextualSimilarity.distanceMetric={{ vdb.com_denodo_vdb_util_TextualSimilarity_distanceMetric }}
+com.denodo.vdb.util.TextualSimilarity.distanceMetric={{ vdb_vars.com_denodo_vdb_util_TextualSimilarity_distanceMetric }}
 
-com.denodo.vdb.engine.wrapper.vdb.BindingJoinAccess.defaultBlockSize={{ vdb.com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_defaultBlockSize }}
-com.denodo.vdb.engine.wrapper.vdb.BindingJoinAccess.JDBCdefaultBlockSize={{ vdb.com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_JDBCdefaultBlockSize }}
-com.denodo.vdb.engine.wrapper.vdb.BindingJoinAccess.LDAPdefaultBlockSize={{ vdb.com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_LDAPdefaultBlockSize }}
+com.denodo.vdb.engine.wrapper.vdb.BindingJoinAccess.defaultBlockSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_defaultBlockSize }}
+com.denodo.vdb.engine.wrapper.vdb.BindingJoinAccess.JDBCdefaultBlockSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_JDBCdefaultBlockSize }}
+com.denodo.vdb.engine.wrapper.vdb.BindingJoinAccess.LDAPdefaultBlockSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_LDAPdefaultBlockSize }}
 
 # Concurrent queries limit
-com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.concurrentQueriesLimit={{ vdb.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_concurrentQueriesLimit }}
+com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.concurrentQueriesLimit={{ vdb_vars.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_concurrentQueriesLimit }}
 # Maximum concurrent queries
-com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.maxConcurrentQueries={{ vdb.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_maxConcurrentQueries }}
+com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.maxConcurrentQueries={{ vdb_vars.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_maxConcurrentQueries }}
 # Waiting queries limit
-com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.waitingQueriesLimit={{ vdb.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_waitingQueriesLimit }}
+com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.waitingQueriesLimit={{ vdb_vars.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_waitingQueriesLimit }}
 # Maximum number of queries waiting to be executed
-com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.maxWaitingQueries={{ vdb.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_maxWaitingQueries }}
+com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.maxWaitingQueries={{ vdb_vars.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_maxWaitingQueries }}
 
 # Default timeouts for stored procedure queries.
-storedProcedures.defaultQueryTimeout={{ vdb.storedProcedures_defaultQueryTimeout }}
-storedProcedures.defaultChunkTimeout={{ vdb.storedProcedures_defaultChunkTimeout }}
-storedProcedures.defaultChunkSize={{ vdb.storedProcedures_defaultChunkSize }}
+storedProcedures.defaultQueryTimeout={{ vdb_vars.storedProcedures_defaultQueryTimeout }}
+storedProcedures.defaultChunkTimeout={{ vdb_vars.storedProcedures_defaultChunkTimeout }}
+storedProcedures.defaultChunkSize={{ vdb_vars.storedProcedures_defaultChunkSize }}
 
 # If true, stored procedures validates if a jdbc driver supports catalogs or schemas
-storedProcedures.validateSchemaAndCatalog={{ vdb.storedProcedures_validateSchemaAndCatalog }}
+storedProcedures.validateSchemaAndCatalog={{ vdb_vars.storedProcedures_validateSchemaAndCatalog }}
 
 # Lucene analyzers class name mapping
-com.denodo.util.lucene.analysis.Analyzer.es={{ vdb.com_denodo_util_lucene_analysis_Analyzer_es }}
-com.denodo.util.lucene.analysis.Analyzer.en={{ vdb.com_denodo_util_lucene_analysis_Analyzer_en }}
-com.denodo.util.lucene.analysis.Analyzer.std={{ vdb.com_denodo_util_lucene_analysis_Analyzer_std }}
+com.denodo.util.lucene.analysis.Analyzer.es={{ vdb_vars.com_denodo_util_lucene_analysis_Analyzer_es }}
+com.denodo.util.lucene.analysis.Analyzer.en={{ vdb_vars.com_denodo_util_lucene_analysis_Analyzer_en }}
+com.denodo.util.lucene.analysis.Analyzer.std={{ vdb_vars.com_denodo_util_lucene_analysis_Analyzer_std }}
 
 # Maximum number of fragments returned by the CONTEXTUALSUMMARY function
-com.denodo.vdb.catalog.view.function.FunctionCONTEXTUALSUMMARY.defaultMaxFragments={{ vdb.com_denodo_vdb_catalog_view_function_FunctionCONTEXTUALSUMMARY_defaultMaxFragments }}
+com.denodo.vdb.catalog.view.function.FunctionCONTEXTUALSUMMARY.defaultMaxFragments={{ vdb_vars.com_denodo_vdb_catalog_view_function_FunctionCONTEXTUALSUMMARY_defaultMaxFragments }}
 
 # If true, tries to execute the cross join as inner join using the conditions in the WHERE clause
-com.denodo.vdb.engine.query.SubQuery.optimizeCrossJoin={{ vdb.com_denodo_vdb_engine_query_SubQuery_optimizeCrossJoin }}
+com.denodo.vdb.engine.query.SubQuery.optimizeCrossJoin={{ vdb_vars.com_denodo_vdb_engine_query_SubQuery_optimizeCrossJoin }}
 
 # Determines if the view plans are propagated. Values: true, false
-com.denodo.vdb.catalog.view.MetaSearchMethod.calculateViewPlans={{ vdb.com_denodo_vdb_catalog_view_MetaSearchMethod_calculateViewPlans }}
+com.denodo.vdb.catalog.view.MetaSearchMethod.calculateViewPlans={{ vdb_vars.com_denodo_vdb_catalog_view_MetaSearchMethod_calculateViewPlans }}
 
 # If false, the execution plan is not sent to the client when an error happens.
-com.denodo.vdb.interpreter.execution.SelectAction.sendTraceOnError={{ vdb.com_denodo_vdb_interpreter_execution_SelectAction_sendTraceOnError }}
+com.denodo.vdb.interpreter.execution.SelectAction.sendTraceOnError={{ vdb_vars.com_denodo_vdb_interpreter_execution_SelectAction_sendTraceOnError }}
 
 # Specifies if traces save execution times for each node. If not present, defaults to 'true'
-#com.denodo.vdb.interpreter.execution.SelectAction.saveTimesInTrace={{ vdb.com_denodo_vdb_interpreter_execution_SelectAction_saveTimesInTrace }}
+#com.denodo.vdb.interpreter.execution.SelectAction.saveTimesInTrace={{ vdb_vars.com_denodo_vdb_interpreter_execution_SelectAction_saveTimesInTrace }}
 
 # Saving query traces in files and/or logs behavior. If not present, defaults to 'DISABLED'
-#com.denodo.vdb.interpreter.execution.saveTrace={{ vdb.com_denodo_vdb_interpreter_execution_saveTrace }}
-#com.denodo.vdb.interpreter.execution.saveTraceDir={{ vdb.com_denodo_vdb_interpreter_execution_saveTraceDir }}
+#com.denodo.vdb.interpreter.execution.saveTrace={{ vdb_vars.com_denodo_vdb_interpreter_execution_saveTrace }}
+#com.denodo.vdb.interpreter.execution.saveTraceDir={{ vdb_vars.com_denodo_vdb_interpreter_execution_saveTraceDir }}
 
 # Maximum size in MB of a queue of rows in an intermediate result
-com.denodo.vdb.engine.RowQueueSizeInMB={{ vdb.com_denodo_vdb_engine_RowQueueSizeInMB }}
+com.denodo.vdb.engine.RowQueueSizeInMB={{ vdb_vars.com_denodo_vdb_engine_RowQueueSizeInMB }}
 
 # Percentage of the queue that must be empty before notifying to the queue producers
-com.denodo.vdb.engine.RowQueueNotifyPercent={{ vdb.com_denodo_vdb_engine_RowQueueNotifyPercent }}
+com.denodo.vdb.engine.RowQueueNotifyPercent={{ vdb_vars.com_denodo_vdb_engine_RowQueueNotifyPercent }}
 
 # WS socket timeout
-com.denodo.vdb.misc.connection.ws.SocketTimeoutMillis={{ vdb.com_denodo_vdb_misc_connection_ws_SocketTimeoutMillis }}
+com.denodo.vdb.misc.connection.ws.SocketTimeoutMillis={{ vdb_vars.com_denodo_vdb_misc_connection_ws_SocketTimeoutMillis }}
 
 # Support for interval types in date operations
-com.denodo.vdb.engine.query.intervalDateSupport={{ vdb.com_denodo_vdb_engine_query_intervalDateSupport }}
+com.denodo.vdb.engine.query.intervalDateSupport={{ vdb_vars.com_denodo_vdb_engine_query_intervalDateSupport }}
 
 # Transaction timeouts (seconds)
-com.denodo.vdb.engine.session.transactionTimeout={{ vdb.com_denodo_vdb_engine_session_transactionTimeout }}
-com.denodo.vdb.engine.session.inactiveTransactionTimeout={{ vdb.com_denodo_vdb_engine_session_inactiveTransactionTimeout }}
+com.denodo.vdb.engine.session.transactionTimeout={{ vdb_vars.com_denodo_vdb_engine_session_transactionTimeout }}
+com.denodo.vdb.engine.session.inactiveTransactionTimeout={{ vdb_vars.com_denodo_vdb_engine_session_inactiveTransactionTimeout }}
 
 # Ping data source
-com.denodo.vdb.management.mbeans.datasource.ping.timeout={{ vdb.com_denodo_vdb_management_mbeans_datasource_ping_timeout }}
-com.denodo.vdb.management.mbeans.datasource.ping.threadPool.coreSize={{ vdb.com_denodo_vdb_management_mbeans_datasource_ping_threadPool_coreSize }}
-com.denodo.vdb.management.mbeans.datasource.ping.threadPool.maxSize={{ vdb.com_denodo_vdb_management_mbeans_datasource_ping_threadPool_maxSize }}
-com.denodo.vdb.management.mbeans.datasource.ping.threadPool.keepAlive={{ vdb.com_denodo_vdb_management_mbeans_datasource_ping_threadPool_keepAlive }}
-com.denodo.vdb.management.mbeans.datasource.ping.threadPool.queueSize={{ vdb.com_denodo_vdb_management_mbeans_datasource_ping_threadPool_queueSize }}
+com.denodo.vdb.management.mbeans.datasource.ping.timeout={{ vdb_vars.com_denodo_vdb_management_mbeans_datasource_ping_timeout }}
+com.denodo.vdb.management.mbeans.datasource.ping.threadPool.coreSize={{ vdb_vars.com_denodo_vdb_management_mbeans_datasource_ping_threadPool_coreSize }}
+com.denodo.vdb.management.mbeans.datasource.ping.threadPool.maxSize={{ vdb_vars.com_denodo_vdb_management_mbeans_datasource_ping_threadPool_maxSize }}
+com.denodo.vdb.management.mbeans.datasource.ping.threadPool.keepAlive={{ vdb_vars.com_denodo_vdb_management_mbeans_datasource_ping_threadPool_keepAlive }}
+com.denodo.vdb.management.mbeans.datasource.ping.threadPool.queueSize={{ vdb_vars.com_denodo_vdb_management_mbeans_datasource_ping_threadPool_queueSize }}
 
 # Parallel processing parameters
-queryOptimization.parallelProcessing.enabled={{ vdb.queryOptimization_parallelProcessing_enabled }}
-queryOptimization.parallelProcessing.dataSource={{ vdb.queryOptimization_parallelProcessing_dataSource }}
-queryOptimization.parallelProcessing.customDataSource.databaseName={{ vdb.queryOptimization_parallelProcessing_customDataSource_databaseName }}
-queryOptimization.parallelProcessing.customDataSource.dataSourceName={{ vdb.queryOptimization_parallelProcessing_customDataSource_dataSourceName }}
+queryOptimization.parallelProcessing.enabled={{ vdb_vars.queryOptimization_parallelProcessing_enabled }}
+queryOptimization.parallelProcessing.dataSource={{ vdb_vars.queryOptimization_parallelProcessing_dataSource }}
+queryOptimization.parallelProcessing.customDataSource.databaseName={{ vdb_vars.queryOptimization_parallelProcessing_customDataSource_databaseName }}
+queryOptimization.parallelProcessing.customDataSource.dataSourceName={{ vdb_vars.queryOptimization_parallelProcessing_customDataSource_dataSourceName }}
 
 ###############################################################################
 #  Cache Configuration Parameters                                             #
 ###############################################################################
 
 # View Cache Manager Strategy
-com.denodo.vdb.cache.AbstractViewCacheManager.instanceClassName={{ vdb.com_denodo_vdb_cache_AbstractViewCacheManager_instanceClassName }}
-com.denodo.vdb.cache.cacheStatus={{ vdb.com_denodo_vdb_cache_cacheStatus }}
+com.denodo.vdb.cache.AbstractViewCacheManager.instanceClassName={{ vdb_vars.com_denodo_vdb_cache_AbstractViewCacheManager_instanceClassName }}
+com.denodo.vdb.cache.cacheStatus={{ vdb_vars.com_denodo_vdb_cache_cacheStatus }}
 
 # Cache DataSource Name
-com.denodo.vdb.cache.jdbc.serverCacheDataSource={{ vdb.com_denodo_vdb_cache_jdbc_serverCacheDataSource }}
-com.denodo.vdb.cache.jdbc.customCacheDataSourceName={{ vdb.com_denodo_vdb_cache_jdbc_customCacheDataSourceName }}
+com.denodo.vdb.cache.jdbc.serverCacheDataSource={{ vdb_vars.com_denodo_vdb_cache_jdbc_serverCacheDataSource }}
+com.denodo.vdb.cache.jdbc.customCacheDataSourceName={{ vdb_vars.com_denodo_vdb_cache_jdbc_customCacheDataSourceName }}
 
 # Memory Cache Class for Caching View Objects
-com.denodo.vdb.cache.ViewCacheManager.cacheClassName={{ vdb.com_denodo_vdb_cache_ViewCacheManager_cacheClassName }}
+com.denodo.vdb.cache.ViewCacheManager.cacheClassName={{ vdb_vars.com_denodo_vdb_cache_ViewCacheManager_cacheClassName }}
 
 # View Memory Cache Parameters
-com.denodo.vdb.cache.ViewCacheManager.maxCacheSize={{ vdb.com_denodo_vdb_cache_ViewCacheManager_maxCacheSize }}
-com.denodo.vdb.cache.ViewCacheManager.objectTimeToLive={{ vdb.com_denodo_vdb_cache_ViewCacheManager_objectTimeToLive }}
-com.denodo.vdb.cache.ViewCacheManager.cacheMaintainerTaskPeriod={{ vdb.com_denodo_vdb_cache_ViewCacheManager_cacheMaintainerTaskPeriod }}
+com.denodo.vdb.cache.ViewCacheManager.maxCacheSize={{ vdb_vars.com_denodo_vdb_cache_ViewCacheManager_maxCacheSize }}
+com.denodo.vdb.cache.ViewCacheManager.objectTimeToLive={{ vdb_vars.com_denodo_vdb_cache_ViewCacheManager_objectTimeToLive }}
+com.denodo.vdb.cache.ViewCacheManager.cacheMaintainerTaskPeriod={{ vdb_vars.com_denodo_vdb_cache_ViewCacheManager_cacheMaintainerTaskPeriod }}
 
 # Max number of rows inserted in a batch call
-com.denodo.vdb.engine.wrapper.raw.jdbc.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.netezza.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_netezza_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.sqlserver.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_sqlserver_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.teradata.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_teradata_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.redshift.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_redshift_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.netezza.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_netezza_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.sqlserver.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_sqlserver_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.teradata.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_teradata_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.redshift.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_redshift_batchInsertSize }}
 
-com.denodo.vdb.engine.wrapper.raw.jdbc.athena.bulkLoad.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_athena_bulkLoad_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.redshift.bulkLoad.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_redshift_bulkLoad_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.snowflake.bulkLoad.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_snowflake_bulkLoad_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.impala.bulkLoad.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_impala_bulkLoad_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.hive.bulkLoad.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_hive_bulkLoad_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.spark.bulkLoad.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_spark_bulkLoad_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.teradata.bulkLoad.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_teradata_bulkLoad_batchInsertSize }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.presto.bulkLoad.batchInsertSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_presto_bulkLoad_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.athena.bulkLoad.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_athena_bulkLoad_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.redshift.bulkLoad.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_redshift_bulkLoad_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.snowflake.bulkLoad.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_snowflake_bulkLoad_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.impala.bulkLoad.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_impala_bulkLoad_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.hive.bulkLoad.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_hive_bulkLoad_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.spark.bulkLoad.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_spark_bulkLoad_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.teradata.bulkLoad.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_teradata_bulkLoad_batchInsertSize }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.presto.bulkLoad.batchInsertSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_presto_bulkLoad_batchInsertSize }}
 
 # Number of rows that are fetched from the database when more rows are needed. 
-com.denodo.vdb.cache.jdbc.fetchSize={{ vdb.com_denodo_vdb_cache_jdbc_fetchSize }}
+com.denodo.vdb.cache.jdbc.fetchSize={{ vdb_vars.com_denodo_vdb_cache_jdbc_fetchSize }}
 
 # Default TTL for every view in cache
-com.denodo.vdb.cache.timeToLiveInSecs={{ vdb.com_denodo_vdb_cache_timeToLiveInSecs }}
+com.denodo.vdb.cache.timeToLiveInSecs={{ vdb_vars.com_denodo_vdb_cache_timeToLiveInSecs }}
 
 # Cache Maintainer Task Period in seconds.
 # If equals to 0, then cache maintainer task is never executed.
-com.denodo.vdb.cache.cacheMaintainerPeriodInSecs={{ vdb.com_denodo_vdb_cache_cacheMaintainerPeriodInSecs }}
-com.denodo.vdb.cache.cacheMaintenance={{ vdb.com_denodo_vdb_cache_cacheMaintenance }}
-com.denodo.vdb.cache.jdbc.manager.JDBCCacheManager.cleanTables={{ vdb.com_denodo_vdb_cache_jdbc_manager_JDBCCacheManager_cleanTables }}
+com.denodo.vdb.cache.cacheMaintainerPeriodInSecs={{ vdb_vars.com_denodo_vdb_cache_cacheMaintainerPeriodInSecs }}
+com.denodo.vdb.cache.cacheMaintenance={{ vdb_vars.com_denodo_vdb_cache_cacheMaintenance }}
+com.denodo.vdb.cache.jdbc.manager.JDBCCacheManager.cleanTables={{ vdb_vars.com_denodo_vdb_cache_jdbc_manager_JDBCCacheManager_cleanTables }}
 
 # Derby cache parameters
-com.denodo.vdb.cache.jdbc.derbyCacheRemoteAccess={{ vdb.com_denodo_vdb_cache_jdbc_derbyCacheRemoteAccess }}
-com.denodo.vdb.cache.jdbc.derbyCachePort={{ vdb.com_denodo_vdb_cache_jdbc_derbyCachePort }}
+com.denodo.vdb.cache.jdbc.derbyCacheRemoteAccess={{ vdb_vars.com_denodo_vdb_cache_jdbc_derbyCacheRemoteAccess }}
+com.denodo.vdb.cache.jdbc.derbyCachePort={{ vdb_vars.com_denodo_vdb_cache_jdbc_derbyCachePort }}
 
 # Maximum time that rows can remain in processing state
-com.denodo.vdb.cache.processingTimeToLiveInSecs={{ vdb.com_denodo_vdb_cache_processingTimeToLiveInSecs }}
+com.denodo.vdb.cache.processingTimeToLiveInSecs={{ vdb_vars.com_denodo_vdb_cache_processingTimeToLiveInSecs }}
 
 # Maximum time in milliseconds that temporary tables can last into cache
-com.denodo.vdb.cache.jdbc.temporalTablesTimeout={{ vdb.com_denodo_vdb_cache_jdbc_temporalTablesTimeout }}
+com.denodo.vdb.cache.jdbc.temporalTablesTimeout={{ vdb_vars.com_denodo_vdb_cache_jdbc_temporalTablesTimeout }}
 
 # Maximum size in memory of a query (MB)
-com.denodo.vdb.engine.resource.queryMemoryLimit={{ vdb.com_denodo_vdb_engine_resource_queryMemoryLimit }}
+com.denodo.vdb.engine.resource.queryMemoryLimit={{ vdb_vars.com_denodo_vdb_engine_resource_queryMemoryLimit }}
 
 ###############################################################################
 #  ODBC Configuration Parameters                                              #
 ###############################################################################
 
 # Data buffer size for ODBC queries
-com.denodo.vdb.vdbinterface.server.odbc.dataBufferSize={{ vdb.com_denodo_vdb_vdbinterface_server_odbc_dataBufferSize }}
+com.denodo.vdb.vdbinterface.server.odbc.dataBufferSize={{ vdb_vars.com_denodo_vdb_vdbinterface_server_odbc_dataBufferSize }}
 # Chunk size for ODBC connections
-com.denodo.vdb.vdbinterface.server.odbc.connection.chunkSize={{ vdb.com_denodo_vdb_vdbinterface_server_odbc_connection_chunkSize }}
+com.denodo.vdb.vdbinterface.server.odbc.connection.chunkSize={{ vdb_vars.com_denodo_vdb_vdbinterface_server_odbc_connection_chunkSize }}
 # Chunk timeout for ODBC connections
-com.denodo.vdb.vdbinterface.server.odbc.connection.chunkTimeout={{ vdb.com_denodo_vdb_vdbinterface_server_odbc_connection_chunkTimeout }}
+com.denodo.vdb.vdbinterface.server.odbc.connection.chunkTimeout={{ vdb_vars.com_denodo_vdb_vdbinterface_server_odbc_connection_chunkTimeout }}
 # Query timeout for ODBC connections
-com.denodo.vdb.vdbinterface.server.odbc.connection.queryTimeout={{ vdb.com_denodo_vdb_vdbinterface_server_odbc_connection_queryTimeout }}
+com.denodo.vdb.vdbinterface.server.odbc.connection.queryTimeout={{ vdb_vars.com_denodo_vdb_vdbinterface_server_odbc_connection_queryTimeout }}
 # Error max length for ODBC queries
-com.denodo.vdb.vdbinterface.server.odbc.errorMaxLength={{ vdb.com_denodo_vdb_vdbinterface_server_odbc_errorMaxLength }}
+com.denodo.vdb.vdbinterface.server.odbc.errorMaxLength={{ vdb_vars.com_denodo_vdb_vdbinterface_server_odbc_errorMaxLength }}
 
 ###############################################################################
 # Http Configuration Parameters                                               #
 ###############################################################################
 
-com.denodo.vdb.proxy.proxyStatus={{ vdb.com_denodo_vdb_proxy_proxyStatus }}
-com.denodo.vdb.proxy.proxyHost={{ vdb.com_denodo_vdb_proxy_proxyHost }}
-com.denodo.vdb.proxy.proxyPort={{ vdb.com_denodo_vdb_proxy_proxyPort }}
-com.denodo.vdb.proxy.proxyUser={{ vdb.com_denodo_vdb_proxy_proxyUser }}
-com.denodo.vdb.proxy.proxyPassword={{ vdb.com_denodo_vdb_proxy_proxyPassword }}
-com.denodo.vdb.proxy.proxyPacUri={{ vdb.com_denodo_vdb_proxy_proxyPacUri }}
-com.denodo.vdb.http.referer={{ vdb.com_denodo_vdb_http_referer }}
-com.denodo.vdb.http.userAgent={{ vdb.com_denodo_vdb_http_userAgent }}
+com.denodo.vdb.proxy.proxyStatus={{ vdb_vars.com_denodo_vdb_proxy_proxyStatus }}
+com.denodo.vdb.proxy.proxyHost={{ vdb_vars.com_denodo_vdb_proxy_proxyHost }}
+com.denodo.vdb.proxy.proxyPort={{ vdb_vars.com_denodo_vdb_proxy_proxyPort }}
+com.denodo.vdb.proxy.proxyUser={{ vdb_vars.com_denodo_vdb_proxy_proxyUser }}
+com.denodo.vdb.proxy.proxyPassword={{ vdb_vars.com_denodo_vdb_proxy_proxyPassword }}
+com.denodo.vdb.proxy.proxyPacUri={{ vdb_vars.com_denodo_vdb_proxy_proxyPacUri }}
+com.denodo.vdb.http.referer={{ vdb_vars.com_denodo_vdb_http_referer }}
+com.denodo.vdb.http.userAgent={{ vdb_vars.com_denodo_vdb_http_userAgent }}
 
 ###############################################################################
 #  Web Services Generator Configuration Parameters                            #
 ###############################################################################
 # Web Container
-com.denodo.tomcat.webapps={{ vdb.com_denodo_tomcat_webapps com_denodo_tomcat_webapps}}
-com.denodo.webcontainer.startonstartup={{ vdb.com_denodo_webcontainer_startonstartup }}
+com.denodo.tomcat.webapps={{ vdb_vars.com_denodo_tomcat_webapps com_denodo_tomcat_webapps}}
+com.denodo.webcontainer.startonstartup={{ vdb_vars.com_denodo_webcontainer_startonstartup }}
 
 # WSGenerator working Directory.
-com.denodo.wsgenerator.workDir={{ vdb.com_denodo_wsgenerator_workDir }}
+com.denodo.wsgenerator.workDir={{ vdb_vars.com_denodo_wsgenerator_workDir }}
 
 # Parameters needed by wsdl2java
-com.denodo.vdb.wsgenerator.common.suntoolslibdir={{ vdb.com_denodo_vdb_wsgenerator_common_suntoolslibdir }}
-com.denodo.vdb.wsgenerator.common.axislibdir={{ vdb.com_denodo_vdb_wsgenerator_common_axislibdir }}
-com.denodo.vdb.wsgenerator.common.axisjars={{ vdb.com_denodo_vdb_wsgenerator_common_axisjars }}
+com.denodo.vdb.wsgenerator.common.suntoolslibdir={{ vdb_vars.com_denodo_vdb_wsgenerator_common_suntoolslibdir }}
+com.denodo.vdb.wsgenerator.common.axislibdir={{ vdb_vars.com_denodo_vdb_wsgenerator_common_axislibdir }}
+com.denodo.vdb.wsgenerator.common.axisjars={{ vdb_vars.com_denodo_vdb_wsgenerator_common_axisjars }}
 
 # Base lib directory
-com.denodo.vdb.wsgenerator.common.baselibdir={{ vdb.com_denodo_vdb_wsgenerator_common_baselibdir }}
+com.denodo.vdb.wsgenerator.common.baselibdir={{ vdb_vars.com_denodo_vdb_wsgenerator_common_baselibdir }}
 
 # Jars needed for java compilation
-com.denodo.vdb.wsgenerator.common.compilationjars={{ vdb.com_denodo_vdb_wsgenerator_common_compilationjars }}
+com.denodo.vdb.wsgenerator.common.compilationjars={{ vdb_vars.com_denodo_vdb_wsgenerator_common_compilationjars }}
 
 # Jars needed for war creation
-com.denodo.vdb.wsgenerator.common.warjars={{ vdb.com_denodo_vdb_wsgenerator_common_warjars }}
-com.denodo.vdb.wsgenerator.common.tomcatjars={{ vdb.com_denodo_vdb_wsgenerator_common_tomcatjars }}
-com.denodo.vdb.wsgenerator.common.resourcesdir={{ vdb.com_denodo_vdb_wsgenerator_common_resourcesdir }}
-com.denodo.vdb.wsgenerator.common.log4j2file={{ vdb.com_denodo_vdb_wsgenerator_common_log4j2file }}
-com.denodo.vdb.wsgenerator.common.cssfile={{ vdb.com_denodo_vdb_wsgenerator_common_cssfile }}
-com.denodo.vdb.wsgenerator.common.webxmltemplate={{ vdb.com_denodo_vdb_wsgenerator_common_webxmltemplate }}
-com.denodo.vdb.wsgenerator.common.indexhtmltemplate={{ vdb.com_denodo_vdb_wsgenerator_common_indexhtmltemplate }}
-com.denodo.vdb.wsgenerator.common.portlet168xmltemplate={{ vdb.com_denodo_vdb_wsgenerator_common_portlet168xmltemplate }}
-com.denodo.vdb.wsgenerator.common.portlet286xmltemplate={{ vdb.com_denodo_vdb_wsgenerator_common_portlet286xmltemplate }}
+com.denodo.vdb.wsgenerator.common.warjars={{ vdb_vars.com_denodo_vdb_wsgenerator_common_warjars }}
+com.denodo.vdb.wsgenerator.common.tomcatjars={{ vdb_vars.com_denodo_vdb_wsgenerator_common_tomcatjars }}
+com.denodo.vdb.wsgenerator.common.resourcesdir={{ vdb_vars.com_denodo_vdb_wsgenerator_common_resourcesdir }}
+com.denodo.vdb.wsgenerator.common.log4j2file={{ vdb_vars.com_denodo_vdb_wsgenerator_common_log4j2file }}
+com.denodo.vdb.wsgenerator.common.cssfile={{ vdb_vars.com_denodo_vdb_wsgenerator_common_cssfile }}
+com.denodo.vdb.wsgenerator.common.webxmltemplate={{ vdb_vars.com_denodo_vdb_wsgenerator_common_webxmltemplate }}
+com.denodo.vdb.wsgenerator.common.indexhtmltemplate={{ vdb_vars.com_denodo_vdb_wsgenerator_common_indexhtmltemplate }}
+com.denodo.vdb.wsgenerator.common.portlet168xmltemplate={{ vdb_vars.com_denodo_vdb_wsgenerator_common_portlet168xmltemplate }}
+com.denodo.vdb.wsgenerator.common.portlet286xmltemplate={{ vdb_vars.com_denodo_vdb_wsgenerator_common_portlet286xmltemplate }}
 
 ###############################################################################
 #  RESTful Web Service Configuration Parameters                               #
 ###############################################################################
-com.denodo.wsgenerator.restfulws.jarsForInternalDeployments={{ vdb.com_denodo_wsgenerator_restfulws_jarsForInternalDeployments }}
-com.denodo.wsgenerator.restfulws.warFile={{ vdb.com_denodo_wsgenerator_restfulws_warFile }}
-com.denodo.wsgenerator.restfulws.timezone={{ vdb.com_denodo_wsgenerator_restfulws_timezone }}
-com.denodo.wsgenerator.restfulws.cors.supportedMethods={{ vdb.com_denodo_wsgenerator_restfulws_cors_supportedMethods }}
-com.denodo.wsgenerator.restfulws.cors.supportedHeaders={{ vdb.com_denodo_wsgenerator_restfulws_cors_supportedHeaders }}
-com.denodo.wsgenerator.restfulws.cors.exposedHeaders={{ vdb.com_denodo_wsgenerator_restfulws_cors_exposedHeaders }}
-com.denodo.wsgenerator.restfulws.cors.supportsCredentials={{ vdb.com_denodo_wsgenerator_restfulws_cors_supportsCredentials }}
-com.denodo.wsgenerator.restfulws.cors.maxAge={{ vdb.com_denodo_wsgenerator_restfulws_cors_maxAge }}
-com.denodo.wsgenerator.restfulws.externalEntities={{ vdb.com_denodo_wsgenerator_restfulws_externalEntities }}
+com.denodo.wsgenerator.restfulws.jarsForInternalDeployments={{ vdb_vars.com_denodo_wsgenerator_restfulws_jarsForInternalDeployments }}
+com.denodo.wsgenerator.restfulws.warFile={{ vdb_vars.com_denodo_wsgenerator_restfulws_warFile }}
+com.denodo.wsgenerator.restfulws.timezone={{ vdb_vars.com_denodo_wsgenerator_restfulws_timezone }}
+com.denodo.wsgenerator.restfulws.cors.supportedMethods={{ vdb_vars.com_denodo_wsgenerator_restfulws_cors_supportedMethods }}
+com.denodo.wsgenerator.restfulws.cors.supportedHeaders={{ vdb_vars.com_denodo_wsgenerator_restfulws_cors_supportedHeaders }}
+com.denodo.wsgenerator.restfulws.cors.exposedHeaders={{ vdb_vars.com_denodo_wsgenerator_restfulws_cors_exposedHeaders }}
+com.denodo.wsgenerator.restfulws.cors.supportsCredentials={{ vdb_vars.com_denodo_wsgenerator_restfulws_cors_supportsCredentials }}
+com.denodo.wsgenerator.restfulws.cors.maxAge={{ vdb_vars.com_denodo_wsgenerator_restfulws_cors_maxAge }}
+com.denodo.wsgenerator.restfulws.externalEntities={{ vdb_vars.com_denodo_wsgenerator_restfulws_externalEntities }}
 
 ###############################################################################
 #  Widget Export Configuration Parameters                                     #
 ###############################################################################
 
-com.denodo.wsgenerator.widget.portlet.editmodeenabled={{ vdb.com_denodo_wsgenerator_widget_portlet_editmodeenabled }}
-com.denodo.wsgenerator.widget.portlet.cache.expirationtime={{ vdb.com_denodo_wsgenerator_widget_portlet_cache_expirationtime }}
-com.denodo.wsgenerator.widget.portlet.cache.scope={{ vdb.com_denodo_wsgenerator_widget_portlet_cache_scope }}
-com.denodo.wsgenerator.widget.portlet.portletjars={{ vdb.com_denodo_wsgenerator_widget_portlet_portletjars }}
-com.denodo.wsgenerator.widget.webpartdir={{ vdb.com_denodo_wsgenerator_widget_webpartdir }}
+com.denodo.wsgenerator.widget.portlet.editmodeenabled={{ vdb_vars.com_denodo_wsgenerator_widget_portlet_editmodeenabled }}
+com.denodo.wsgenerator.widget.portlet.cache.expirationtime={{ vdb_vars.com_denodo_wsgenerator_widget_portlet_cache_expirationtime }}
+com.denodo.wsgenerator.widget.portlet.cache.scope={{ vdb_vars.com_denodo_wsgenerator_widget_portlet_cache_scope }}
+com.denodo.wsgenerator.widget.portlet.portletjars={{ vdb_vars.com_denodo_wsgenerator_widget_portlet_portletjars }}
+com.denodo.wsgenerator.widget.webpartdir={{ vdb_vars.com_denodo_wsgenerator_widget_webpartdir }}
 
 ###############################################################################
 #  Java Security Parameters                                                   #
 ###############################################################################
 {% if ssl.enabled %}
-com.denodo.security.ssl.enabled={{ ssl.enabled }}
-com.denodo.security.ssl.keyStore={{ ssl.key_store }}
-com.denodo.security.ssl.keyStorePassword={{ ssl.key_store_password }}
-com.denodo.security.ssl.keyStorePassword.encrypted={{ ssl.key_store_password_encrypted }}
+com.denodo.security.ssl.enabled={{ ssl_vars.enabled }}
+com.denodo.security.ssl.keyStore={{ ssl_vars.key_store }}
+com.denodo.security.ssl.keyStorePassword={{ ssl_vars.key_store_password }}
+com.denodo.security.ssl.keyStorePassword.encrypted={{ ssl_vars.key_store_password_encrypted }}
 {% endif %}
 
 # "changeit" is the default password for the "cacerts" TrustStore included in 
 # the Java Runtime Environment
 {% if ssl.trustStore_enabled %}
-com.denodo.security.ssl.trustStore={{ ssl.trust_store }}
-com.denodo.security.ssl.trustStorePassword={{ ssl.trust_store_password }}
-com.denodo.security.ssl.trustStorePassword.encrypted={{ ssl.trust_store_password_encrypted }}
+com.denodo.security.ssl.trustStore={{ ssl_vars.trust_store }}
+com.denodo.security.ssl.trustStorePassword={{ ssl_vars.trust_store_password }}
+com.denodo.security.ssl.trustStorePassword.encrypted={{ ssl_vars.trust_store_password_encrypted }}
 {% endif %}
 ###############################################################################
 #  Parser Configuration Parameters                                            #
 ###############################################################################
 
 # Relative Paths to class directory
-URLBASE={{ vdb.URLBASE }}
-PARSERMETADATA={{ vdb.PARSERMETADATA }}
+URLBASE={{ vdb_vars.URLBASE }}
+PARSERMETADATA={{ vdb_vars.PARSERMETADATA }}
 
-PAQUETE_ESCANERS={{ vdb.PAQUETE_ESCANERS }}
-PAQUETE_FUNCIONES={{ vdb.PAQUETE_FUNCIONES }}
-PAQUETE_FUNCIONES_RUTAS={{ vdb.PAQUETE_FUNCIONES_RUTAS }}
-PAQUETE_ACCIONES={{ vdb.PAQUETE_ACCIONES }}
+PAQUETE_ESCANERS={{ vdb_vars.PAQUETE_ESCANERS }}
+PAQUETE_FUNCIONES={{ vdb_vars.PAQUETE_FUNCIONES }}
+PAQUETE_FUNCIONES_RUTAS={{ vdb_vars.PAQUETE_FUNCIONES_RUTAS }}
+PAQUETE_ACCIONES={{ vdb_vars.PAQUETE_ACCIONES }}
 
-JUEGO_POR_DEFECTO={{ vdb.JUEGO_POR_DEFECTO }}
-NOMBRE_NIVELES_POR_DEFECTO={{ vdb.NOMBRE_NIVELES_POR_DEFECTO }}
-NOMBRE_PATRONES_POR_DEFECTO={{ vdb.NOMBRE_PATRONES_POR_DEFECTO }}
+JUEGO_POR_DEFECTO={{ vdb_vars.JUEGO_POR_DEFECTO }}
+NOMBRE_NIVELES_POR_DEFECTO={{ vdb_vars.NOMBRE_NIVELES_POR_DEFECTO }}
+NOMBRE_PATRONES_POR_DEFECTO={{ vdb_vars.NOMBRE_PATRONES_POR_DEFECTO }}
 
-PARSER_RELOAD_DIR={{ vdb.PARSER_RELOAD_DIR }}
+PARSER_RELOAD_DIR={{ vdb_vars.PARSER_RELOAD_DIR }}
 
-Parser.TagSets.Attributes={{ vdb.Parser_TagSets_Attributes }}
+Parser.TagSets.Attributes={{ vdb_vars.Parser_TagSets_Attributes }}
 
-GenericLexerFactory/className={{ vdb.GenericLexerFactory_className }}
+GenericLexerFactory/className={{ vdb_vars.GenericLexerFactory_className }}
 
-TokenMarca/visibleTags={{ vdb.TokenMarca_visibleTags }}
+TokenMarca/visibleTags={{ vdb_vars.TokenMarca_visibleTags }}
 
 ###############################################################################
 #  IEBrowser Configuration Parameters                                         #
@@ -476,316 +476,316 @@ TokenMarca/visibleTags={{ vdb.TokenMarca_visibleTags }}
 
 ### Parameters to locate remote pool from IEBrowserConnection
 ### (if it is nos specified, default local pool is created) ###
-IEBrowserConnection.POOL_HOST={{ vdb.IEBrowserConnection_POOL_HOST }}
-IEBrowserConnection.POOL_PORT={{ vdb.IEBrowserConnection_POOL_PORT }}
-IEBrowserConnection.POOL_NAME={{ vdb.IEBrowserConnection_POOL_NAME }}
-IEBrowserConnection.charsetName={{ vdb.IEBrowserConnection_charsetName }}
+IEBrowserConnection.POOL_HOST={{ vdb_vars.IEBrowserConnection_POOL_HOST }}
+IEBrowserConnection.POOL_PORT={{ vdb_vars.IEBrowserConnection_POOL_PORT }}
+IEBrowserConnection.POOL_NAME={{ vdb_vars.IEBrowserConnection_POOL_NAME }}
+IEBrowserConnection.charsetName={{ vdb_vars.IEBrowserConnection_charsetName }}
 
 ###############################################################################
 #  Http Configuration Parameters                                              #
 ###############################################################################
 
-IEBrowser.NOCACHE={{ vdb.IEBrowser_NOCACHE }}
-IEBrowser.MAX_DOWNLOAD_TIME={{ vdb.IEBrowser_MAX_DOWNLOAD_TIME }}
-IEBrowser.NOSCRIPT={{ vdb.IEBrowser_NOSCRIPT }}
-IEBrowser.PROXY_PASSWORD={{ vdb.IEBrowser_PROXY_PASSWORD }}
-IEBrowser.PROXY_LOGIN={{ vdb.IEBrowser_PROXY_LOGIN }}
-IEBrowser.PROXY_DOMAIN={{ vdb.IEBrowser_PROXY_DOMAIN }}
+IEBrowser.NOCACHE={{ vdb_vars.IEBrowser_NOCACHE }}
+IEBrowser.MAX_DOWNLOAD_TIME={{ vdb_vars.IEBrowser_MAX_DOWNLOAD_TIME }}
+IEBrowser.NOSCRIPT={{ vdb_vars.IEBrowser_NOSCRIPT }}
+IEBrowser.PROXY_PASSWORD={{ vdb_vars.IEBrowser_PROXY_PASSWORD }}
+IEBrowser.PROXY_LOGIN={{ vdb_vars.IEBrowser_PROXY_LOGIN }}
+IEBrowser.PROXY_DOMAIN={{ vdb_vars.IEBrowser_PROXY_DOMAIN }}
 
-IEBrowserPool.REUSABLE_OBJECTS={{ vdb.IEBrowserPool_REUSABLE_OBJECTS }}
-ObjectPool.ASSIGNMENT_STRATEGY.3={{ vdb.ObjectPool_ASSIGNMENT_STRATEGY_3 }}
+IEBrowserPool.REUSABLE_OBJECTS={{ vdb_vars.IEBrowserPool_REUSABLE_OBJECTS }}
+ObjectPool.ASSIGNMENT_STRATEGY.3={{ vdb_vars.ObjectPool_ASSIGNMENT_STRATEGY_3 }}
 
-JSBrowser.CACHE_SIZE={{ vdb.JSBrowser_CACHE_SIZE }}
-JSBrowser.CACHE_TTL={{ vdb.JSBrowser_CACHE_TTL }}
-JSBrowser.CACHE_TTL_CHECK_DELAY={{ vdb.JSBrowser_CACHE_TTL_CHECK_DELAY }}
+JSBrowser.CACHE_SIZE={{ vdb_vars.JSBrowser_CACHE_SIZE }}
+JSBrowser.CACHE_TTL={{ vdb_vars.JSBrowser_CACHE_TTL }}
+JSBrowser.CACHE_TTL_CHECK_DELAY={{ vdb_vars.JSBrowser_CACHE_TTL_CHECK_DELAY }}
 
-ObjectPool.MAX_POOLSIZE={{ vdb.ObjectPool_MAX_POOLSIZE }}
+ObjectPool.MAX_POOLSIZE={{ vdb_vars.ObjectPool_MAX_POOLSIZE }}
 
 ###############################################################################
 #  MaxLen of Oracle PL\SQL Tables                                             #
 ###############################################################################
-com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.OraclePlugin.storedProcedure.table.maxlen={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_OraclePlugin_storedProcedure_table_maxlen }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.OraclePlugin.storedProcedure.register.maxlen={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_OraclePlugin_storedProcedure_register_maxlen }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.OraclePlugin.storedProcedure.table.maxlen={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_OraclePlugin_storedProcedure_table_maxlen }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.OraclePlugin.storedProcedure.register.maxlen={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_OraclePlugin_storedProcedure_register_maxlen }}
 
 
 ###############################################################################
 #  ITPilot Other                                                              #
 ###############################################################################
 
-ITPCore.CUSTOM_FUNCTION_LOCATOR={{ vdb.ITPCore_CUSTOM_FUNCTION_LOCATOR }}
+ITPCore.CUSTOM_FUNCTION_LOCATOR={{ vdb_vars.ITPCore_CUSTOM_FUNCTION_LOCATOR }}
 
-com.denodo.itp.admin.custom.components.dir={{ vdb.com_denodo_itp_admin_custom_components_dir }}
+com.denodo.itp.admin.custom.components.dir={{ vdb_vars.com_denodo_itp_admin_custom_components_dir }}
 
 # Temp directory
-ITPilot.tempDirectory={{ vdb.ITPilot_tempDirectory }}
+ITPilot.tempDirectory={{ vdb_vars.ITPilot_tempDirectory }}
 
-com.denodo.vdb.engine.wrapper.raw.html.ItpAccessFactory.jars={{ vdb.com_denodo_vdb_engine_wrapper_raw_html_ItpAccessFactory_jars }}
-com.denodo.iebrowser.connection.http.DenodoBrowserPoolConnection.jars={{ vdb.com_denodo_iebrowser_connection_http_DenodoBrowserPoolConnection_jars }}
-com.denodo.itp.component.core.evaluator.custom.ScriptRunner.jars={{ vdb.com_denodo_itp_component_core_evaluator_custom_ScriptRunner_jars }}
-com.denodo.util.net.ProxyUtil.jars={{ vdb.com_denodo_util_net_ProxyUtil_jars }}
+com.denodo.vdb.engine.wrapper.raw.html.ItpAccessFactory.jars={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_html_ItpAccessFactory_jars }}
+com.denodo.iebrowser.connection.http.DenodoBrowserPoolConnection.jars={{ vdb_vars.com_denodo_iebrowser_connection_http_DenodoBrowserPoolConnection_jars }}
+com.denodo.itp.component.core.evaluator.custom.ScriptRunner.jars={{ vdb_vars.com_denodo_itp_component_core_evaluator_custom_ScriptRunner_jars }}
+com.denodo.util.net.ProxyUtil.jars={{ vdb_vars.com_denodo_util_net_ProxyUtil_jars }}
 
 ###############################################################################
 #  ITPilot Converters                                                         #
 ###############################################################################
 
-Converter.tempDirectory={{ vdb.Converter_tempDirectory }}
+Converter.tempDirectory={{ vdb_vars.Converter_tempDirectory }}
 # Converter word to html
-ConverterWordToHtmlFactory.converterClassName={{ vdb.ConverterWordToHtmlFactory_converterClassName }}
+ConverterWordToHtmlFactory.converterClassName={{ vdb_vars.ConverterWordToHtmlFactory_converterClassName }}
 # Converter excel to html
-ConverterExcelToHtmlFactory.converterClassName={{ vdb.ConverterExcelToHtmlFactory_converterClassName }}
+ConverterExcelToHtmlFactory.converterClassName={{ vdb_vars.ConverterExcelToHtmlFactory_converterClassName }}
 # Converter pdf to html
-ConverterPdfToHtmlFactory.converterClassName={{ vdb.ConverterPdfToHtmlFactory_converterClassName }}
+ConverterPdfToHtmlFactory.converterClassName={{ vdb_vars.ConverterPdfToHtmlFactory_converterClassName }}
 
-ConverterWordToHtmlFactory.converterLibDir={{ vdb.ConverterWordToHtmlFactory_converterLibDir }}
-ConverterExcelToHtmlFactory.converterLibDir={{ vdb.ConverterExcelToHtmlFactory_converterLibDir }}
-ConverterPDFToHtmlFactory.converterLibDir={{ vdb.ConverterPDFToHtmlFactory_converterLibDir }}
-OOConverter.requiredJars={{ vdb.OOConverter_requiredJars }}
-OOConverter.OpenOfficeDirectory={{ vdb.OOConverter_OpenOfficeDirectory }}
+ConverterWordToHtmlFactory.converterLibDir={{ vdb_vars.ConverterWordToHtmlFactory_converterLibDir }}
+ConverterExcelToHtmlFactory.converterLibDir={{ vdb_vars.ConverterExcelToHtmlFactory_converterLibDir }}
+ConverterPDFToHtmlFactory.converterLibDir={{ vdb_vars.ConverterPDFToHtmlFactory_converterLibDir }}
+OOConverter.requiredJars={{ vdb_vars.OOConverter_requiredJars }}
+OOConverter.OpenOfficeDirectory={{ vdb_vars.OOConverter_OpenOfficeDirectory }}
 
 #Implementation class for a xslt transformation
-com.denodo.vdb.catalog.view.function.FunctionXSLT.transImpl={{ vdb.com_denodo_vdb_catalog_view_function_FunctionXSLT_transImpl }}
+com.denodo.vdb.catalog.view.function.FunctionXSLT.transImpl={{ vdb_vars.com_denodo_vdb_catalog_view_function_FunctionXSLT_transImpl }}
 
 #Implementation class for a xpath transformation
-com.denodo.vdb.catalog.view.function.FunctionXPATH.transImpl={{ vdb.com_denodo_vdb_catalog_view_function_FunctionXPATH_transImpl }}
-com.denodo.vdb.catalog.view.function.FunctionXPATH.xpathImpl={{ vdb.com_denodo_vdb_catalog_view_function_FunctionXPATH_xpathImpl }}
-com.denodo.vdb.catalog.view.function.FunctionXPATH2.transImpl={{ vdb.com_denodo_vdb_catalog_view_function_FunctionXPATH2_transImpl }}
-com.denodo.vdb.catalog.view.function.FunctionXPATH2.xpathImpl={{ vdb.com_denodo_vdb_catalog_view_function_FunctionXPATH2_xpathImpl }}
+com.denodo.vdb.catalog.view.function.FunctionXPATH.transImpl={{ vdb_vars.com_denodo_vdb_catalog_view_function_FunctionXPATH_transImpl }}
+com.denodo.vdb.catalog.view.function.FunctionXPATH.xpathImpl={{ vdb_vars.com_denodo_vdb_catalog_view_function_FunctionXPATH_xpathImpl }}
+com.denodo.vdb.catalog.view.function.FunctionXPATH2.transImpl={{ vdb_vars.com_denodo_vdb_catalog_view_function_FunctionXPATH2_transImpl }}
+com.denodo.vdb.catalog.view.function.FunctionXPATH2.xpathImpl={{ vdb_vars.com_denodo_vdb_catalog_view_function_FunctionXPATH2_xpathImpl }}
 
 ###############################################################################
 #  HTTP Pool connections                                                      #
 ###############################################################################
-com.denodo.parser.connection.http.maxConnectionsPerHost={{ vdb.com_denodo_parser_connection_http_maxConnectionsPerHost }}
-com.denodo.parser.connection.http.maxTotalConnections={{ vdb.com_denodo_parser_connection_http_maxTotalConnections }}
-com.denodo.parser.connection.http.connection.manager.timeout={{ vdb.com_denodo_parser_connection_http_connection_manager_timeout }}
-com.denodo.parser.connection.http.testOnBorrow={{ vdb.com_denodo_parser_connection_http_testOnBorrow }}
-com.denodo.parser.connection.http.minEvictableIdleTimeMillis={{ vdb.com_denodo_parser_connection_http_minEvictableIdleTimeMillis }}
-com.denodo.parser.connection.http.ntlm.maxConnectionsPerHost={{ vdb.com_denodo_parser_connection_http_ntlm_maxConnectionsPerHost }}
-com.denodo.parser.connection.http.ntlm.maxTotalConnections={{ vdb.com_denodo_parser_connection_http_ntlm_maxTotalConnections }}
-com.denodo.parser.connection.http.ntlm.maxCredentials={{ vdb.com_denodo_parser_connection_http_ntlm_maxCredentials }}
+com.denodo.parser.connection.http.maxConnectionsPerHost={{ vdb_vars.com_denodo_parser_connection_http_maxConnectionsPerHost }}
+com.denodo.parser.connection.http.maxTotalConnections={{ vdb_vars.com_denodo_parser_connection_http_maxTotalConnections }}
+com.denodo.parser.connection.http.connection.manager.timeout={{ vdb_vars.com_denodo_parser_connection_http_connection_manager_timeout }}
+com.denodo.parser.connection.http.testOnBorrow={{ vdb_vars.com_denodo_parser_connection_http_testOnBorrow }}
+com.denodo.parser.connection.http.minEvictableIdleTimeMillis={{ vdb_vars.com_denodo_parser_connection_http_minEvictableIdleTimeMillis }}
+com.denodo.parser.connection.http.ntlm.maxConnectionsPerHost={{ vdb_vars.com_denodo_parser_connection_http_ntlm_maxConnectionsPerHost }}
+com.denodo.parser.connection.http.ntlm.maxTotalConnections={{ vdb_vars.com_denodo_parser_connection_http_ntlm_maxTotalConnections }}
+com.denodo.parser.connection.http.ntlm.maxCredentials={{ vdb_vars.com_denodo_parser_connection_http_ntlm_maxCredentials }}
 
 ###############################################################################
 #  LDAP - PageSize                                                            #
 ###############################################################################
-com.denodo.vdb.engine.wrapper.raw.ldap.LDAPAccess.LDAPDefaultPageSize={{ vdb.com_denodo_vdb_engine_wrapper_raw_ldap_LDAPAccess_LDAPDefaultPageSize }}
+com.denodo.vdb.engine.wrapper.raw.ldap.LDAPAccess.LDAPDefaultPageSize={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_ldap_LDAPAccess_LDAPDefaultPageSize }}
 
 ###############################################################################
 #  LDAP - Connection Pool                                                     #
 ###############################################################################
-com.denodo.vdb.misc.datasource.LDAPDataSource.pool.initialSize={{ vdb.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_initialSize }}
-com.denodo.vdb.misc.datasource.LDAPDataSource.pool.maxActive={{ vdb.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_maxActive }}
-com.denodo.vdb.misc.datasource.LDAPDataSource.pool.prefSize={{ vdb.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_prefSize }}
-com.denodo.vdb.misc.datasource.LDAPDataSource.pool.connectionTimeout={{ vdb.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_connectionTimeout }}
-com.denodo.vdb.misc.datasource.LDAPDataSource.pool.minEvictableIdleTimeMillis={{ vdb.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_minEvictableIdleTimeMillis }}
+com.denodo.vdb.misc.datasource.LDAPDataSource.pool.initialSize={{ vdb_vars.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_initialSize }}
+com.denodo.vdb.misc.datasource.LDAPDataSource.pool.maxActive={{ vdb_vars.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_maxActive }}
+com.denodo.vdb.misc.datasource.LDAPDataSource.pool.prefSize={{ vdb_vars.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_prefSize }}
+com.denodo.vdb.misc.datasource.LDAPDataSource.pool.connectionTimeout={{ vdb_vars.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_connectionTimeout }}
+com.denodo.vdb.misc.datasource.LDAPDataSource.pool.minEvictableIdleTimeMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_LDAPDataSource_pool_minEvictableIdleTimeMillis }}
 
 ###############################################################################
 #  DF - Maximum characters per line                                           #
 ###############################################################################
-com.denodo.vdb.engine.wrapper.raw.df.row.maxlen={{ vdb.com_denodo_vdb_engine_wrapper_raw_df_row_maxlen }}
+com.denodo.vdb.engine.wrapper.raw.df.row.maxlen={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_df_row_maxlen }}
 
 ###############################################################################
 #  OLAP - Connection Pool                                                     #
 ###############################################################################
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.initialSize={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_initialSize }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.maxIdle={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxIdle }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.minIdle={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_minIdle }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.maxActive={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxActive }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.maxWait={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxWait }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.whenExhaustedAction={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_whenExhaustedAction }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.testOnBorrow={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testOnBorrow }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.testOnReturn={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testOnReturn }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.testWhileIdle={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testWhileIdle }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.timeBetweenEvictionRunsMillis={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_timeBetweenEvictionRunsMillis }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.numTestsPerEvictionRun={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_numTestsPerEvictionRun }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.minEvictableIdleTimeMillis={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_minEvictableIdleTimeMillis }}
-com.denodo.vdb.misc.datasource.OLAPDataSource.pool.pingQuery={{ vdb.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_pingQuery }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.initialSize={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_initialSize }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.maxIdle={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxIdle }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.minIdle={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_minIdle }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.maxActive={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxActive }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.maxWait={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxWait }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.whenExhaustedAction={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_whenExhaustedAction }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.testOnBorrow={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testOnBorrow }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.testOnReturn={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testOnReturn }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.testWhileIdle={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testWhileIdle }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.timeBetweenEvictionRunsMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_timeBetweenEvictionRunsMillis }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.numTestsPerEvictionRun={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_numTestsPerEvictionRun }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.minEvictableIdleTimeMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_minEvictableIdleTimeMillis }}
+com.denodo.vdb.misc.datasource.OLAPDataSource.pool.pingQuery={{ vdb_vars.com_denodo_vdb_misc_datasource_OLAPDataSource_pool_pingQuery }}
 
 ###############################################################################
 #  JVM options                                                                #
 ###############################################################################
 
-java.env.DENODO_OPTS_START={{ vdb.java_env_DENODO_OPTS_START }}
-java.env.DENODO_OPTS_STOP={{ vdb.java_env_DENODO_OPTS_STOP }}
+java.env.DENODO_OPTS_START={{ vdb_vars.java_env_DENODO_OPTS_START }}
+java.env.DENODO_OPTS_STOP={{ vdb_vars.java_env_DENODO_OPTS_STOP }}
 
 ###############################################################################
 #  Service wrapper options                                                    #
 ###############################################################################
 
-service.wrapper.WRAPPER_PING_INTERVAL={{ vdb.service_wrapper_WRAPPER_PING_INTERVAL }}
-service.wrapper.WRAPPER_PING_TIMEOUT={{ vdb.service_wrapper_WRAPPER_PING_TIMEOUT }}
+service.wrapper.WRAPPER_PING_INTERVAL={{ vdb_vars.service_wrapper_WRAPPER_PING_INTERVAL }}
+service.wrapper.WRAPPER_PING_TIMEOUT={{ vdb_vars.service_wrapper_WRAPPER_PING_TIMEOUT }}
 
 ###############################################################################
 #  Essbase options                                                            #
 ###############################################################################
-com.denodo.vdb.essbasePluginsDir={{ vdb.com_denodo_vdb_essbasePluginsDir }}
-com.denodo.vdb.essbaseDriversDir={{ vdb.com_denodo_vdb_essbaseDriversDir }}
-com.denodo.essbaseJarName={{ vdb.com_denodo_essbaseJarName }}
+com.denodo.vdb.essbasePluginsDir={{ vdb_vars.com_denodo_vdb_essbasePluginsDir }}
+com.denodo.vdb.essbaseDriversDir={{ vdb_vars.com_denodo_vdb_essbaseDriversDir }}
+com.denodo.essbaseJarName={{ vdb_vars.com_denodo_essbaseJarName }}
 
 ###############################################################################
 #  Hive Options                                                               #
 ###############################################################################
 # Disable query cancel for older versions of hive
-com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.HiveStandardPlugin.cancelStatementsEnabled.12={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_12 }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.HiveStandardPlugin.cancelStatementsEnabled.11={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_11 }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.HiveStandardPlugin.cancelStatementsEnabled.10={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_10 }}
-com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.HiveStandardPlugin.cancelStatementsEnabled.071={{ vdb.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_071 }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.HiveStandardPlugin.cancelStatementsEnabled.12={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_12 }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.HiveStandardPlugin.cancelStatementsEnabled.11={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_11 }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.HiveStandardPlugin.cancelStatementsEnabled.10={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_10 }}
+com.denodo.vdb.engine.wrapper.raw.jdbc.adapter.plugins.HiveStandardPlugin.cancelStatementsEnabled.071={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_071 }}
 
 ###############################################################################
 #  POI SAX CustomWrapper                                                      #
 ###############################################################################
-com.denodo.vdb.contrib.wrapper.xls.event.content.introspection.maxrows={{ vdb.com_denodo_vdb_contrib_wrapper_xls_event_content_introspection_maxrows }}
+com.denodo.vdb.contrib.wrapper.xls.event.content.introspection.maxrows={{ vdb_vars.com_denodo_vdb_contrib_wrapper_xls_event_content_introspection_maxrows }}
 
 ###############################################################################
 #  VCS options                                                                #
 ###############################################################################
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.user={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_user }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.system={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_system }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.url={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_url }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.environment={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_environment }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.useVCS={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_useVCS }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.password={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_password }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.useUserAndPassword={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_useUserAndPassword }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.encryptedPassword={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_encryptedPassword }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.localRepositoriesHome={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_localRepositoriesHome }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.lsopt={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_lsopt }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.uniquenessConflictsDetection={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.uniquenessConflictsDetection.tfs={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_tfs }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.uniquenessConflictsDetection.svn={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_svn }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.uniquenessConflictsDetection.git={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_git }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.defaultQueryTimeout={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultQueryTimeout }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.defaultChunkTimeout={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultChunkTimeout }}
-com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.defaultChunkSize={{ vdb.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultChunkSize }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.user={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_user }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.system={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_system }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.url={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_url }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.environment={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_environment }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.useVCS={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_useVCS }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.password={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_password }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.useUserAndPassword={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_useUserAndPassword }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.encryptedPassword={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_encryptedPassword }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.localRepositoriesHome={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_localRepositoriesHome }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.lsopt={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_lsopt }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.uniquenessConflictsDetection={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.uniquenessConflictsDetection.tfs={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_tfs }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.uniquenessConflictsDetection.svn={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_svn }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.uniquenessConflictsDetection.git={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_git }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.defaultQueryTimeout={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultQueryTimeout }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.defaultChunkTimeout={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultChunkTimeout }}
+com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.defaultChunkSize={{ vdb_vars.com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultChunkSize }}
 
 ###############################################################################
 #  Table manager options                                                      #
 ###############################################################################
-com.denodo.vdb.util.tablemanagement.blockDelete.loopSize={{ vdb.com_denodo_vdb_util_tablemanagement_blockDelete_loopSize }}
-com.denodo.vdb.util.tablemanagement.blockDelete.blockSize={{ vdb.com_denodo_vdb_util_tablemanagement_blockDelete_blockSize }}
+com.denodo.vdb.util.tablemanagement.blockDelete.loopSize={{ vdb_vars.com_denodo_vdb_util_tablemanagement_blockDelete_loopSize }}
+com.denodo.vdb.util.tablemanagement.blockDelete.blockSize={{ vdb_vars.com_denodo_vdb_util_tablemanagement_blockDelete_blockSize }}
 
 ###############################################################################
 #  JMS parameters                                                             #
 ###############################################################################
-jmslistener.defaultChunkSize={{ vdb.jmslistener_defaultChunkSize }}
-jmslistener.queryTimeout={{ vdb.jmslistener_queryTimeout }}
-jmslistener.chunkTimeout={{ vdb.jmslistener_chunkTimeout }}
+jmslistener.defaultChunkSize={{ vdb_vars.jmslistener_defaultChunkSize }}
+jmslistener.queryTimeout={{ vdb_vars.jmslistener_queryTimeout }}
+jmslistener.chunkTimeout={{ vdb_vars.jmslistener_chunkTimeout }}
 
 ###############################################################################
 #  Cost optimizer parameters                                                  #
 ###############################################################################
 
 # Parameter to enable the Automatic cost-based optimization
-com.denodo.vdb.interpreter.execution.SelectAction.costoptimization={{ vdb.com_denodo_vdb_interpreter_execution_SelectAction_costoptimization }}
+com.denodo.vdb.interpreter.execution.SelectAction.costoptimization={{ vdb_vars.com_denodo_vdb_interpreter_execution_SelectAction_costoptimization }}
 
 # Default blockSize in KB
-com.denodo.vdb.engine.costoptimizer.blockSize={{ vdb.com_denodo_vdb_engine_costoptimizer_blockSize }}
+com.denodo.vdb.engine.costoptimizer.blockSize={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_blockSize }}
 # Default multiBlockReadCount in number of blocks
-com.denodo.vdb.engine.costoptimizer.multiBlockReadCount={{ vdb.com_denodo_vdb_engine_costoptimizer_multiBlockReadCount }}
+com.denodo.vdb.engine.costoptimizer.multiBlockReadCount={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_multiBlockReadCount }}
 # Default transfer Rate Scale Factor. Default value 1 corresponds with a JDBC database accessible through a conventional 100 Mbps LAN
-com.denodo.vdb.engine.costoptimizer.transferRateFactor={{ vdb.com_denodo_vdb_engine_costoptimizer_transferRateFactor }}
+com.denodo.vdb.engine.costoptimizer.transferRateFactor={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_transferRateFactor }}
 # Default readRate in I/O operations/millisecond
-com.denodo.vdb.engine.costoptimizer.readRate={{ vdb.com_denodo_vdb_engine_costoptimizer_readRate }}
+com.denodo.vdb.engine.costoptimizer.readRate={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_readRate }}
 # Default initTime in milliseconds
-com.denodo.vdb.engine.costoptimizer.initTime={{ vdb.com_denodo_vdb_engine_costoptimizer_initTime }}
+com.denodo.vdb.engine.costoptimizer.initTime={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_initTime }}
 
 # Parameter initTime by data source type in milliseconds
-com.denodo.vdb.engine.costoptimizer.initTime.ws={{ vdb.com_denodo_vdb_engine_costoptimizer_initTime_ws }}
-com.denodo.vdb.engine.costoptimizer.initTime.xml={{ vdb.com_denodo_vdb_engine_costoptimizer_initTime_xml }}
-com.denodo.vdb.engine.costoptimizer.initTime.json={{ vdb.com_denodo_vdb_engine_costoptimizer_initTime_json }}
-com.denodo.vdb.engine.costoptimizer.initTime.df={{ vdb.com_denodo_vdb_engine_costoptimizer_initTime_df }}
-com.denodo.vdb.engine.costoptimizer.initTime.saperp={{ vdb.com_denodo_vdb_engine_costoptimizer_initTime_saperp }}
-com.denodo.vdb.engine.costoptimizer.initTime.ldap={{ vdb.com_denodo_vdb_engine_costoptimizer_initTime_ldap }}
-com.denodo.vdb.engine.costoptimizer.initTime.itp={{ vdb.com_denodo_vdb_engine_costoptimizer_initTime_itp }}
+com.denodo.vdb.engine.costoptimizer.initTime.ws={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_initTime_ws }}
+com.denodo.vdb.engine.costoptimizer.initTime.xml={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_initTime_xml }}
+com.denodo.vdb.engine.costoptimizer.initTime.json={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_initTime_json }}
+com.denodo.vdb.engine.costoptimizer.initTime.df={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_initTime_df }}
+com.denodo.vdb.engine.costoptimizer.initTime.saperp={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_initTime_saperp }}
+com.denodo.vdb.engine.costoptimizer.initTime.ldap={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_initTime_ldap }}
+com.denodo.vdb.engine.costoptimizer.initTime.itp={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_initTime_itp }}
 
 # Default transfer Rate Scale Factor. Default value 1 corresponds with a JDBC database accessible through a conventional 100 Mbps LAN
-com.denodo.vdb.engine.costoptimizer.transferRateFactor.ws={{ vdb.com_denodo_vdb_engine_costoptimizer_transferRateFactor_ws }}
-com.denodo.vdb.engine.costoptimizer.transferRateFactor.xml={{ vdb.com_denodo_vdb_engine_costoptimizer_transferRateFactor_xml }}
-com.denodo.vdb.engine.costoptimizer.transferRateFactor.json={{ vdb.com_denodo_vdb_engine_costoptimizer_transferRateFactor_json }}
-com.denodo.vdb.engine.costoptimizer.transferRateFactor.df={{ vdb.com_denodo_vdb_engine_costoptimizer_transferRateFactor_df }}
-com.denodo.vdb.engine.costoptimizer.transferRateFactor.saperp={{ vdb.com_denodo_vdb_engine_costoptimizer_transferRateFactor_saperp }}
-com.denodo.vdb.engine.costoptimizer.transferRateFactor.ldap={{ vdb.com_denodo_vdb_engine_costoptimizer_transferRateFactor_ldap }}
-com.denodo.vdb.engine.costoptimizer.transferRateFactor.itp={{ vdb.com_denodo_vdb_engine_costoptimizer_transferRateFactor_itp }}
+com.denodo.vdb.engine.costoptimizer.transferRateFactor.ws={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_transferRateFactor_ws }}
+com.denodo.vdb.engine.costoptimizer.transferRateFactor.xml={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_transferRateFactor_xml }}
+com.denodo.vdb.engine.costoptimizer.transferRateFactor.json={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_transferRateFactor_json }}
+com.denodo.vdb.engine.costoptimizer.transferRateFactor.df={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_transferRateFactor_df }}
+com.denodo.vdb.engine.costoptimizer.transferRateFactor.saperp={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_transferRateFactor_saperp }}
+com.denodo.vdb.engine.costoptimizer.transferRateFactor.ldap={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_transferRateFactor_ldap }}
+com.denodo.vdb.engine.costoptimizer.transferRateFactor.itp={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_transferRateFactor_itp }}
 
 # Default values for netezza datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.netezza.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_netezza_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.netezza.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_netezza_default }}
-com.denodo.vdb.engine.costoptimizer.internalTransferRate.jdbc.netezza.default={{ vdb.com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_netezza_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.netezza.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_netezza_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.netezza.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_netezza_default }}
+com.denodo.vdb.engine.costoptimizer.internalTransferRate.jdbc.netezza.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_netezza_default }}
 
 # Default values for teradata datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.teradata.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_teradata_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.teradata.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_teradata_default }}
-com.denodo.vdb.engine.costoptimizer.internalTransferRate.jdbc.teradata.default={{ vdb.com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_teradata_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.teradata.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_teradata_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.teradata.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_teradata_default }}
+com.denodo.vdb.engine.costoptimizer.internalTransferRate.jdbc.teradata.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_teradata_default }}
 
 # Default values for vertica datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.vertica.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_vertica_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.vertica.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_vertica_default }}
-com.denodo.vdb.engine.costoptimizer.internalTransferRate.jdbc.vertica.default={{ vdb.com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_vertica_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.vertica.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_vertica_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.vertica.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_vertica_default }}
+com.denodo.vdb.engine.costoptimizer.internalTransferRate.jdbc.vertica.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_vertica_default }}
 
 # Default values for hive datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.hive.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_hive_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.hive.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_hive_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.hive.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_hive_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.hive.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_hive_default }}
 
 # Default values for impala datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.impala.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_impala_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.impala.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_impala_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.impala.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_impala_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.impala.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_impala_default }}
 
 # Default values for spark datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.spark.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_spark_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.spark.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_spark_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.spark.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_spark_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.spark.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_spark_default }}
 
 # Default values for redshift datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.redshift.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_redshift_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.redshift.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_redshift_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.redshift.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_redshift_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.redshift.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_redshift_default }}
 
 # Default values for snowflake datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.snowflake.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_snowflake_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.snowflake.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_snowflake_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.snowflake.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_snowflake_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.snowflake.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_snowflake_default }}
 
 # Default values for impala datasources
-com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.presto.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_presto_default }}
-com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.presto.default={{ vdb.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_presto_default }}
+com.denodo.vdb.engine.costoptimizer.numProcessingUnits.jdbc.presto.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_presto_default }}
+com.denodo.vdb.engine.costoptimizer.numCPUsPerProcessingUnit.jdbc.presto.default={{ vdb_vars.com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_presto_default }}
 
 ###############################################################################
 
 ## SAPBW BAPI POOL
-com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.maxWait={{ vdb.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxWait }}
-com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.maxActive={{ vdb.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxActive }}
-com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.maxIdle={{ vdb.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxIdle }}
-com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.minEvictableIdleTimeMillis={{ vdb.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_minEvictableIdleTimeMillis }}
-com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.timeBetweenEvictionRunsMillis={{ vdb.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_timeBetweenEvictionRunsMillis }}
+com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.maxWait={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxWait }}
+com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.maxActive={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxActive }}
+com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.maxIdle={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxIdle }}
+com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.minEvictableIdleTimeMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_minEvictableIdleTimeMillis }}
+com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.pool.timeBetweenEvictionRunsMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_timeBetweenEvictionRunsMillis }}
 
-com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.readBlockSize={{ vdb.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_readBlockSize }}
-com.denodo.vdb.interpreter.execution.util.sapBWBapiUtils.filterInfoObjects={{ vdb.com_denodo_vdb_interpreter_execution_util_sapBWBapiUtils_filterInfoObjects }}
+com.denodo.vdb.misc.datasource.SAPBWBapiDataSource.readBlockSize={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_readBlockSize }}
+com.denodo.vdb.interpreter.execution.util.sapBWBapiUtils.filterInfoObjects={{ vdb_vars.com_denodo_vdb_interpreter_execution_util_sapBWBapiUtils_filterInfoObjects }}
 
 ## SAPERP BAPI POOL
-com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.maxWait={{ vdb.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxWait }}
-com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.maxActive={{ vdb.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxActive }}
-com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.maxIdle={{ vdb.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxIdle }}
-com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.minEvictableIdleTimeMillis={{ vdb.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_minEvictableIdleTimeMillis }}
-com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.timeBetweenEvictionRunsMillis={{ vdb.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_timeBetweenEvictionRunsMillis }}
+com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.maxWait={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxWait }}
+com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.maxActive={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxActive }}
+com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.maxIdle={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxIdle }}
+com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.minEvictableIdleTimeMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_minEvictableIdleTimeMillis }}
+com.denodo.vdb.misc.datasource.SAPERPDataSource.pool.timeBetweenEvictionRunsMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_timeBetweenEvictionRunsMillis }}
 
 ## Salesforce BULK API parameters
-com.denodo.vdb.misc.datasource.SalesforceDataSource.bulk.batchStatus.maxWaitMillis={{ vdb.com_denodo_vdb_misc_datasource_SalesforceDataSource_bulk_batchStatus_maxWaitMillis }}
-com.denodo.vdb.misc.datasource.SalesforceDataSource.bulk.batchStatus.timeBetweenRequestsMillis={{ vdb.com_denodo_vdb_misc_datasource_SalesforceDataSource_bulk_batchStatus_timeBetweenRequestsMillis }}
+com.denodo.vdb.misc.datasource.SalesforceDataSource.bulk.batchStatus.maxWaitMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_SalesforceDataSource_bulk_batchStatus_maxWaitMillis }}
+com.denodo.vdb.misc.datasource.SalesforceDataSource.bulk.batchStatus.timeBetweenRequestsMillis={{ vdb_vars.com_denodo_vdb_misc_datasource_SalesforceDataSource_bulk_batchStatus_timeBetweenRequestsMillis }}
 
 ## MDB cache levels enabling
-com.denodo.vdb.engine.wrapper.raw.mdb.uniquenames.cache.enable={{ vdb.com_denodo_vdb_engine_wrapper_raw_mdb_uniquenames_cache_enable }}
-com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.enableAutoSingleUserMode={{ vdb.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_enableAutoSingleUserMode }}
+com.denodo.vdb.engine.wrapper.raw.mdb.uniquenames.cache.enable={{ vdb_vars.com_denodo_vdb_engine_wrapper_raw_mdb_uniquenames_cache_enable }}
+com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.enableAutoSingleUserMode={{ vdb_vars.com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_enableAutoSingleUserMode }}
 
 ###############################################################################
 # Resource manager parameters                                                 #
 ###############################################################################
 
 # Parameter to enable the resource manager
-com.denodo.vdb.engine.session.restriction.ResourceManagerEngine.resourceManagerStatus={{ vdb.com_denodo_vdb_engine_session_restriction_ResourceManagerEngine_resourceManagerStatus }}
-com.denodo.vdb.engine.session.restriction.ResourceManagerEngine.maintainerPeriodInSecs={{ vdb.com_denodo_vdb_engine_session_restriction_ResourceManagerEngine_maintainerPeriodInSecs }}
+com.denodo.vdb.engine.session.restriction.ResourceManagerEngine.resourceManagerStatus={{ vdb_vars.com_denodo_vdb_engine_session_restriction_ResourceManagerEngine_resourceManagerStatus }}
+com.denodo.vdb.engine.session.restriction.ResourceManagerEngine.maintainerPeriodInSecs={{ vdb_vars.com_denodo_vdb_engine_session_restriction_ResourceManagerEngine_maintainerPeriodInSecs }}
 
 ###############################################################################
 # Privilege parameters                                                        #
 ###############################################################################
 
 # FILE privilege accesible routes (disabled, * or a list of routes delimited by | )
-com.denodo.security.file.privilege.generalaccess={{ vdb.com_denodo_security_file_privilege_generalaccess }}
-com.denodo.vdb.interpreter.execution.SelectAction.simplify={{ vdb.com_denodo_vdb_interpreter_execution_SelectAction_simplify }}
-com.denodo.vdb.interpreter.execution.SelectAction.summaryRewrite={{ vdb.com_denodo_vdb_interpreter_execution_SelectAction_summaryRewrite }}
-com.denodo.vdb.interpreter.execution.SelectAction.dataMovement={{ vdb.com_denodo_vdb_interpreter_execution_SelectAction_dataMovement }}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.runtimeRegistryPort={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_runtimeRegistryPort }}
-com.denodo.vdb.vdbinterface.server.VDBManagerImpl.runtimeShutdownPort={{ vdb.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_runtimeShutdownPort }}
+com.denodo.security.file.privilege.generalaccess={{ vdb_vars.com_denodo_security_file_privilege_generalaccess }}
+com.denodo.vdb.interpreter.execution.SelectAction.simplify={{ vdb_vars.com_denodo_vdb_interpreter_execution_SelectAction_simplify }}
+com.denodo.vdb.interpreter.execution.SelectAction.summaryRewrite={{ vdb_vars.com_denodo_vdb_interpreter_execution_SelectAction_summaryRewrite }}
+com.denodo.vdb.interpreter.execution.SelectAction.dataMovement={{ vdb_vars.com_denodo_vdb_interpreter_execution_SelectAction_dataMovement }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.runtimeRegistryPort={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_runtimeRegistryPort }}
+com.denodo.vdb.vdbinterface.server.VDBManagerImpl.runtimeShutdownPort={{ vdb_vars.com_denodo_vdb_vdbinterface_server_VDBManagerImpl_runtimeShutdownPort }}

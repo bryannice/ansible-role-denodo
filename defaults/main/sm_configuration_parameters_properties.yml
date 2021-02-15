@@ -1,6 +1,6 @@
 ---
-sm_configuration_parameters_properties:
-  server_port: "{{ solution_manager_installer.port }}"
+sm_configuration_parameters_properties_defaults:
+  server_port: "{{ solution_manager_installer_defaults.port }}"
   spring_hateoas_use_hal_as_default_json_media_type: false
   spring_data_rest_defaultMediaType: application/json
   com_denodo_solutionmanager_timezone: UTC
@@ -8,8 +8,8 @@ sm_configuration_parameters_properties:
   com_denodo_solutionmanager_userAgent: Denodo-Solution-Manager
   java_env_DENODO_OPTS_START: -Xmx1024m
   com_denodo_solutionmanager_rmi_host: localhost
-  com_denodo_solutionmanager_utils_LicenseManager_iconRoute: "{{ solution_manager_installer.install_path }}/resources/solution-manager/ico"
-  com_denodo_vdb_install: "{{ solution_manager_installer.install_path }}"
+  com_denodo_solutionmanager_utils_LicenseManager_iconRoute: "{{ solution_manager_installer_defaults.install_path }}/resources/solution-manager/ico"
+  com_denodo_vdb_install: "{{ solution_manager_installer_defaults.install_path }}"
   rmi_queryTimeout: 90000
   rmi_chunkTimeout: 90000
   rmi_chunkSize: 100
@@ -45,7 +45,7 @@ sm_configuration_parameters_properties:
   jdbc_numTestsPerEviction: 3
   jdbc_minEvictableIdleTime: 1800000
   jdbc_kerberosTokenTimeout: 30000
-  com_denodo_solutionmanager_vdp_confFile: "{{ solution_manager_installer.install_path }}/conf/vdp/VDBConfiguration.properties"
+  com_denodo_solutionmanager_vdp_confFile: "{{ solution_manager_installer_defaults.install_path }}/conf/vdp/VDBConfiguration.properties"
   com_denodo_solutionmanager_vdp_database: admin
   com_denodo_solutionmanager_vdp_hostname: localhost
   com_denodo_solutionmanager_scheduler_waitingTime: 10000
@@ -59,21 +59,21 @@ sm_configuration_parameters_properties:
   com_denodo_solutionmanager_vcs_password:
   com_denodo_solutionmanager_vcs_useUserAndPassword: true
   com_denodo_solutionmanager_vcs_encryptedPassword: true
-  com_denodo_solutionmanager_vcs_localRepositoriesHome: "{{ solution_manager_installer.install_path }}/work/solution-manager/repository"
+  com_denodo_solutionmanager_vcs_localRepositoriesHome: "{{ solution_manager_installer_defaults.install_path }}/work/solution-manager/repository"
   com_denodo_solutionmanager_vcs_tempSVNRepository: tempSolutionManagerSvnRepo
   com_denodo_solutionmanager_vcs_maxTryWaiting: 5
   com_denodo_solutionmanager_vcs_waitingTime: 10000
   com_denodo_solutionmanager_deployments_deleteRetries: 50
-  com_denodo_solutionmanagerserver_deployments_workDir: "{{ solution_manager_installer.install_path }}/work/solution-manager"
+  com_denodo_solutionmanagerserver_deployments_workDir: "{{ solution_manager_installer_defaults.install_path }}/work/solution-manager"
   com_denodo_solutionmanager_scripts_timeoutInSeconds: 600
-  com_denodo_solutionmanagerserver_monitoring_resourcesDir: "{{ solution_manager_installer.install_path }}/resources/solution-manager-monitor"
-  com_denodo_solutionmanagerserver_monitoring_workDir: "{{ solution_manager_installer.install_path }}/resources/solution-manager-monitor/work"
+  com_denodo_solutionmanagerserver_monitoring_resourcesDir: "{{ solution_manager_installer_defaults.install_path }}/resources/solution-manager-monitor"
+  com_denodo_solutionmanagerserver_monitoring_workDir: "{{ solution_manager_installer_defaults.install_path }}/resources/solution-manager-monitor/work"
   com_denodo_solutionmanagerserver_monitoring_stopRunningMonitorsOnShutdown: false
   com_denodo_solutionmanagerserver_monitoring_checkRunningMonitorsOnStartup_timeoutInSecs: 60
   com_denodo_solutionmanagerserver_authentication_oauth2_serverAccessTokenGeneratorUrl: https://auth.denodo.com/oauth2.0/accessToken
   com_denodo_solutionmanagerserver_resourceServerAvailableUpdatesUrl: https://support.denodo.com/repository/items
   com_denodo_solutionmanagerserver_cloud_aws_resourceServerAvailableAmisProvidedUrl: https://support.denodo.com/repository/aws/list
   com_denodo_solutionmanagerserver_cloud_aws_resourceServerShareAmiUrl: https://support.denodo.com/repository/aws/share
-  sso_confFile: "{{ solution_manager_installer.install_path }}/conf/SSOConfiguration.properties"
-  sso_server_confFile: "{{ solution_manager_installer.install_path }}/conf/denodo-sso/SSOTokenConfiguration.properties"
+  sso_confFile: "{{ solution_manager_installer_defaults.install_path }}/conf/SSOConfiguration.properties"
+  sso_server_confFile: "{{ solution_manager_installer_defaults.install_path }}/conf/denodo-sso/SSOTokenConfiguration.properties"
   com_denodo_solutionmanager_cloud_aws_supportedInstanceTypes: ^(t2\\.medium|(t2|m4|m5|c3|c4|c5)\\.(large|xlarge|2xlarge|4xlarge|8xlarge|9xlarge|10xlarge|12xlarge)|r3\\.(large|xlarge|2xlarge))$
