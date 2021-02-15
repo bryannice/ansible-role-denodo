@@ -7,7 +7,7 @@ solution_manager_installer_defaults:
   denodo_installer_path: /data
   derby_port: 11526
   diagnosticmonitoringtool: true
-  install_path: "/opt/denodo/solution_manager"
+  install_path: /opt/denodo/solution_manager
   install_license_manager_server_service: none
   install_solution_manager_server_service: none
   install_vdp_server_service: none

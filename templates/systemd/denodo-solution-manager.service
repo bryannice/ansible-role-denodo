@@ -5,8 +5,8 @@ After=denodo-license-manager.service
 Before=denodo-solution-manager-web-tool.service
 
 [Service]
-ExecStart=/opt/denodo-install-solutionmanager-8.0/bin/solutionmanager_startup.sh
-ExecStop=/opt/denodo-install-solutionmanager-8.0/bin/solutionmanager_shutdown.sh
+ExecStart={{ solution_manager_installer_vars.install_path }}/bin/solutionmanager_startup.sh
+ExecStop={{ solution_manager_installer_vars.install_path }}/bin/solutionmanager_shutdown.sh
 RemainAfterExit=true
 Type=oneshot
 
