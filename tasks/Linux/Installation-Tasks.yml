@@ -39,7 +39,7 @@
   retries: 180
   until: job_result.finished
 
-- name: Remove Denodo solution manager archive
-  ansible.builtin.file:
-    path: "{{ solution_manager_installer_vars.denodo_root_directory }}/{{ contents.files[0] }}"
-    state: absent
+#- name: Remove Denodo solution manager archive
+#  ansible.builtin.file:
+#    path: "{{ solution_manager_installer_vars.denodo_root_directory }}/{{ contents.files[0] }}"
+#    state: absent
