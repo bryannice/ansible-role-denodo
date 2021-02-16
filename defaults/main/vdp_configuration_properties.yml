@@ -1,0 +1,385 @@
+---
+# Virtual DataPort Configuration File
+vdb_defaults:
+  com_denodo_vdb_install: "{{ solution_manager_installer_defaults.install_path }}"
+  com_denodo_vdb_workDir: "{{ solution_manager_installer_defaults.install_path }}/work/vdp"
+  com_denodo_vdb_jdbcDriversDir: "{{ solution_manager_installer_defaults.install_path }}/extensions/thirdparty/lib"
+  com_denodo_vdb_jdbcDriversLibDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/jdbc-drivers"
+  com_denodo_vdb_jdbcDriversExternalLibDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/jdbc-drivers-external"
+  com_denodo_vdb_jdbcOtherDriversExternalLibDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/jdbc-drivers-other"
+  com_denodo_vdb_jarsDir: "{{ solution_manager_installer_defaults.install_path }}/metadata/db/jar"
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_hostName: localhost
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_port: 19999
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_shutdownPort: 19998
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_odbcPort: 19996
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_registryURL: localhost
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_registryPort: 19997
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_factoryPort: 19995
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_iconRoute: "{{ solution_manager_installer_defaults.install_path }}/resources/vdp/ico"
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_maxWorkers: 0
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiMinWorkers: 4
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiMaxWorkers: 100
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_rmiWorkerTimeout: 10
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_refreshMetadataPeriod: 60
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_refreshMBeansPeriod: 0
+  com_denodo_vdb_interpreter_execution_Action_help_path: /com/denodo/vdb/interpreter/parser/help/
+  com_denodo_vdb_catalog_view_JoinView_defaultNestedParallelNumber: 5
+  derby_system_home: "{{ solution_manager_installer_defaults.install_path }}/metadata/db"
+  com_denodo_vdb_catalog_storage_DBDerbyStorageManager_databaseName: dbmetadata
+  com_denodo_vdb_engine_optimize_Optimizer_instanceClassName: com.denodo.vdb.engine.optimize.LowestCostOptimizer
+  com_denodo_vdb_engine_thread_ThreadPool_maxThreads: 300
+  com_denodo_vdb_engine_thread_ThreadPool_expirationTime: 600000
+  com_denodo_vdb_engine_thread_ThreadPool_sleepTime: 300000
+  com_denodo_vdb_engine_thread_ThreadPool_timeout: 43200000
+  com_denodo_vdb_engine_thread_ThreadPool_checkoutTime: 30000
+  com_denodo_vdb_engine_thread_ThreadPool_cancelTimeout: 300000
+  com_denodo_vdb_engine_wrapper_RawAccess_yieldInterval: 100
+  com_denodo_vdb_management_mbeans_request_RequestsManagementInfo_maxRequests: 0
+  com_denodo_vdb_management_mbeans_request_TransactionsManagementInfo_maxTransactions: 0
+  com_denodo_vdb_management_mbeans_cache_DatabaseCacheManagementInfo_maxRefreshProcs: 0
+  com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_DriverAdapter_fetchSize: 1000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_PostgreSQLPlugin_fetchSize_autoCommit: false
+  com_denodo_vdb_engine_swap_SwapManager_swappingStatus: ON
+  com_denodo_vdb_engine_swap_SwapManager_swappingResultMaxSizeInMB: 50
+  com_denodo_vdb_engine_swap_SwapManager_swappingAccessMaxSizeInMB: 50
+  com_denodo_vdb_engine_swap_SwapManager_maxBlockSizeInKB: 200
+  com_denodo_vdb_engine_swap_SwapManager_swapDir: ../work/vdp/swap
+  com_denodo_vdb_catalog_type_DecimalPrecision: 38
+  com_denodo_vdb_catalog_map_SimpleMap_mapPath: "{{ solution_manager_installer_defaults.install_path }}/setup/vdp/metadata/properties/databases/"
+  com_denodo_vdb_catalog_map_SimpleMap_mapDirectory: maps/
+  com_denodo_vdb_misc_PropertiesMap_fileMapsPath_i18n: "{{ solution_manager_installer_defaults.install_path }}/setup/vdp/metadata/properties/i18n/"
+  com_denodo_vdb_catalog_wrapper_MetaWrapper_wrapperPath: "{{ solution_manager_installer_defaults.install_path }}/metadata/db/"
+  com_denodo_vdb_catalog_wrapper_MetaWrapper_jarDir: jar
+  com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_suntoolslibdir: "{{ solution_manager_installer_defaults.install_path }}/lib/sun-tools"
+  com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axislibdir: "{{ solution_manager_installer_defaults.install_path }}/lib/contrib"
+  com_denodo_vdb_catalog_wrapper_ws_MetaWebServiceWrapper_axisjars: commons-discovery.jar,denodo-axis-jaxrpc.jar,denodo-axis-saaj.jar,denodo-axis-rt-core.jar,denodo-axis-rt-transport-jms.jar
+  com_denodo_parser_connection_html_ConnectionParser_defaultConnection: http.CommonsHttpClientConnection,120000
+  com_denodo_vdb_misc_connection_util_ConnectionParser_defaultConnection: http.CommonsHttpClientConnection,120000
+  com_denodo_vdb_ODBCDriver: sun.jdbc.odbc.JdbcOdbcDriver
+  com_denodo_vdb_ODBCClassPath: jdbc-odbc
+  com_denodo_vdb_catalog_user_User_maxCacheSize: 10
+  com_denodo_vdb_catalog_user_User_objectTimeToLive: 0
+  com_denodo_vdb_catalog_user_User_cacheMaintainerTaskPeriod: 0
+  com_denodo_vdb_catalog_database_Database_maxCacheSize: 0
+  com_denodo_vdb_catalog_database_Database_objectTimeToLive: 0
+  com_denodo_vdb_catalog_database_Database_cacheMaintainerTaskPeriod: 0
+  com_denodo_vdb_catalog_database_Database_databasePath: "{{ solution_manager_installer_defaults.install_path }}/metadata/db/"
+  com_denodo_vdb_catalog_database_Database_databasePropertiesPath: "{{ solution_manager_installer_defaults.install_path }}/metadata/db/properties/"
+  com_denodo_vdb_catalog_database_Database_adminDatabase: admin
+  com_denodo_vdb_catalog_database_identifiersCharset: unicode
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_initialSize: 4
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxIdle: -1
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_minIdle: 0
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxActive: 20
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxWait: 30000
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_whenExhaustedAction: 1
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testOnBorrow: true
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testOnReturn: false
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_testWhileIdle: false
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_timeBetweenEvictionRunsMillis: -1
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_numTestsPerEvictionRun: 3
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_minEvictableIdleTimeMillis: 1800000
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_pingQuery:
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_poolPreparedStatements: false
+  com_denodo_vdb_misc_datasource_JDBCDataSource_pool_maxOpenPreparedStatements: -1
+  com_denodo_vdb_misc_datasource_WebServiceDataSource_connectionPoolTimeout: 0
+  com_denodo_vdb_misc_datasource_WebServiceDataSource_maxTotalConnections: 50
+  com_denodo_vdb_misc_datasource_WebServiceDataSource_connectionPoolReadTimeout: 43200000
+  com_denodo_vdb_misc_I18nParametersManager_i18nDefault: us_pst
+  com_denodo_vdb_misc_I18nParametersManager_useI18nOnCast: false
+  com_denodo_vdb_misc_I18nParametersManager_prefixFileName: i18n_
+  com_denodo_vdb_misc_I18nParametersManager_cacheClassName: com.denodo.util.cache.MapCache
+  com_denodo_vdb_misc_I18nParametersManager_cachePropertiesFile:
+  com_denodo_vdb_interpreter_execution_transformations_TransformationManager_transformations_file: Transformations.xml
+  com_denodo_vdb_catalog_Catalog_identifiersMaxLength: 100
+  com_denodo_vdb_util_TextualSimilarity_distanceMetric: JaroWinklerTFIDF
+  com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_defaultBlockSize: 200
+  com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_JDBCdefaultBlockSize: 200
+  com_denodo_vdb_engine_wrapper_vdb_BindingJoinAccess_LDAPdefaultBlockSize: 200
+  com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_concurrentQueriesLimit: OFF
+  com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_maxConcurrentQueries: 100
+  com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_waitingQueriesLimit: OFF
+  com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_maxWaitingQueries: 500
+  storedProcedures_defaultQueryTimeout: 80000
+  storedProcedures_defaultChunkTimeout: 80000
+  storedProcedures_defaultChunkSize: 100
+  storedProcedures_validateSchemaAndCatalog: true
+  com_denodo_util_lucene_analysis_Analyzer_es: com.denodo.util.lucene.analysis.es.SpanishAnalyzer
+  com_denodo_util_lucene_analysis_Analyzer_en: com.denodo.util.lucene.analysis.en.EnglishAnalyzer
+  com_denodo_util_lucene_analysis_Analyzer_std: com.denodo.util.lucene.analysis.StandardAnalyzer
+  com_denodo_vdb_catalog_view_function_FunctionCONTEXTUALSUMMARY_defaultMaxFragments: 1000
+  com_denodo_vdb_engine_query_SubQuery_optimizeCrossJoin: true
+  com_denodo_vdb_catalog_view_MetaSearchMethod_calculateViewPlans: true
+  com_denodo_vdb_interpreter_execution_SelectAction_sendTraceOnError: true
+  com_denodo_vdb_interpreter_execution_SelectAction_saveTimesInTrace: false
+  com_denodo_vdb_interpreter_execution_saveTrace: ALL_FULL
+  com_denodo_vdb_interpreter_execution_saveTraceDir: "{{ solution_manager_installer_defaults.install_path }}/logs/vdp/trace"
+  com_denodo_vdb_engine_RowQueueSizeInMB: 10
+  com_denodo_vdb_engine_RowQueueNotifyPercent: 0.2
+  com_denodo_vdb_misc_connection_ws_SocketTimeoutMillis: 1800000
+  com_denodo_vdb_engine_query_intervalDateSupport: true
+  com_denodo_vdb_engine_session_transactionTimeout: 1800
+  com_denodo_vdb_engine_session_inactiveTransactionTimeout: 30
+  com_denodo_vdb_management_mbeans_datasource_ping_timeout: 15000
+  com_denodo_vdb_management_mbeans_datasource_ping_threadPool_coreSize: 8
+  com_denodo_vdb_management_mbeans_datasource_ping_threadPool_maxSize: 16
+  com_denodo_vdb_management_mbeans_datasource_ping_threadPool_keepAlive: 90000
+  com_denodo_vdb_management_mbeans_datasource_ping_threadPool_queueSize: 50
+  queryOptimization_parallelProcessing_enabled: false
+  queryOptimization_parallelProcessing_dataSource: cache
+  queryOptimization_parallelProcessing_customDataSource_databaseName:
+  queryOptimization_parallelProcessing_customDataSource_dataSourceName:
+  com_denodo_vdb_cache_AbstractViewCacheManager_instanceClassName: com.denodo.vdb.cache.ViewCacheManager
+  com_denodo_vdb_cache_cacheStatus: OFF
+  com_denodo_vdb_cache_jdbc_serverCacheDataSource: \"admin\".\"vdpcachedatasource\"
+  com_denodo_vdb_cache_jdbc_customCacheDataSourceName: customvdpcachedatasource
+  com_denodo_vdb_cache_ViewCacheManager_cacheClassName: com.denodo.util.cache.MapCache
+  com_denodo_vdb_cache_ViewCacheManager_maxCacheSize: 10
+  com_denodo_vdb_cache_ViewCacheManager_objectTimeToLive: 180
+  com_denodo_vdb_cache_ViewCacheManager_cacheMaintainerTaskPeriod: 240
+  com_denodo_vdb_engine_wrapper_raw_jdbc_batchInsertSize: 200
+  com_denodo_vdb_engine_wrapper_raw_jdbc_netezza_batchInsertSize: 10000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_sqlserver_batchInsertSize: 1000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_teradata_batchInsertSize: 1000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_redshift_batchInsertSize: 50000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_athena_bulkLoad_batchInsertSize: 500000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_redshift_bulkLoad_batchInsertSize: 500000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_snowflake_bulkLoad_batchInsertSize: 500000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_impala_bulkLoad_batchInsertSize: 5000000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_hive_bulkLoad_batchInsertSize: 5000000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_spark_bulkLoad_batchInsertSize: 5000000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_teradata_bulkLoad_batchInsertSize: 1000
+  com_denodo_vdb_engine_wrapper_raw_jdbc_presto_bulkLoad_batchInsertSize: 5000000
+  com_denodo_vdb_cache_jdbc_fetchSize: 1000
+  com_denodo_vdb_cache_timeToLiveInSecs: 3600
+  com_denodo_vdb_cache_cacheMaintainerPeriodInSecs: 21600
+  com_denodo_vdb_cache_cacheMaintenance: ON
+  com_denodo_vdb_cache_jdbc_manager_JDBCCacheManager_cleanTables: true
+  com_denodo_vdb_cache_jdbc_derbyCacheRemoteAccess: OFF
+  com_denodo_vdb_cache_jdbc_derbyCachePort: 1527
+  com_denodo_vdb_cache_processingTimeToLiveInSecs: 86400
+  com_denodo_vdb_cache_jdbc_temporalTablesTimeout: 172800000
+  com_denodo_vdb_engine_resource_queryMemoryLimit: 200
+  com_denodo_vdb_vdbinterface_server_odbc_dataBufferSize: 1048576
+  com_denodo_vdb_vdbinterface_server_odbc_connection_chunkSize: 1000
+  com_denodo_vdb_vdbinterface_server_odbc_connection_chunkTimeout: 90000
+  com_denodo_vdb_vdbinterface_server_odbc_connection_queryTimeout: 900000
+  com_denodo_vdb_vdbinterface_server_odbc_errorMaxLength: 200
+  com_denodo_vdb_proxy_proxyStatus: OFF
+  com_denodo_vdb_proxy_proxyHost:
+  com_denodo_vdb_proxy_proxyPort:
+  com_denodo_vdb_proxy_proxyUser:
+  com_denodo_vdb_proxy_proxyPassword:
+  com_denodo_vdb_proxy_proxyPacUri:
+  com_denodo_vdb_http_referer:
+  com_denodo_vdb_http_userAgent:
+  com_denodo_tomcat_webapps: sso,denodo-restfulws,denodo-odata4-service,denodo-graphql-service
+  com_denodo_webcontainer_startonstartup: on
+  com_denodo_wsgenerator_workDir: "{{ solution_manager_installer_defaults.install_path }}/work/vdp"
+  com_denodo_vdb_wsgenerator_common_suntoolslibdir: "{{ solution_manager_installer_defaults.install_path }}/lib/sun-tools"
+  com_denodo_vdb_wsgenerator_common_axislibdir: "{{ solution_manager_installer_defaults.install_path }}/lib/contrib"
+  com_denodo_vdb_wsgenerator_common_axisjars: denodo-axis-rt-core.jar,commons-discovery.jar,denodo-axis-jaxrpc.jar,denodo-axis-saaj.jar,denodo-axis-rt-transport-jms.jar
+  com_denodo_vdb_wsgenerator_common_baselibdir: "{{ solution_manager_installer_defaults.install_path }}/lib"
+  com_denodo_vdb_wsgenerator_common_compilationjars: contrib/commons-logging.jar,contrib/denodo-commons-interpolator.jar,contrib/log4j-api.jar,contrib/log4j-core.jar,contrib/wss4j.jar,contrib/denodo-vdp-wsgenerator-runtime.jar,contrib/commons-betwixt.jar,contrib/commons-beanutils.jar,vdp-client-core/denodo-vdp-client.jar,../resources/apache-tomcat/lib/servlet-api.jar
+  com_denodo_vdb_wsgenerator_common_warjars: contrib/opensaml-core.jar,contrib/opensaml-saml-api.jar,contrib/opensaml-saml-impl.jar,contrib/java-support.jar,contrib/metrics-core.jar,contrib/Saxon-HE.jar,contrib/denodo-commons-interpolator.jar,contrib/log4j-api.jar,contrib/log4j-core.jar,contrib/denodo-wss4j.jar,contrib/xmlsec.jar,contrib/denodo-vdp-wsgenerator-runtime.jar,,contrib/denodo-axis-saaj.jar,contrib/denodo-axis-jaxrpc.jar,contrib/denodo-axis-rt-core.jar,contrib/denodo-axis-rt-transport-jms.jar,contrib/commons-discovery.jar,contrib/commons-betwixt.jar,contrib/commons-beanutils.jar,contrib/commons-digester.jar,contrib/commons-collections.jar,contrib/commons-collections4.jar,contrib/commons-logging.jar,contrib/commons-lang.jar,contrib/commons-lang3.jar,contrib/java_cup_runtime.jar,contrib/commons-pool2.jar,contrib/wsdl4j.jar,ws-contrib/denodo-commons-util-web.jar,vdp-client-core/denodo-vdp-client.jar,contrib/denodo-asyncrmi.jar,contrib/commons-codec.jar,contrib/icu4j.jar,contrib/jms.jar,contrib/stax.jar,contrib/jackson-core.jar,contrib/jackson-databind.jar,contrib/istack-commons-runtime.jar,contrib/jaxb-runtime.jar,contrib/jaxb-api.jar,/ws-contrib/javax.activation-api.jar,contrib/javax.xml.soap-api.jar
+  com_denodo_vdb_wsgenerator_common_tomcatjars: contrib/denodo-axis-jaxrpc.jar,contrib/denodo-axis-rt-core.jar,contrib/denodo-axis-rt-transport-jms.jar,contrib/denodo-vdp-wsgenerator-runtime.jar,contrib/denodo-wss4j.jar
+  com_denodo_vdb_wsgenerator_common_resourcesdir: "{{ solution_manager_installer_defaults.install_path }}/resources/db/wsgenerator"
+  com_denodo_vdb_wsgenerator_common_log4j2file: log4j2.xml
+  com_denodo_vdb_wsgenerator_common_cssfile: default.css
+  com_denodo_vdb_wsgenerator_common_webxmltemplate: web.xml.template
+  com_denodo_vdb_wsgenerator_common_indexhtmltemplate: index.html.template
+  com_denodo_vdb_wsgenerator_common_portlet168xmltemplate: portlet.portletv168.xml.template
+  com_denodo_vdb_wsgenerator_common_portlet286xmltemplate: portlet.portletv286.xml.template
+  com_denodo_wsgenerator_restfulws_jarsForInternalDeployments: denodo-vdp-wsgenerator-runtime,jackson-jaxrs-json-provider,swagger-jaxrs
+  com_denodo_wsgenerator_restfulws_warFile: "{{ solution_manager_installer_defaults.install_path }}/webapps/denodo-restfulws/denodo-restfulws.war"
+  com_denodo_wsgenerator_restfulws_timezone: GMT
+  com_denodo_wsgenerator_restfulws_cors_supportedMethods: GET, POST, PUT, DELETE, HEAD, OPTIONS
+  com_denodo_wsgenerator_restfulws_cors_supportedHeaders: Accept, Accept-Language, Authorization, Cache-Control, Content-Language, Content-Type, X-Requested-With
+  com_denodo_wsgenerator_restfulws_cors_exposedHeaders: Accept-Ranges, Access-Control-Allow-Credentials, Access-Control-Allow-Origin, Cache-Control, Content-Language, Content-Length, Content-Type, Date, ETag, Expires, Last-Modified, Location, Pragma, Server, Transfer-Encoding, Vary, WWW-Authenticate
+  com_denodo_wsgenerator_restfulws_cors_supportsCredentials: true
+  com_denodo_wsgenerator_restfulws_cors_maxAge: 1800
+  com_denodo_wsgenerator_restfulws_externalEntities: other_settings.xml,connection_settings.xml,cors_settings.xml
+  com_denodo_wsgenerator_widget_portlet_editmodeenabled: true
+  com_denodo_wsgenerator_widget_portlet_cache_expirationtime: 30
+  com_denodo_wsgenerator_widget_portlet_cache_scope: PRIVATE
+  com_denodo_wsgenerator_widget_portlet_portletjars: contrib/denodo-commons-interpolator.jar,portlet-client-core/denodo-vdp-wsgenerator-portlet-client.jar,contrib/denodo-vdp-wsgenerator-runtime.jar,contrib/commons-discovery.jar,contrib/commons-betwixt.jar,contrib/commons-beanutils.jar,contrib/commons-digester.jar,contrib/commons-collections.jar,contrib/commons-collections4.jar,contrib/commons-logging.jar,contrib/commons-lang.jar,contrib/commons-lang3.jar,contrib/java_cup_runtime.jar,contrib/commons-pool2.jar,ws-contrib/denodo-commons-util-web.jar,vdp-client-core/denodo-vdp-client.jar,contrib/log4j-api.jar,contrib/log4j-core.jar,contrib/jstl-api.jar,contrib/taglibs-standard-impl.jar,contrib/taglibs-standard-jstlel.jar,contrib/commons-codec.jar,contrib/icu4j.jar,contrib/stax.jar
+  com_denodo_wsgenerator_widget_webpartdir: "{{ solution_manager_installer_defaults.install_path }}/resources/db/wsgenerator/widget/webpart"
+  URLBASE: "{{ solution_manager_installer_defaults.install_path }}/"
+  PARSERMETADATA: metadata/parser/wes/
+  PAQUETE_ESCANERS: com.denodo.parser.escaner.
+  PAQUETE_FUNCIONES: com.denodo.parser.interpolator.function.
+  PAQUETE_FUNCIONES_RUTAS: com.denodo.parser.interpolator.function.
+  PAQUETE_ACCIONES: com.denodo.parser.action.
+  JUEGO_POR_DEFECTO: STANDARD
+  NOMBRE_NIVELES_POR_DEFECTO: Level_
+  NOMBRE_PATRONES_POR_DEFECTO: Pattern_
+  PARSER_RELOAD_DIR: "{{ solution_manager_installer_defaults.install_path }}/extensions/dev/target/classes_wes/"
+  Parser_TagSets_Attributes: ALL
+  GenericLexerFactory_className: com.denodo.parser.escaner.GenericFullLexer4_6
+  TokenMarca_visibleTags: SELECT,IMG,MAP,BUTTON,TEXTAREA,INPUT
+  IEBrowserConnection_POOL_HOST: "%{SERVERPOOL_HOST}"
+  IEBrowserConnection_POOL_PORT: "%{SERVERPOOL_PORT}"
+  IEBrowserConnection_POOL_NAME: RemoteIEBrowserPoolImpl
+  IEBrowserConnection_charsetName: UTF-8
+  IEBrowser_NOCACHE: 0
+  IEBrowser_MAX_DOWNLOAD_TIME: 60000
+  IEBrowser_NOSCRIPT: 0
+  IEBrowser_PROXY_PASSWORD:
+  IEBrowser_PROXY_LOGIN:
+  IEBrowser_PROXY_DOMAIN:
+  IEBrowserPool_REUSABLE_OBJECTS: false
+  ObjectPool_ASSIGNMENT_STRATEGY_3: SimplePoolAsignationStrategy
+  JSBrowser_CACHE_SIZE: 150
+  JSBrowser_CACHE_TTL: 3600000
+  JSBrowser_CACHE_TTL_CHECK_DELAY: 3600000
+  ObjectPool_MAX_POOLSIZE: 250
+  com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_OraclePlugin_storedProcedure_table_maxlen: 100
+  com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_OraclePlugin_storedProcedure_register_maxlen: 512
+  ITPCore_CUSTOM_FUNCTION_LOCATOR: com.denodo.vdb.engine.wrapper.raw.html.customfunctions.ScriptAccessCustomFunctionLocator
+  com_denodo_itp_admin_custom_components_dir: "{{ solution_manager_installer_defaults.install_path }}/metadata/itp-custom-components-wes"
+  ITPilot_tempDirectory: "{{ solution_manager_installer_defaults.install_path }}/temp"
+  com_denodo_vdb_engine_wrapper_raw_html_ItpAccessFactory_jars: lib/iebrowser-core/denodo-iebrowser.jar,lib/itp-runtime/js.jar,lib/itp-runtime/denodo-itpmodel-runtime.jar,lib/itp-contrib/denodo-itpcore.jar,lib/denodo-vdp-adapters/denodo-itp-adapter/denodo-vdp-itp-adapter.jar
+  com_denodo_iebrowser_connection_http_DenodoBrowserPoolConnection_jars: lib/iebrowser-core/denodo-iebrowser.jar,lib/itp-runtime/js.jar
+  com_denodo_itp_component_core_evaluator_custom_ScriptRunner_jars: lib/iebrowser-core/denodo-iebrowser.jar,lib/itp-runtime/js.jar,lib/itp-contrib/denodo-itpcore.jar,extensions/thirdparty/itp-lib
+  com_denodo_util_net_ProxyUtil_jars: lib/itp-runtime/js.jar,lib/contrib/denodo-commons-util.jar
+  Converter_tempDirectory: "{{ solution_manager_installer_defaults.install_path }}/temp"
+  ConverterWordToHtmlFactory_converterClassName: com.denodo.util.converters.word.OOConverterWordToHtml
+  ConverterExcelToHtmlFactory_converterClassName: com.denodo.util.converters.excel.OOConverterExcelToHtml
+  ConverterPdfToHtmlFactory_converterClassName: com.denodo.util.converters.pdf.TextAcrobatConverterPdfToHtml
+  ConverterWordToHtmlFactory_converterLibDir: Open_Office_Install_Dir/program/classes,Open_Office_Install_Dir/URE/java,Open_Office_Install_Dir/program,Open_Office_Install_Dir/Basis/program/classes
+  ConverterExcelToHtmlFactory_converterLibDir: Open_Office_Install_Dir/program/classes,Open_Office_Install_Dir/URE/java,Open_Office_Install_Dir/program,Open_Office_Install_Dir/Basis/program/classes
+  ConverterPDFToHtmlFactory_converterLibDir: $ITP_ACROBAT_HOME/Acrobat/plug_ins
+  OOConverter_requiredJars: ridl.jar,jurt.jar,juh.jar,java_uno.jar,unoloader.jar,unoil.jar
+  OOConverter_OpenOfficeDirectory: Open_Office_Install_Dir
+  com_denodo_vdb_catalog_view_function_FunctionXSLT_transImpl: net.sf.saxon.TransformerFactoryImpl
+  com_denodo_vdb_catalog_view_function_FunctionXPATH_transImpl: org.apache.xalan.processor.TransformerFactoryImpl
+  com_denodo_vdb_catalog_view_function_FunctionXPATH_xpathImpl: org.apache.xpath.jaxp.XPathFactoryImpl
+  com_denodo_vdb_catalog_view_function_FunctionXPATH2_transImpl: net.sf.saxon.TransformerFactoryImpl
+  com_denodo_vdb_catalog_view_function_FunctionXPATH2_xpathImpl: net.sf.saxon.xpath.XPathFactoryImpl
+  com_denodo_parser_connection_http_maxConnectionsPerHost: 100
+  com_denodo_parser_connection_http_maxTotalConnections: 500
+  com_denodo_parser_connection_http_connection_manager_timeout: 120000
+  com_denodo_parser_connection_http_testOnBorrow: false
+  com_denodo_parser_connection_http_minEvictableIdleTimeMillis: 10000
+  com_denodo_parser_connection_http_ntlm_maxConnectionsPerHost: 50
+  com_denodo_parser_connection_http_ntlm_maxTotalConnections: 100
+  com_denodo_parser_connection_http_ntlm_maxCredentials: 50
+  com_denodo_vdb_engine_wrapper_raw_ldap_LDAPAccess_LDAPDefaultPageSize: 1000
+  com_denodo_vdb_misc_datasource_LDAPDataSource_pool_initialSize: 1
+  com_denodo_vdb_misc_datasource_LDAPDataSource_pool_maxActive: 20
+  com_denodo_vdb_misc_datasource_LDAPDataSource_pool_prefSize: 0
+  com_denodo_vdb_misc_datasource_LDAPDataSource_pool_connectionTimeout: 30000
+  com_denodo_vdb_misc_datasource_LDAPDataSource_pool_minEvictableIdleTimeMillis: 1800000
+  com_denodo_vdb_engine_wrapper_raw_df_row_maxlen: 512000
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_initialSize: 2
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxIdle: 2
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_minIdle: 2
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxActive: 20
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_maxWait: 30000
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_whenExhaustedAction: 1
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testOnBorrow: false
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testOnReturn: false
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_testWhileIdle: false
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_timeBetweenEvictionRunsMillis: -1
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_numTestsPerEvictionRun: 3
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_minEvictableIdleTimeMillis: 1800000
+  com_denodo_vdb_misc_datasource_OLAPDataSource_pool_pingQuery:
+  java_env_DENODO_OPTS_START: -Xmx1024m -XX:NewRatio=4
+  java_env_DENODO_OPTS_STOP:
+  service_wrapper_WRAPPER_PING_INTERVAL: 30
+  service_wrapper_WRAPPER_PING_TIMEOUT: 150
+  com_denodo_vdb_essbasePluginsDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/essbase-plugins"
+  com_denodo_vdb_essbaseDriversDir: "{{ solution_manager_installer_defaults.install_path }}/lib/extensions/essbase-drivers"
+  com_denodo_essbaseJarName: denodo-essbase
+  com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_12: false
+  com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_11: false
+  com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_10: false
+  com_denodo_vdb_engine_wrapper_raw_jdbc_adapter_plugins_HiveStandardPlugin_cancelStatementsEnabled_071: false
+  com_denodo_vdb_contrib_wrapper_xls_event_content_introspection_maxrows: 1000
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_user:
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_system:
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_url:
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_environment:
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_useVCS:
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_password:
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_useUserAndPassword:
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_encryptedPassword:
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_localRepositoriesHome: "{{ solution_manager_installer_defaults.install_path }}/work/vdp/repository"
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_lsopt: 1
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection: 0
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_tfs: 3
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_svn: 1
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_uniquenessConflictsDetection_git: 3
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultQueryTimeout: 80000
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultChunkTimeout: 80000
+  com_denodo_vdb_vdbinterface_server_vcs_VCSConfigurationManager_defaultChunkSize: 100
+  com_denodo_vdb_util_tablemanagement_blockDelete_loopSize: 100
+  com_denodo_vdb_util_tablemanagement_blockDelete_blockSize: 100000
+  jmslistener_defaultChunkSize: 1000
+  jmslistener_queryTimeout: 90000
+  jmslistener_chunkTimeout: 9000
+  com_denodo_vdb_interpreter_execution_SelectAction_costoptimization: false
+  com_denodo_vdb_engine_costoptimizer_blockSize: 8
+  com_denodo_vdb_engine_costoptimizer_multiBlockReadCount: 8
+  com_denodo_vdb_engine_costoptimizer_transferRateFactor: 1.0
+  com_denodo_vdb_engine_costoptimizer_readRate: 1
+  com_denodo_vdb_engine_costoptimizer_initTime: 5
+  com_denodo_vdb_engine_costoptimizer_initTime_ws: 10
+  com_denodo_vdb_engine_costoptimizer_initTime_xml: 10
+  com_denodo_vdb_engine_costoptimizer_initTime_json: 10
+  com_denodo_vdb_engine_costoptimizer_initTime_df: 10
+  com_denodo_vdb_engine_costoptimizer_initTime_saperp: 10
+  com_denodo_vdb_engine_costoptimizer_initTime_ldap: 10
+  com_denodo_vdb_engine_costoptimizer_initTime_itp: 1000
+  com_denodo_vdb_engine_costoptimizer_transferRateFactor_ws: 0.35
+  com_denodo_vdb_engine_costoptimizer_transferRateFactor_xml: 0.35
+  com_denodo_vdb_engine_costoptimizer_transferRateFactor_json: 0.35
+  com_denodo_vdb_engine_costoptimizer_transferRateFactor_df: 0.35
+  com_denodo_vdb_engine_costoptimizer_transferRateFactor_saperp: 0.5
+  com_denodo_vdb_engine_costoptimizer_transferRateFactor_ldap: 0.5
+  com_denodo_vdb_engine_costoptimizer_transferRateFactor_itp: 0.1
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_netezza_default: 12
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_netezza_default: 8
+  com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_netezza_default: 29
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_teradata_default: 12
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_teradata_default: 8
+  com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_teradata_default: 29
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_vertica_default: 12
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_vertica_default: 8
+  com_denodo_vdb_engine_costoptimizer_internalTransferRate_jdbc_vertica_default: 29
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_hive_default: 8
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_hive_default: 8
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_impala_default: 8
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_impala_default: 8
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_spark_default: 8
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_spark_default: 8
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_redshift_default: 2
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_redshift_default: 16
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_snowflake_default: 2
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_snowflake_default: 16
+  com_denodo_vdb_engine_costoptimizer_numProcessingUnits_jdbc_presto_default: 8
+  com_denodo_vdb_engine_costoptimizer_numCPUsPerProcessingUnit_jdbc_presto_default: 8
+  com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxWait: 60000
+  com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxActive: 20
+  com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_maxIdle: 4
+  com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_minEvictableIdleTimeMillis: 100000
+  com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_pool_timeBetweenEvictionRunsMillis: 150000
+  com_denodo_vdb_misc_datasource_SAPBWBapiDataSource_readBlockSize: 20000
+  com_denodo_vdb_interpreter_execution_util_sapBWBapiUtils_filterInfoObjects: false
+  com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxWait: 60000
+  com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxActive: 20
+  com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_maxIdle: 4
+  com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_minEvictableIdleTimeMillis: 100000
+  com_denodo_vdb_misc_datasource_SAPERPDataSource_pool_timeBetweenEvictionRunsMillis: 150000
+  com_denodo_vdb_misc_datasource_SalesforceDataSource_bulk_batchStatus_maxWaitMillis: 1800000
+  com_denodo_vdb_misc_datasource_SalesforceDataSource_bulk_batchStatus_timeBetweenRequestsMillis: 2000
+  com_denodo_vdb_engine_wrapper_raw_mdb_uniquenames_cache_enable: true
+  com_denodo_vdb_interpreter_execution_processor_VDBActionProcessor_enableAutoSingleUserMode: true
+  com_denodo_vdb_engine_session_restriction_ResourceManagerEngine_resourceManagerStatus: ON
+  com_denodo_vdb_engine_session_restriction_ResourceManagerEngine_maintainerPeriodInSecs: 20
+  com_denodo_security_file_privilege_generalaccess: "*"
+  com_denodo_vdb_interpreter_execution_SelectAction_simplify: true
+  com_denodo_vdb_interpreter_execution_SelectAction_summaryRewrite: true
+  com_denodo_vdb_interpreter_execution_SelectAction_dataMovement: true
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_runtimeRegistryPort: 19999
+  com_denodo_vdb_vdbinterface_server_VDBManagerImpl_runtimeShutdownPort: 19998

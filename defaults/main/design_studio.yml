@@ -1,0 +1,16 @@
+---
+design_studio_defaults:
+  backend_connection_queryTimeout: 100000
+  backend_connection_chunkSize: 100
+  backend_connection_chunkTimeout: 1000
+  backend_connection_activeSessionConnections: 20
+  backend_connection_connectionTimeout: -1
+  backend_connection_ssl: auto
+  backend_connection_wanOptimized: true
+  backend_web_retrieveRowsLimit: 1000
+  informativeMessage_filesFolder: "{{ solution_manager_installer_defaults.install_path }}/work/design-studio"
+  kerberos_enabled: false
+  kerberos_principal: 
+  kerberos_keyTab: 
+  kerberos_filesFolder: "{{ solution_manager_installer_defaults.install_path }}/work/design-studio/kerberos"
+  weblogin_password: lzCHuLdywxSgvQpI3MiJ8zBSbuaY2QEDKp1Kj2jcVFfrjq22ebm9/H4HT9H7c3fMqa3GJMMQr1OPJno7r9MZbrjdJa5dY3Nx

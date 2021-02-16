@@ -1,0 +1,6 @@
+---
+- include_tasks: Linux/Post-Installation-Tasks.yml
+  when: ansible_os_family == 'RedHat' or ansible_os_family == 'Debian'
+
+- include_tasks: Windows/Post-Installation-Tasks.yml
+  when: ansible_os_family == 'Windows'

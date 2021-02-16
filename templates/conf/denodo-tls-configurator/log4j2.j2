@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+  <Appenders>
+
+    <RollingFile name="FILEOUT" fileName="{{ solution_manager_installer_vars.install_path }}/logs/denodo-tls-configurator/denodo-tls-configurator.log" filePattern="{{ solution_manager_installer_vars.install_path }}/logs/denodo-tls-configurator/denodo-tls-configurator.log.%i">
+      <Policies>
+        <SizeBasedTriggeringPolicy size="10 MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="7" />
+      <PatternLayout pattern="%-4r [%t] %-5p %d{yyyy-MM-dd'T'HH:mm:ss.SSS} %c %x - %m  %n" />
+    </RollingFile>
+
+  </Appenders>
+
+  <Loggers>
+
+    <Logger name="com.denodo" level="error" />
+
+    <Root level="error">
+      <AppenderRef ref="FILEOUT" />
+    </Root>
+
+  </Loggers>
+
+</Configuration>

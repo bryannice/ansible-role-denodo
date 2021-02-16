@@ -1,0 +1,26 @@
+# ===============================
+# = AUTHENTICATION CONFIGURATION
+# ===============================
+authentication.type={{ scheduler_webadmintool_vars.authentication_type }}
+{% if scheduler_webadmintool_vars.kerberos_enabled %}
+kerberos.enabled={{ scheduler_webadmintool_vars.kerberos_enabled }}
+{% endif %}
+# ===============================
+# = SSO CONFIGURATION
+# ===============================
+sso.confFile={{ scheduler_webadmintool_vars.sso_confFile }}
+sso.successRedirectUrl={{ scheduler_webadmintool_vars.sso_successRedirectUrl }}
+
+# ===============================
+# = KERBEROS CONFIGURATION
+# ===============================
+kerberos.principal={{ scheduler_webadmintool_vars.kerberos_principal }}
+kerberos.keyTab={{ scheduler_webadmintool_vars.kerberos_keyTab }}
+kerberos.filesFolder={{ scheduler_webadmintool_vars.kerberos_filesFolder }}
+
+# ===============================
+# = INFORMATIVE MESSAGE CONFIGURATION
+# ===============================
+informativeMessage.filesFolder={{ scheduler_webadmintool_vars.informativeMessage_filesFolder }}
+wanEnabled={{ scheduler_webadmintool_vars.wanEnabled }}
+weblogin.password={{ scheduler_webadmintool_vars.weblogin_password }}

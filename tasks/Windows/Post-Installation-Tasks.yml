@@ -1,0 +1,7 @@
+---
+- name: Create Denodo License Manager Windows Scheduler Task
+  community:windows.win_scheduled_task:
+    name: Denodo-License-Manager
+    description: Denodo License Manager
+    actions:
+      - path: "{{ solution_manager_installer_vars.denodo_installer_path }}/bin/licensemanager_startup.bat"

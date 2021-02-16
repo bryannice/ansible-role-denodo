@@ -1,10 +1,15 @@
 ---
 # tasks file for install Denodo
-- name: Upload install payload to server
-  copy:
-    src: G2Module.ini
-    dest: "{{ senzing_project_dir }}/etc"
-    owner: root
-    group: root
-    mode: "u=rw,g=r,o=r"
-    force: yes
+- include_tasks: variables.yml
+
+- include_tasks: Installer-Tasks.yml
+  when: solution_manager_installer.enabled|bool
+
+- include_tasks: SSL-Configuration-Tasks.yml
+  when: ssl.enabled|bool
+
+- include_tasks: Denodo-Monitor-Configuration-Tasks.yml
+  when: denodo_monitor.enabled|bool
+
+- include_tasks: Post-Installer-Tasks.yml
+  when: solution_manager_installer.enabled|bool

@@ -1,5 +1,5 @@
 ---
-- src: git@github.com:senzing-factory/
-  version:
-  name:
+- src: https://github.com/bryannice/ansible-role-denodo-solution-manager.git
+  version: issue-1.bryan-nice
+  name: denodo-solution-manager
   scm: git

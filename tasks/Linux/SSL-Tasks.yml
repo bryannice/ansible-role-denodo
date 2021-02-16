@@ -1,0 +1,36 @@
+---
+- name: Update VDB Configuration Properties
+  ansible.builtin.template:
+    src: conf/vdp/VDBConfiguration.jinja
+    dest: "{{ solution_manager_installer_vars.install_path }}/conf/vdp/VDBConfiguration.properties"
+
+- name: Update SM Configuration Properties
+  ansible.builtin.template:
+    src: conf/solution-manager/SMConfigurationParameters.jinja
+    dest: "{{ solution_manager_installer_vars.install_path }}/conf/solution-manager/SMConfigurationParameters.properties"
+
+- name: Update LM Configuration Properties
+  ansible.builtin.template:
+    src: conf/license-manager/LMConfigurationParameters.jinja
+    dest: "{{ solution_manager_installer_vars.install_path }}/conf/license-manager/LMConfigurationParameters.properties"
+
+- name: Update Tomcat Properties
+  ansible.builtin.template:
+    src: resources/apache-tomcat/conf/tomcat.jinja
+    dest: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf/tomcat.properties"
+
+- name: Update Tomcat Server XML
+  ansible.builtin.template:
+    src: resources/apache-tomcat/conf/server.jinja
+    dest: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf/server.xml"
+
+- name: Update SMAdminConfiguration.properties
+  ansible.builtin.template:
+    src: conf/solution-manager-web-tool/SMAdminConfiguration.j2
+    dest: "{{ solution_manager_installer_vars.install_path }}/conf/solution-manager-web-tool/SMAdminConfiguration.properties"
+
+- name: Create empty jmxssl.properties file
+  ansible.builtin.file:
+    mode: "0600"
+    path: "{{ solution_manager_installer_vars.install_path }}/resources/apache-tomcat/conf/jmxssl.properties"
+    state: touch

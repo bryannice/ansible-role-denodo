@@ -1,0 +1,6 @@
+---
+- name: Decompress Denodo Monitor
+  ansible.builtin.unarchive:
+    dest: "{{ solution_manager_installer_vars.install_path }}/tools/monitor"
+    recurse: yes
+    src: "{{ solution_manager_installer_vars.denodo_installer_path }}/tools/monitor/denodo-monitor.zip"

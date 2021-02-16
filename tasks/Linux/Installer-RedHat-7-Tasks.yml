@@ -1,0 +1,7 @@
+---
+- name: Install unzip if not present on REHL 7
+  yum:
+    name:
+      - unzip
+    state: present
+  when: "'unzip' not in required_packages_check.ansible_facts.packages"

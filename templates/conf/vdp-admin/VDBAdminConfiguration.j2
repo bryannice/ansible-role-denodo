@@ -1,0 +1,128 @@
+###########################################################################
+#                                                                         #
+#                   Virtual DataPort Configuration File                   #
+#                     (c) Denodo Technologies - 2018                      #
+#                                                                         #
+###########################################################################
+
+com.denodo.vdb.install=/denodo/solution_manager
+
+###########################################################################
+#  Administration Tool Client Configuration Parameters                    #
+###########################################################################
+
+# Datasorce for command line shell clients to connect to VDP.
+vdbDataSource.vdpAdminDataSource.vdbURI={{ vdpadmin_vars.vdbDataSource_vdpAdminDataSource_vdbURI }}
+vdbDataSource.vdpAdminDataSource.username={{ vdpadmin_vars.vdbDataSource_vdpAdminDataSource_username }}
+vdbDataSource.vdpAdminDataSource.password={{ vdpadmin_vars.vdbDataSource_vdpAdminDataSource_password }}
+vdbDataSource.vdpAdminDataSource.queryTimeout={{ vdpadmin_vars.vdbDataSource_vdpAdminDataSource_queryTimeout }}
+vdbDataSource.vdpAdminDataSource.chunkTimeout={{ vdpadmin_vars.vdbDataSource_vdpAdminDataSource_chunkTimeout }}
+vdbDataSource.vdpAdminDataSource.chunkSize={{ vdpadmin_vars.vdbDataSource_vdpAdminDataSource_chunkSize }}
+vdbDataSource.vdpAdminDataSource.userAgent={{ vdpadmin_vars.vdbDataSource_vdpAdminDataSource_userAgent }}
+
+# Query Monitor configuration
+com.denodo.vdb.admin.queryMonitor.updateTime={{ vdpadmin_vars.com_denodo_vdb_admin_queryMonitor_updateTime }}
+
+com.denodo.vdb.admin.model.vdbserverproxy.VDBServerProxy.dataSourceName={{ vdpadmin_vars.com_denodo_vdb_admin_model_vdbserverproxy_VDBServerProxy_dataSourceName }}
+com.denodo.vdb.admin.gui.model.maps.i18n={{ vdpadmin_vars.com_denodo_vdb_admin_gui_model_maps_i18n }}
+
+#Parameter for the query conditions history file
+com.denodo.vdb.admin.queryconditions.file={{ vdpadmin_vars.com_denodo_vdb_admin_queryconditions_file }}
+
+#Parameter for the URL connections history file
+com.denodo.vdb.admin.urlconnections.file={{ vdpadmin_vars.com_denodo_vdb_admin_urlconnections_file }}
+com.denodo.vdb.admin.urlconnections.queue.size={{ vdpadmin_vars.com_denodo_vdb_admin_urlconnections_queue_size }}
+
+#Parameter for the VQL sentences history file
+com.denodo.vdb.admin.vqlsentences.file={{ vdpadmin_vars.com_denodo_vdb_admin_vqlsentences_file }}
+com.denodo.vdb.admin.vqlsentences.traces.folder={{ vdpadmin_vars.com_denodo_vdb_admin_vqlsentences_traces_folder }}
+com.denodo.vdb.admin.vqlsentences.queue.size={{ vdpadmin_vars.com_denodo_vdb_admin_vqlsentences_queue_size }}
+
+#Parameter for the ImportRolesFromLDAP history file
+com.denodo.vdb.admin.roles.ldap.configurations.file={{ vdpadmin_vars.com_denodo_vdb_admin_roles_ldap_configurations_file }}
+
+#Parameter for the Import dialog server URIs history file
+com.denodo.vdb.admin.qui.model.serverimport.urisfile={{ vdpadmin_vars.com_denodo_vdb_admin_qui_model_serverimport_urisfile }}
+
+#Parameter for the GUI layout file
+com.denodo.vdb.admin.gui.layout.file={{ vdpadmin_vars.com_denodo_vdb_admin_gui_layout_file }}
+
+# Admin Tool Working Directory.
+com.denodo.admintool.workDir={{ vdpadmin_vars.com_denodo_admintool_workDir }}
+
+# Parameters for Web service facade.
+com.denodo.vdb.admin.model.wrapper.ws.util.suntoolslibdir={{ vdpadmin_vars.com_denodo_vdb_admin_model_wrapper_ws_util_suntoolslibdir }}
+com.denodo.vdb.admin.model.wrapper.ws.util.axislibdir={{ vdpadmin_vars.com_denodo_vdb_admin_model_wrapper_ws_util_axislibdir }}
+com.denodo.vdb.admin.model.wrapper.ws.util.axisjars={{ vdpadmin_vars.com_denodo_vdb_admin_model_wrapper_ws_util_axisjars }}
+
+# Parameters for JDBC Wrapper Facade.
+com.denodo.vdb.admin.model.wrapper.jdbc.util.jdbcDriversDir={{ vdpadmin_vars.com_denodo_vdb_admin_model_wrapper_jdbc_util_jdbcDriversDir }}
+
+# Parameters for ODBC Wrapper Facade.
+com.denodo.vdb.admin.model.wrapper.odbc.util.ODBCDriver={{ vdpadmin_vars.com_denodo_vdb_admin_model_wrapper_odbc_util_ODBCDriver }}
+
+# Maximum length of the identifiers
+com.denodo.vdb.catalog.Catalog.identifiersMaxLength={{ vdpadmin_vars.com_denodo_vdb_catalog_Catalog_identifiersMaxLength }}
+
+# Maximum number of search methods to display automatically in advanced view
+com.denodo.vdb.admin.gui.components.dockable.view.advanced.AdvancedViewPanel.maxSearchMethodsDisplay={{ vdpadmin_vars.com_denodo_vdb_admin_gui_components_dockable_view_advanced_AdvancedViewPanel_maxSearchMethodsDisplay }}
+com.denodo.admintool.help.URL={{ vdpadmin_vars.com_denodo_admintool_help_URL }}
+
+#Parameters for the help
+com.denodo.admintool.help.file={{ vdpadmin_vars.com_denodo_admintool_help_file }}
+
+#Parameter for the projects file
+com.denodo.vdb.admin.projects.file={{ vdpadmin_vars.com_denodo_vdb_admin_projects_file }}
+
+#Parameter for the limit of shown rows in the execution of views and queries
+com.denodo.vdb.admin.tables.rowLimit={{ vdpadmin_vars.com_denodo_vdb_admin_tables_rowLimit }}
+
+#Parameters for the creation of a HTML Web service
+com.denodo.export.webservice.resourcesdir={{ vdpadmin_vars.com_denodo_export_webservice_resourcesdir }}
+com.denodo.export.webservice.cssfile={{ vdpadmin_vars.com_denodo_export_webservice_cssfile }}
+
+#Parameters to create widgets
+com.denodo.export.widget.resourcesdir={{ vdpadmin_vars.com_denodo_export_widget_resourcesdir }}
+com.denodo.export.widget.helpmodecontent={{ vdpadmin_vars.com_denodo_export_widget_helpmodecontent }}
+
+#Parameter to create RESTful Web services
+com.denodo.export.webservice.restfulws.cssfile={{ vdpadmin_vars.com_denodo_export_webservice_restfulws_cssfile }}
+
+#Results of the queries are internationalized
+com.denodo.vdb.admin.i18nQueryResults={{ vdpadmin_vars.com_denodo_vdb_admin_i18nQueryResults }}
+
+#Parameter for the number of fields shown by default in a cell when dropping a view in combine wizards
+com.denodo.vdb.admin.combine.defaultCellSize.numFields={{ vdpadmin_vars.com_denodo_vdb_admin_combine_defaultCellSize_numFields }}
+
+#Use decimal for introspection
+
+###########################################################################
+#  SSL Truststore Configuration                                           #
+###########################################################################
+{% if com_denodo_security_ssl_trustStore|length %}
+com.denodo.security.ssl.trustStore={{ vdpadmin_vars.com_denodo_security_ssl_trustStore }}
+com.denodo.security.ssl.trustStorePassword={{ vdpadmin_vars.com_denodo_security_ssl_trustStorePassword }}
+com.denodo.security.ssl.trustStorePassword.encrypted={{ vdpadmin_vars.com_denodo_security_ssl_trustStorePassword_encrypted }}
+{% endif %}
+###########################################################################
+#  WSManagement Server Configuration                                      #
+###########################################################################
+com.denodo.vdb.wsManagement.enabled={{ vdpadmin_vars.com_denodo_vdb_wsManagement_enabled }}
+com.denodo.vdb.wsManagement.port={{ vdpadmin_vars.com_denodo_vdb_wsManagement_port }}
+
+###########################################################################
+#  Export VQL configuration parameters                                    #
+###########################################################################
+com.denodo.vdb.admin.exportVQLShowDependencies={{ vdpadmin_vars.com_denodo_vdb_admin_exportVQLShowDependencies }}
+com.denodo.vdb.admin.exportVQLDefaultTarget={{ vdpadmin_vars.com_denodo_vdb_admin_exportVQLDefaultTarget }}
+com.denodo.vdb.admin.exportVQLDefaultDropReplaceMode={{ vdpadmin_vars.com_denodo_vdb_admin_exportVQLDefaultDropReplaceMode }}
+com.denodo.vdb.admin.exportVQLIncludeJars={{ vdpadmin_vars.com_denodo_vdb_admin_exportVQLIncludeJars }}
+com.denodo.vdb.admin.exportVQLIncludeITPScanners={{ vdpadmin_vars.com_denodo_vdb_admin_exportVQLIncludeITPScanners }}
+com.denodo.vdb.admin.exportVQLIncludeITPCustomComponents={{ vdpadmin_vars.com_denodo_vdb_admin_exportVQLIncludeITPCustomComponents }}
+com.denodo.vdb.admin.exportVQLSingleUserMode={{ vdpadmin_vars.com_denodo_vdb_admin_exportVQLSingleUserMode }}
+
+###############################################################################
+# JVM options
+###############################################################################
+
+java.env.DENODO_OPTS_START={{ vdpadmin_vars.java_env_DENODO_OPTS_START }}

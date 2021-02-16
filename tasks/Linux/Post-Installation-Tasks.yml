@@ -1,0 +1,36 @@
+---
+- name: Copy service shell to systemd location for Denodo License Manager
+  ansible.builtin.template:
+    dest: "/etc/systemd/system/denodo-license-manager.service"
+    src: "systemd/denodo-license-manager.j2"
+
+- name: Copy service shell to systemd location for Denodo Solution Manager
+  ansible.builtin.template:
+    dest: "/etc/systemd/system/denodo-solution-manager.service"
+    src: "systemd/denodo-solution-manager.j2"
+
+- name: Copy service shell to systemd location for Denodo Solution Manager Web Tool
+  ansible.builtin.template:
+    dest: "/etc/systemd/system/denodo-solution-manager-web-tool.service"
+    src: "systemd/denodo-solution-manager-web-tool.j2"
+
+- name: Start Denodo License Manager
+  ansible.builtin.systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-license-manager.service
+    state: started
+
+- name: Start Denodo Solution Manager
+  ansible.builtin.systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-solution-manager.service
+    state: started
+
+- name: Start Denodo Solution Manager Web Tool
+  ansible.builtin.systemd:
+    daemon_reload: yes
+    enabled: yes
+    name: denodo-solution-manager-web-tool.service
+    state: started

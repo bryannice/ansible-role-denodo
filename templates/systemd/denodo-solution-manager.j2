@@ -1,0 +1,14 @@
+[Unit]
+Description=Denodo Solution Manager
+After=network.target
+After=denodo-license-manager.service
+Before=denodo-solution-manager-web-tool.service
+
+[Service]
+ExecStart={{ solution_manager_installer_vars.install_path }}/bin/solutionmanager_startup.sh
+ExecStop={{ solution_manager_installer_vars.install_path }}/bin/solutionmanager_shutdown.sh
+RemainAfterExit=true
+Type=oneshot
+
+[Install]
+WantedBy=default.target
